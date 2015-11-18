@@ -306,7 +306,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JWPlayer-Developer-Demo",
-					/Users/maxmikheyenko/Desktop,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
 				);
@@ -334,7 +333,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JWPlayer-Developer-Demo",
-					/Users/maxmikheyenko/Desktop,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Framework",
 				);
