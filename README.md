@@ -7,6 +7,8 @@ SDK version: 2.0
 Getting support and submitting feedback
 =======================================
 
+[![Join the chat at https://gitter.im/jwplayer/jwplayer-sdk-ios-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jwplayer/jwplayer-sdk-ios-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 To send us your feedback or bug reports, send email to support@jwplayer.com.
 
 Before contacting us, please read our FAQ: http://support.jwplayer.com/customer/portal/articles/2022900-ios-sdk-faq
