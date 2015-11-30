@@ -11,21 +11,19 @@ import UIKit
 
 class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
     
-    private var player:JWPlayerController
+    private var player:JWPlayerController!
     @IBOutlet var callbacksView: UITextView!
     @IBOutlet var playbackTime: UILabel!
     @IBOutlet var playButton: UIButton!
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        self.player = JWPlayerController()
         callbacksView = UITextView(frame: CGRectZero)
         callbacksView?.editable = false
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.player = JWPlayerController()
         callbacksView = UITextView(frame: CGRectZero)
         callbacksView?.editable = false
         super.init(coder: aDecoder)
