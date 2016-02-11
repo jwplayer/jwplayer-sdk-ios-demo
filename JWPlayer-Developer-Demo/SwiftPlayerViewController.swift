@@ -257,4 +257,8 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
     func onAdError(error: NSError!) {
         self.playButton?.setTitle("Pause", forState: UIControlState.Normal)
     }
+    
+    func controlCenter() {
+        MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = [MPMediaItemPropertyArtist : "Artist",  MPMediaItemPropertyTitle : "Title"]
+    }
 }
