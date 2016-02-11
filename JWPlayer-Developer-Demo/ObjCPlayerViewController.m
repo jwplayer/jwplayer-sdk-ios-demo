@@ -66,7 +66,7 @@
     
     /*
      custom xml skin can be applied using:
-     config.skin = @"http://p.jwpcdn.com/iOS/Skins/nature01/nature01.xml";
+     config.skin = @"http://p.jwpcdn.com/iOS/Skins/ethan.css";
      */
     
     //captions
