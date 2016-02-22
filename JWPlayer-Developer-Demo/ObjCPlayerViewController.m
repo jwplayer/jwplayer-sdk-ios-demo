@@ -8,6 +8,7 @@
 
 #import "ObjCPlayerViewController.h"
 #import <JWPlayer-iOS-SDK/JWPlayerController.h>
+@import MediaPlayer;
 
 @interface ObjCPlayerViewController () <JWPlayerDelegate>
 
@@ -274,13 +275,13 @@
         NSString *position = [NSString stringWithFormat:@"%@/%@", userinfo[@"position"], userinfo[@"duration"]];
         self.playbackTime.text = position;
     }
+}
 
 - (void)controlCenter {
     MPNowPlayingInfoCenter* mpic = [MPNowPlayingInfoCenter defaultCenter];
     mpic.nowPlayingInfo = @{MPMediaItemPropertyTitle: @"Title",
                             MPMediaItemPropertyArtist: @"Artist"
                             };
-    }
 }
 
 @end
