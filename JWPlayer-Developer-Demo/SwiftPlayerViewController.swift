@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MediaPlayer
 
 class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
     
