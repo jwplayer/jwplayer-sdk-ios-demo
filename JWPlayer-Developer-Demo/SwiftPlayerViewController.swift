@@ -68,8 +68,8 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
         config.premiumSkin = JWPremiumSkinRoundster
         
         /*
-        custom xml skin can be applied using:
-        config.skin = "http://p.jwpcdn.com/iOS/Skins/ethan.css"
+        custom css skin can be applied using:
+        config.cssSkin = "http://p.jwpcdn.com/iOS/Skins/ethan.css"
         */
         
         //captions
