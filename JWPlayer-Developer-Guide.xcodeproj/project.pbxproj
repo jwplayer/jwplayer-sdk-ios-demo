@@ -313,7 +313,7 @@
 				INFOPLIST_FILE = "JWPlayer-Developer-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "JWPlayer-Developer-Guide";
 				PROVISIONING_PROFILE = "";
@@ -340,7 +340,7 @@
 				INFOPLIST_FILE = "JWPlayer-Developer-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "JWPlayer-Developer-Guide";
 				PROVISIONING_PROFILE = "";
