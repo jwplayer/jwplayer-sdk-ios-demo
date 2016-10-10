@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"JW Player Developer Guide";
+    self.navigationItem.title = @"JW Player iOS SDK";
     
     self.objc.layer.borderColor = [UIColor whiteColor].CGColor;
     self.objc.layer.borderWidth = 1;

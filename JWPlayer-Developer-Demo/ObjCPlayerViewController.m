@@ -20,8 +20,7 @@
 
 @implementation ObjCPlayerViewController
 
-#pragma mark - view lifecycle
-
+//MARK: Life Cycle Methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -29,9 +28,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
-    
     [self createPlayer];
     [self setupNotifications];
     [self.view addSubview:self.player.view];
@@ -42,16 +41,12 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark - player creation
-
 - (void)createPlayer
 {
-    // basic config
+    //MARK: JWConfig
     
-    /*
-     JWConfig can be created with a single file reference
-     JWConfig *config = [JWConfig configWithContentURL:@"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"];
-     */
+    /* JWConfig can be created with a single file reference */
+    //     JWConfig *config = [JWConfig configWithContentURL:@"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"];
     
     JWConfig *config = [JWConfig new];
     config.sources = @[[JWSource sourceWithFile:@"http://content.bitsontherun.com/videos/bkaovAYt-injeKYZS.mp4" label:@"180p Streaming" isDefault:YES],
@@ -64,18 +59,16 @@
     config.repeat = NO;   //default
     config.premiumSkin = JWPremiumSkinRoundster;
     
-    /*
-     custom css skin can be applied using:
-     config.cssSkin = @"http://p.jwpcdn.com/iOS/Skins/ethan.css";
-     */
+    /* custom css skin can be applied using */
+    //     config.cssSkin = @"http:p.jwpcdn.com/iOS/Skins/ethan.css";
     
-    //captions
+    //MARK: JWTrack (captions)
     config.tracks = @[[JWTrack trackWithFile:@"http://playertest.longtailvideo.com/caption-files/sintel-en.srt" label:@"English" isDefault:YES],
                       [JWTrack trackWithFile:@"http://playertest.longtailvideo.com/caption-files/sintel-sp.srt" label:@"Spanish"],
                       [JWTrack trackWithFile:@"http://playertest.longtailvideo.com/caption-files/sintel-ru.srt" label:@"Russian"]];
     
     
-    //captionConfig
+    //MARK: JWCaptionStyling
     JWCaptionStyling* captionStyling = [JWCaptionStyling new];
     captionStyling.font = [UIFont fontWithName:@"Zapfino" size:20];
     captionStyling.edgeStyle = raised;
@@ -84,7 +77,7 @@
     captionStyling.fontColor = [UIColor blueColor];
     config.captionStyling = captionStyling;
     
-    //ad config
+    //MARK: JWAdConfig
     JWAdConfig *adConfig = [JWAdConfig new];
     adConfig.adMessage = @"Ad duration countdown xx";
     adConfig.skipMessage = @"Skip in xx";
@@ -93,25 +86,22 @@
     adConfig.adClient = vastPlugin;
     config.adConfig = adConfig;
     
-    //auto start
-    config.autostart = YES;
+//    config.autostart = YES;
     
-    //waterfall tags
+    //MARK: Waterfall Tags
     NSArray *waterfallTags = @[@"bad tag", @"another bad tag", @"http://playertest.longtailvideo.com/adtags/preroll_newer.xml"];
     
-    //ad breaks
+    //MARK: JWAdBreak
     config.adSchedule = @[[JWAdBreak adBreakWithTags:waterfallTags offset:@"pre"],
                           [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"0:00:05"],
                           [JWAdBreak adBreakWithTag:@"http://demo.jwplayer.com/player-demos/assets/overlay.xml" offset:@"7" nonLinear:YES],
-                          //                          [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"5"],
+//                          [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"5"],
                           [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"50%"],
                           [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"post"]];
     
     self.player = [[JWPlayerController alloc] initWithConfig:config];
     self.player.delegate = self;
     
-    //sets player frame to be half the screen
-    //alternatively config.size can be used during the player creation
     CGRect frame = self.view.bounds;
     frame.origin.y = 64;
     frame.size.height /= 2;
@@ -124,8 +114,7 @@
     self.player.forceLandscapeOnFullScreen = YES;
 }
 
-#pragma mark - callback delegate methods
-
+//MARK: JW Player Delegates
 -(void)onTime:(double)position ofDuration:(double)duration
 {
     NSString *playbackPosition = [NSString stringWithFormat:@"%.01f/.01%f", position, duration];
@@ -237,7 +226,16 @@
 
 - (void)setupNotifications
 {
-    NSArray *notifications = @[JWPlayerStateChangedNotification, JWMetaDataAvailableNotification, JWAdActivityNotification, JWErrorNotification, JWCaptionsNotification, JWVideoQualityNotification, JWPlaybackPositionChangedNotification, JWFullScreenStateChangedNotification, JWAdClickNotification];
+    NSArray *notifications = @[
+                               JWPlayerStateChangedNotification,
+                               JWMetaDataAvailableNotification,
+                               JWAdActivityNotification,
+                               JWErrorNotification,
+                               JWCaptionsNotification,
+                               JWVideoQualityNotification,
+                               JWPlaybackPositionChangedNotification,
+                               JWFullScreenStateChangedNotification,
+                               JWAdClickNotification];
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [notifications enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL *stop) {
@@ -274,13 +272,6 @@
         NSString *position = [NSString stringWithFormat:@"%@/%@", userinfo[@"position"], userinfo[@"duration"]];
         self.playbackTime.text = position;
     }
-}
-
-- (void)controlCenter {
-    MPNowPlayingInfoCenter* mpic = [MPNowPlayingInfoCenter defaultCenter];
-    mpic.nowPlayingInfo = @{MPMediaItemPropertyTitle: @"Title",
-                            MPMediaItemPropertyArtist: @"Artist"
-                            };
 }
 
 @end
