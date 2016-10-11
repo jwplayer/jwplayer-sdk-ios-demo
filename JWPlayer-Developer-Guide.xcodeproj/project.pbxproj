@@ -14,9 +14,9 @@
 		6A7D08FF1A5DAFD600C4E749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */; };
 		6A80951B1A5F028400F8B4C6 /* icon-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A80951A1A5F028400F8B4C6 /* icon-15.png */; };
-		8A0B54801B596AA500617BB9 /* JWPlayer-iOS-SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0B547F1B596AA500617BB9 /* JWPlayer-iOS-SDK.framework */; };
 		8AEA39FA1AFAAE22008A8C8A /* SwiftPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA39F71AFAAE22008A8C8A /* SwiftPlayerViewController.swift */; };
 		8AEA39FB1AFAAE22008A8C8A /* ObjCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA39F91AFAAE22008A8C8A /* ObjCPlayerViewController.m */; };
+		97B533E21DA80A9000856F28 /* jwlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B533E11DA80A9000856F28 /* jwlogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +31,11 @@
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A7D09011A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6A80951A1A5F028400F8B4C6 /* icon-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-15.png"; sourceTree = "<group>"; };
-		8A0B547F1B596AA500617BB9 /* JWPlayer-iOS-SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "JWPlayer-iOS-SDK.framework"; path = "../Framework/JWPlayer-iOS-SDK.framework"; sourceTree = "<group>"; };
 		8AEA39F61AFAAE22008A8C8A /* JWPlayer-Developer-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWPlayer-Developer-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		8AEA39F71AFAAE22008A8C8A /* SwiftPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPlayerViewController.swift; sourceTree = "<group>"; };
 		8AEA39F81AFAAE22008A8C8A /* ObjCPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCPlayerViewController.h; sourceTree = "<group>"; };
 		8AEA39F91AFAAE22008A8C8A /* ObjCPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCPlayerViewController.m; sourceTree = "<group>"; };
+		97B533E11DA80A9000856F28 /* jwlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jwlogo.png; path = ../jwlogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0B54801B596AA500617BB9 /* JWPlayer-iOS-SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +54,7 @@
 			children = (
 				6A7D08F01A5DAFD600C4E749 /* JWPlayer-Developer-Demo */,
 				6A7D08EF1A5DAFD600C4E749 /* Products */,
+				9769E5CB1DA8034E00BEF7FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,18 +69,10 @@
 		6A7D08F01A5DAFD600C4E749 /* JWPlayer-Developer-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				6A8095191A5F028400F8B4C6 /* Assets */,
-				8AEA39F61AFAAE22008A8C8A /* JWPlayer-Developer-Demo-Bridging-Header.h */,
 				8AEA39F71AFAAE22008A8C8A /* SwiftPlayerViewController.swift */,
 				8AEA39F81AFAAE22008A8C8A /* ObjCPlayerViewController.h */,
 				8AEA39F91AFAAE22008A8C8A /* ObjCPlayerViewController.m */,
-				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
-				6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */,
-				6A7D08F81A5DAFD600C4E749 /* ViewController.h */,
-				6A7D08F91A5DAFD600C4E749 /* ViewController.m */,
-				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
-				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
-				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
+				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
 				6A7D08F11A5DAFD600C4E749 /* Supporting Files */,
 			);
 			path = "JWPlayer-Developer-Demo";
@@ -89,9 +81,16 @@
 		6A7D08F11A5DAFD600C4E749 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8A0B547F1B596AA500617BB9 /* JWPlayer-iOS-SDK.framework */,
-				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
+				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
+				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
+				6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */,
+				6A7D08F81A5DAFD600C4E749 /* ViewController.h */,
+				6A7D08F91A5DAFD600C4E749 /* ViewController.m */,
+				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
+				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
+				8AEA39F61AFAAE22008A8C8A /* JWPlayer-Developer-Demo-Bridging-Header.h */,
+				6A8095191A5F028400F8B4C6 /* Assets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -99,9 +98,17 @@
 		6A8095191A5F028400F8B4C6 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				97B533E11DA80A9000856F28 /* jwlogo.png */,
 				6A80951A1A5F028400F8B4C6 /* icon-15.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		9769E5CB1DA8034E00BEF7FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,12 +139,13 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = JWPlayer;
 				TargetAttributes = {
 					6A7D08ED1A5DAFD600C4E749 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = WX87M56X5N;
+						DevelopmentTeam = 6775TJNQT2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -166,6 +174,7 @@
 			files = (
 				6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */,
 				6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */,
+				97B533E21DA80A9000856F28 /* jwlogo.png in Resources */,
 				6A80951B1A5F028400F8B4C6 /* icon-15.png in Resources */,
 				6A7D08FF1A5DAFD600C4E749 /* Images.xcassets in Resources */,
 			);
@@ -221,8 +230,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -231,6 +242,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -243,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
@@ -268,8 +280,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -277,19 +291,21 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -303,6 +319,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6775TJNQT2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JWPlayer-Developer-Demo",
@@ -310,8 +328,9 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = "JWPlayer-Developer-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
@@ -319,6 +338,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-Developer-Demo/JWPlayer-Developer-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -330,6 +350,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6775TJNQT2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/JWPlayer-Developer-Demo",
@@ -337,14 +359,16 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = "JWPlayer-Developer-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "JWPlayer-Developer-Guide";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-Developer-Demo/JWPlayer-Developer-Demo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

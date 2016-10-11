@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@import MediaPlayer;
 
 @interface ObjCPlayerViewController : UIViewController
 
