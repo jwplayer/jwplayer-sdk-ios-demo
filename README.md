@@ -2,32 +2,35 @@
 JW Player Open Source Demo for iOS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SDK version: 2.0
 
 Getting support and submitting feedback
 =======================================
 
 [![Join the chat at https://gitter.im/jwplayer/jwplayer-sdk-ios-demo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jwplayer/jwplayer-sdk-ios-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-To send us your feedback or bug reports, send email to support@jwplayer.com.
 
-Before contacting us, please read our FAQ: http://support.jwplayer.com/customer/portal/articles/2022900-ios-sdk-faq
+To send us your questions, feedback or bug report, please send an email to support+sdk@jwplayer.com.
+
 
 Using this demo app
 ==================
 
-The source code of a sample application (JWPlayer_Developer_Demo) is included to demonstrate a very basic set-up and use of the JWPlayer iOS SDK. To use this app, link the SDK Framework (JWPlayer-iOS-SDK.framework) to the sample application’s project and enter your JWPlayer Beta License key in the info.plist under JWPlayerKey.
+The source code of a sample application (JWPlayer_Developer_Demo) is included to demonstrate a very basic setup and use of the JWPlayer iOS SDK. To use this app, please review our Quickstart Guide as well as our JW Player iOS SDK documentation.
 
-What’s new in this release
+JW Player Quickstart Guide
 ==========================
 
-- Added non-linear ad examples
+- https://developer.jwplayer.com/sdk/ios/docs/developer-guide/intro/getting-started/
 
-Fixes in this release
+JW Player iOS SDK Documentation
 =====================
 
-- Fixed an issue where ad waterfalling would produce an error.
+- https://developer.jwplayer.com/ios-sdk/
 
+
+JW Player iOS SDK Release Notes
+=====================
+- https://developer.jwplayer.com/sdk/ios/docs/developer-guide/about/release-notes/
 
 License
 ===============
