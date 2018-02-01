@@ -7,7 +7,7 @@
 //
 
 #import "ObjCPlayerViewController.h"
-#import <JWPlayer-iOS-SDK/JWPlayerController.h>
+#import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface ObjCPlayerViewController () <JWPlayerDelegate>
 
