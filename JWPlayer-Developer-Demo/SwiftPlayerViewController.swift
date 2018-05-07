@@ -139,7 +139,7 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
         }
     }
     
-    func playerStateChanged(_ info: Notification) {
+    @objc func playerStateChanged(_ info: Notification) {
         let userInfo: NSDictionary = (info as NSNotification).userInfo! as NSDictionary
         if( userInfo["event"] as! String == "onPause" ||
             userInfo["event"] as! String == "onReady" ||
@@ -197,7 +197,7 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
         }
     }
     
-    func updatePlaybackTimer(_ notification: Notification) {
+    @objc func updatePlaybackTimer(_ notification: Notification) {
         let userInfo: NSDictionary = (notification as NSNotification).userInfo! as NSDictionary
         if(userInfo["event"] as! String == "onTime") {
             var text: String = String(format: "%.1f", userInfo["position"] as! Double) + "/"
