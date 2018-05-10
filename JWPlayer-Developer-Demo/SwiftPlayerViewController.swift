@@ -16,6 +16,7 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
     @IBOutlet var playbackTime: UILabel!
     @IBOutlet var playButton: UIButton!
     
+    @IBOutlet weak var playerViewConstraint: NSLayoutConstraint!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         callbacksView = UITextView(frame: CGRect.zero)
@@ -111,9 +112,11 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
 
         var frame: CGRect = self.view.bounds
         frame.origin.y = 10
-        frame.size.height /= 2
-        frame.size.height -= 44
         
+        self.playerViewConstraint.constant = frame.size.height / 2 - 44
+        
+        frame.size.height = self.playerViewConstraint.constant
+
         self.player.view.frame = frame
         self.player.view.autoresizingMask = [
             UIViewAutoresizing.flexibleBottomMargin,
@@ -139,7 +142,7 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
         }
     }
     
-    func playerStateChanged(_ info: Notification) {
+    @objc func playerStateChanged(_ info: Notification) {
         let userInfo: NSDictionary = (info as NSNotification).userInfo! as NSDictionary
         if( userInfo["event"] as! String == "onPause" ||
             userInfo["event"] as! String == "onReady" ||
@@ -197,10 +200,10 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
         }
     }
     
-    func updatePlaybackTimer(_ notification: Notification) {
+    @objc func updatePlaybackTimer(_ notification: Notification) {
         let userInfo: NSDictionary = (notification as NSNotification).userInfo! as NSDictionary
         if(userInfo["event"] as! String == "onTime") {
-            var text: String = String(format: "%.1f", userInfo["position"] as! Double) + "/"
+            var text: String = String(format: "%.1f", userInfo["position"] as! Double) + " / "
             text += String(userInfo["duration"] as! Int)
             
             self.playbackTime.text = text
@@ -209,7 +212,7 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
     
     //MARK: JW Player Delegates
     func onTime(_ position: Double, ofDuration duration: Double) {
-        var text: String = String(format: "%.1f", position) + "/"
+        var text: String = String(format: "%.1f", position) + " / "
         text += String(format: "%.1f", duration)
         self.playbackTime.text = text
     }

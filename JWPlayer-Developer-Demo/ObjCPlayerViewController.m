@@ -7,7 +7,7 @@
 //
 
 #import "ObjCPlayerViewController.h"
-#import <JWPlayer-iOS-SDK/JWPlayerController.h>
+#import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface ObjCPlayerViewController () <JWPlayerDelegate>
 
@@ -15,6 +15,8 @@
 @property (nonatomic) IBOutlet UITextView *callbacksView;
 @property (nonatomic) IBOutlet UILabel *playbackTime;
 @property (nonatomic) IBOutlet UIButton *playButton;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerHeightConstraint;
 
 @end
 
@@ -103,9 +105,11 @@
     self.player.delegate = self;
     
     CGRect frame = self.view.bounds;
+
+    self.playerHeightConstraint.constant = frame.size.height / 2 - (44 + 64);
+    
     frame.origin.y = 64;
-    frame.size.height /= 2;
-    frame.size.height -= 44 + 64;
+    frame.size.height = self.playerHeightConstraint.constant;
     self.player.view.frame = frame;
     self.player.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     
@@ -117,7 +121,7 @@
 //MARK: JW Player Delegates
 -(void)onTime:(double)position ofDuration:(double)duration
 {
-    NSString *playbackPosition = [NSString stringWithFormat:@"%.01f/.01%f", position, duration];
+    NSString *playbackPosition = [NSString stringWithFormat:@"%.01f / %.01f", position, duration];
     self.playbackTime.text = playbackPosition;
 }
 -(void)onPlay
