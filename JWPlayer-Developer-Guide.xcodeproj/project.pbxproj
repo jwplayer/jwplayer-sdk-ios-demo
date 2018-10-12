@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AE35AC821120F1E00B352A7 /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE35AC721120F1E00B352A7 /* JWPlayer_iOS_SDK.framework */; };
+		1AE35AC921120F1E00B352A7 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE35AC721120F1E00B352A7 /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
 		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
 		6A7D08FA1A5DAFD600C4E749 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* ViewController.m */; };
@@ -19,7 +21,22 @@
 		97B533E21DA80A9000856F28 /* jwlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B533E11DA80A9000856F28 /* jwlogo.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1AE35ACA21120F1E00B352A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AE35AC921120F1E00B352A7 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1AE35AC721120F1E00B352A7 /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-Developer-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-Developer-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE35AC821120F1E00B352A7 /* JWPlayer_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +70,7 @@
 		6A7D08E51A5DAFD600C4E749 = {
 			isa = PBXGroup;
 			children = (
+				1AE35AC721120F1E00B352A7 /* JWPlayer_iOS_SDK.framework */,
 				6A7D08F01A5DAFD600C4E749 /* JWPlayer-Developer-Demo */,
 				6A7D08EF1A5DAFD600C4E749 /* Products */,
 				9769E5CB1DA8034E00BEF7FF /* Frameworks */,
@@ -121,6 +140,7 @@
 				6A7D08EA1A5DAFD600C4E749 /* Sources */,
 				6A7D08EB1A5DAFD600C4E749 /* Frameworks */,
 				6A7D08EC1A5DAFD600C4E749 /* Resources */,
+				1AE35ACA21120F1E00B352A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,7 +164,7 @@
 				TargetAttributes = {
 					6A7D08ED1A5DAFD600C4E749 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 6775TJNQT2;
+						DevelopmentTeam = WX87M56X5N;
 						LastSwiftMigration = 0930;
 					};
 				};
@@ -329,7 +349,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6775TJNQT2;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,7 +380,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6775TJNQT2;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

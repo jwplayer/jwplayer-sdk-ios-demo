@@ -55,14 +55,16 @@
                        [JWSource sourceWithFile:@"http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4" label:@"270p Streaming"],
                        [JWSource sourceWithFile:@"http://content.bitsontherun.com/videos/bkaovAYt-DZ7jSYgM.mp4" label:@"720p Streaming"]];
     
-    config.image = @"http://content.bitsontherun.com/thumbs/bkaovAYt-480.jpg";
-    config.title = @"JWPlayer Demo";
+    config.image    = @"http://content.bitsontherun.com/thumbs/bkaovAYt-480.jpg";
+    config.title    = @"JWPlayer Demo";
     config.controls = YES;  //default
-    config.repeat = NO;   //default
-    config.premiumSkin = JWPremiumSkinRoundster;
+    config.repeat   = NO;   //default
+    
+    /* Removed in v3.0 */
+//    config.premiumSkin = JWPremiumSkinRoundster;
     
     /* custom css skin can be applied using */
-    //     config.cssSkin = @"http:p.jwpcdn.com/iOS/Skins/ethan.css";
+    //     config.skin.url = @"http:p.jwpcdn.com/iOS/Skins/ethan.css";
     
     //MARK: JWTrack (captions)
     config.tracks = @[[JWTrack trackWithFile:@"http://playertest.longtailvideo.com/caption-files/sintel-en.srt" label:@"English" isDefault:YES],
@@ -72,34 +74,36 @@
     
     //MARK: JWCaptionStyling
     JWCaptionStyling* captionStyling = [JWCaptionStyling new];
-    captionStyling.font = [UIFont fontWithName:@"Zapfino" size:20];
-    captionStyling.edgeStyle = raised;
-    captionStyling.windowColor = [UIColor orangeColor];
-    captionStyling.backgroundColor = [UIColor colorWithRed:0.3 green:0.6 blue:0.3 alpha:0.7];
-    captionStyling.fontColor = [UIColor blueColor];
-    config.captionStyling = captionStyling;
+    captionStyling.font              = [UIFont fontWithName:@"Zapfino" size:20];
+    captionStyling.edgeStyle         = JWEdgeStyleRaised;
+    captionStyling.windowColor       = [UIColor orangeColor];
+    captionStyling.backgroundColor   = [UIColor colorWithRed:0.3 green:0.6 blue:0.3 alpha:0.7];
+    captionStyling.color             = [UIColor blueColor];
+    config.captions                  = captionStyling;
     
     //MARK: JWAdConfig
     JWAdConfig *adConfig = [JWAdConfig new];
-    adConfig.adMessage = @"Ad duration countdown xx";
+    adConfig.adMessage   = @"Ad duration countdown xx";
     adConfig.skipMessage = @"Skip in xx";
-    adConfig.skipText = @"Move on";
-    adConfig.skipOffset = 3;
-    adConfig.adClient = vastPlugin;
-    config.adConfig = adConfig;
+    adConfig.skipText    = @"Move on";
+    adConfig.skipOffset  = 3;
+    adConfig.client      = JWAdClientVast;
+    
     
 //    config.autostart = YES;
     
     //MARK: Waterfall Tags
     NSArray *waterfallTags = @[@"bad tag", @"another bad tag", @"http://playertest.longtailvideo.com/adtags/preroll_newer.xml"];
-    
+
     //MARK: JWAdBreak
-    config.adSchedule = @[[JWAdBreak adBreakWithTags:waterfallTags offset:@"pre"],
+    adConfig.schedule = @[[JWAdBreak adBreakWithTags:waterfallTags offset:@"pre"],
                           [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"0:00:05"],
                           [JWAdBreak adBreakWithTag:@"http://demo.jwplayer.com/player-demos/assets/overlay.xml" offset:@"7" nonLinear:YES],
-//                          [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"5"],
+                          //                          [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"5"],
                           [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"50%"],
                           [JWAdBreak adBreakWithTag:@"http://playertest.longtailvideo.com/adtags/preroll_newer.xml" offset:@"post"]];
+    
+    config.advertising = adConfig;
     
     self.player = [[JWPlayerController alloc] initWithConfig:config];
     self.player.delegate = self;
@@ -108,88 +112,89 @@
 
     self.playerHeightConstraint.constant = frame.size.height / 2 - (44 + 64);
     
-    frame.origin.y = 64;
-    frame.size.height = self.playerHeightConstraint.constant;
-    self.player.view.frame = frame;
+    frame.origin.y                    = 64;
+    frame.size.height                 = self.playerHeightConstraint.constant;
+    self.player.view.frame            = frame;
     self.player.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     
-    self.player.openSafariOnAdClick = YES;
+    self.player.openSafariOnAdClick        = YES;
     self.player.forceFullScreenOnLandscape = YES;
     self.player.forceLandscapeOnFullScreen = YES;
 }
 
 //MARK: JW Player Delegates
--(void)onTime:(double)position ofDuration:(double)duration
+- (void)onTime:(JWEvent<JWTimeEvent> *)event
 {
-    NSString *playbackPosition = [NSString stringWithFormat:@"%.01f / %.01f", position, duration];
+    NSString *playbackPosition = [NSString stringWithFormat:@"%.01f / %.01f", event.position, event.duration];
     self.playbackTime.text = playbackPosition;
 }
--(void)onPlay
+
+- (void)onPlay:(JWEvent<JWStateChangeEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onPause
+- (void)onPause:(JWEvent<JWStateChangeEvent> *)event
 {
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
 }
 
--(void)onBuffer
+- (void)onBuffer:(JWEvent<JWBufferEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onIdle
+- (void)onIdle:(JWEvent<JWStateChangeEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onReady
+- (void)onReady:(JWEvent<JWReadyEvent> *)event
 {
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
 }
 
--(void)onComplete
+- (void)onComplete
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onAdSkipped:(NSString *)tag
+- (void)onAdSkipped:(JWAdEvent<JWAdDetailEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onAdComplete:(NSString *)tag
+- (void)onAdComplete:(JWAdEvent<JWAdDetailEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onAdImpression:(NSString *)tag
+- (void)onAdImpression:(JWAdEvent<JWAdImpressionEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onBeforePlay
+- (void)onBeforePlay
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onBeforeComplete
+- (void)onBeforeComplete
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onAdPlay:(NSString *)tag
+- (void)onAdPlay:(JWAdEvent<JWAdStateChangeEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
--(void)onAdPause:(NSString *)tag
+- (void)onAdPause:(JWAdEvent<JWAdStateChangeEvent> *)event
 {
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
 }
 
--(void)onAdError:(NSError *)error
+- (void)onError:(JWEvent<JWErrorEvent> *)event
 {
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
@@ -198,9 +203,12 @@
 
 - (IBAction)play:(id)sender
 {
-    NSLog(@"state %@", self.player.playerState);
-    if([self.player.playerState isEqualToString:@"PAUSED"] ||
-       [self.player.playerState isEqualToString:@"IDLE"]) {
+    
+    NSLog(@"state %i", self.player.state);
+    
+    if(self.player.state == JWPlayerStatePaused ||
+       self.player.state == JWPlayerStateIdle)
+    {
         [self.player play];
         [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
     } else {

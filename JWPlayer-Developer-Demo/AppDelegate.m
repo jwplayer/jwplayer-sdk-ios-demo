@@ -7,11 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSLog(@"SDK version: %@", JWPlayerController.SDKVersion);
+    
+    return YES;
+}
 
 @end
