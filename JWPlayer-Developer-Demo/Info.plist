@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>JWPlayerKey</key>
-	<string></string>
+	<string>YOUR_LICENSE_KEY</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

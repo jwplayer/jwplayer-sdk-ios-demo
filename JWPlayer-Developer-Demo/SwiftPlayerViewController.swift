@@ -278,4 +278,10 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
     func onAdError(_ event: (JWAdEvent & JWErrorEvent)!) {
         playButton?.setTitle("Pause", for: UIControlState())
     }
+    
+    func onFullscreen(_ event: (JWEvent & JWFullscreenEvent)!) {
+        if(!event.fullscreen){
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        }
+    }
 }
