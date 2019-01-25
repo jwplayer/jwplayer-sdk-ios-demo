@@ -199,6 +199,13 @@
     [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
 }
 
+- (void)onFullscreen:(JWEvent<JWFullscreenEvent> *)event{
+    if(!event.fullscreen){
+        [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationPortrait) forKey:@"orientation"];
+        [UINavigationController attemptRotationToDeviceOrientation];
+    }
+}
+
 #pragma mark - IBActions
 
 - (IBAction)play:(id)sender
