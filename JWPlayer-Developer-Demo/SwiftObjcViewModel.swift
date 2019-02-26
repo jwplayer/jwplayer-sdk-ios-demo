@@ -117,19 +117,22 @@ extension SwiftObjcViewModel /* Notifications & Output */ {
         
         outputText += "\n" + callbackEventName
         outputDetailsText += "\n=+=+=\n" + userInfo.prettyPrint()
-        outputTextView?.scrollToBottom()
     }
     
     
     private func setupOutputKVO() {
-        observations += [observe(\.outputText, options: [.old, .new], changeHandler: { (viewModel, changes) in
-                viewModel.outputTextView?.text = changes.newValue })]
+        observations += [observe(\.outputText, options: .new, changeHandler: { (viewModel, changes) in
+                viewModel.outputTextView?.text = changes.newValue
+            self.outputTextView?.scrollToBottom()
+        })]
     }
     
     private func setupDetailsOutputKVO() {
         // KVO to update UI
-        observations += [observe(\.outputDetailsText, changeHandler: { (viewModel, changes) in
-                viewModel.outputDetailsTextView?.text = changes.newValue })]
+        observations += [observe(\.outputDetailsText, options: .new, changeHandler: { (viewModel, changes) in
+                viewModel.outputDetailsTextView?.text = changes.newValue
+            self.outputDetailsTextView?.scrollToBottom()
+        })]
     }
 }
 
@@ -146,5 +149,7 @@ extension UIScrollView {
 //        contentOffset = bottomOffset
     }
     
-    var bottomOffset: CGPoint { return CGPoint(x: 0, y: contentSize.height - bounds.size.height + contentInset.bottom) }
+    var bottomOffset: CGPoint {
+        let newY = max(0, contentSize.height - bounds.size.height + contentInset.bottom)
+        return CGPoint(x: 0, y: newY) }
 }
