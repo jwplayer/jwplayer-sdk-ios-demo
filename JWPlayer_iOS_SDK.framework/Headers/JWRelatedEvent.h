@@ -55,6 +55,6 @@
 /*!
  Ordinal position of the related video that has been chosen.
  */
-@property (nonatomic) NSUInteger position;
+@property (nonatomic) NSInteger position;
 
 @end
