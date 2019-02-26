@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* SwiftViewController.swift */; };
 		118E8ED12225A147006D0685 /* SwiftObjcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */; };
+		118E8ED32225A7F6006D0685 /* Dictionary+PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */; };
+		118E8ED52225AAFE006D0685 /* PrettyPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED42225AAFE006D0685 /* PrettyPrinter.swift */; };
 		118E8ED62225AC6C006D0685 /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */; };
 		118E8ED72225AC6C006D0685 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
@@ -40,6 +42,9 @@
 /* Begin PBXFileReference section */
 		118E8ECC22259B43006D0685 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
+		118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObjcViewModel.swift; sourceTree = "<group>"; };
+		118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PrettyPrint.swift"; sourceTree = "<group>"; };
+		118E8ED42225AAFE006D0685 /* PrettyPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrinter.swift; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-Developer-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-Developer-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,8 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				8AEA39F71AFAAE22008A8C8A /* SwiftPlayerViewController.swift */,
+				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
+				118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */,
 				8AEA39F81AFAAE22008A8C8A /* ObjCPlayerViewController.h */,
 				8AEA39F91AFAAE22008A8C8A /* ObjCPlayerViewController.m */,
+				118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */,
+				118E8ED42225AAFE006D0685 /* PrettyPrinter.swift */,
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
 				6A7D08F11A5DAFD600C4E749 /* Supporting Files */,
 			);
@@ -210,11 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118E8ED52225AAFE006D0685 /* PrettyPrinter.swift in Sources */,
+				118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */,
 				6A7D08FA1A5DAFD600C4E749 /* ViewController.m in Sources */,
 				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
 				8AEA39FB1AFAAE22008A8C8A /* ObjCPlayerViewController.m in Sources */,
 				6A7D08F41A5DAFD600C4E749 /* main.m in Sources */,
+				118E8ED32225A7F6006D0685 /* Dictionary+PrettyPrint.swift in Sources */,
 				8AEA39FA1AFAAE22008A8C8A /* SwiftPlayerViewController.swift in Sources */,
+				118E8ED12225A147006D0685 /* SwiftObjcViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
