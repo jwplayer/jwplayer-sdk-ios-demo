@@ -10,6 +10,7 @@ import Foundation
 
 let sdkVerMsg = "*****\n SDK Version: \(JWPlayerController.sdkVersion() ?? "unavailable")\n*****\n"
 
+@objcMembers
 class SwiftObjcViewModel: NSObject {
     public static var shared = SwiftObjcViewModel()
     private override init() {
@@ -17,7 +18,8 @@ class SwiftObjcViewModel: NSObject {
         // receive model updates
         setupNotifications()
     }
-    
+    /// UI counter for callbacks (see extension).
+    var callNumber = 0
     var kvoObservations = [NSKeyValueObservation]()
     
     deinit {
@@ -105,8 +107,9 @@ extension SwiftObjcViewModel /* Notifications & Output */ {
         
         if callbackEventName == "onTime" {return}
         
-        outputText += "\n" + callbackEventName
-        outputDetailsText += "\n=+=+=\n" + userInfo.prettyPrint()
+        callNumber += 1
+        outputText += "\n\(callNumber). " + callbackEventName
+        outputDetailsText += "\n=+=+=\n\(callNumber).\n" + userInfo.prettyPrint()
     }
     
     // MARK: KVO to update UI
@@ -172,7 +175,7 @@ fileprivate struct Endpoints {
     static let waterfallTags = ["bad tag", "another bad tag", "http://playertest.longtailvideo.com/adtags/preroll_newer.xml"]
     
     //MARK: Ads: AdSchedule
-    static let schedule = [JWAdBreak(tags:waterfallTags as! [String], offset:"1"),
+    static let schedule = [JWAdBreak(tags:waterfallTags, offset:"1"),
                          JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"5"),
                          //                             JWAdBreak(tag: "http://demo.jwplayer.com/player-demos/assets/overlay.xml", offset: "7", nonLinear: true),
         JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"0:00:05"),

@@ -36,7 +36,7 @@ class SwiftPlayerViewController: UIViewController, JWPlayerDelegate {
         edgesForExtendedLayout =  UIRectEdge()
         view.backgroundColor = UIColor.white
         
-        automaticallyAdjustsScrollViewInsets = false
+        //TODO: adjust contentInsetAdjustmentBehavior ??
         
         super.viewDidLoad()
     }

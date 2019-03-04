@@ -102,6 +102,9 @@
                                 <state key="normal" title="Objective C">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="RuL-lc-W7i" kind="show" id="IIo-Bk-KVP"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="icon-15.png" translatesAutoresizingMaskIntoConstraints="NO" id="0z9-ym-Y8C">
                                 <rect key="frame" x="157.5" y="164.5" width="60" height="60"/>
@@ -165,6 +168,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02x-hW-Htu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-583" y="-168"/>
+        </scene>
+        <!--Objective-C Implementation-->
+        <scene sceneID="PbL-a7-P6t">
+            <objects>
+                <viewController id="RuL-lc-W7i" customClass="ObjCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ypG-U5-NO4"/>
+                        <viewControllerLayoutGuide type="bottom" id="dbJ-gK-4ge"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AV1-vM-Yjp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiL-gt-ycz">
+                                <rect key="frame" x="0.0" y="72" width="375" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tiL-gt-ycz" secondAttribute="height" multiplier="16:9" id="cch-GR-GOe"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-AA-CLH">
+                                <rect key="frame" x="16" y="291" width="343" height="324"/>
+                                <color key="backgroundColor" red="0.92268605940000004" green="0.99499108790000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TET-9u-I3c">
+                                <rect key="frame" x="16" y="291" width="343" height="324"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tiL-gt-ycz" firstAttribute="centerX" secondItem="AV1-vM-Yjp" secondAttribute="centerX" id="8SG-3r-1IP"/>
+                            <constraint firstItem="hpU-AA-CLH" firstAttribute="centerY" secondItem="TET-9u-I3c" secondAttribute="centerY" id="8YU-B5-xE5"/>
+                            <constraint firstItem="TET-9u-I3c" firstAttribute="top" secondItem="tiL-gt-ycz" secondAttribute="bottom" constant="8" symbolic="YES" id="Kfb-KL-W1d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TET-9u-I3c" secondAttribute="trailing" id="Lv0-6O-UEQ"/>
+                            <constraint firstItem="hpU-AA-CLH" firstAttribute="height" secondItem="TET-9u-I3c" secondAttribute="height" id="MZl-f4-bJK"/>
+                            <constraint firstItem="tiL-gt-ycz" firstAttribute="width" secondItem="AV1-vM-Yjp" secondAttribute="width" id="NNE-mr-MSN"/>
+                            <constraint firstItem="TET-9u-I3c" firstAttribute="leading" secondItem="AV1-vM-Yjp" secondAttribute="leadingMargin" id="PLX-d3-jdZ"/>
+                            <constraint firstItem="hpU-AA-CLH" firstAttribute="centerX" secondItem="TET-9u-I3c" secondAttribute="centerX" id="jZK-8G-XXd"/>
+                            <constraint firstItem="dbJ-gK-4ge" firstAttribute="top" secondItem="TET-9u-I3c" secondAttribute="bottom" constant="8" symbolic="YES" id="lCC-zS-9C0"/>
+                            <constraint firstItem="tiL-gt-ycz" firstAttribute="top" secondItem="ypG-U5-NO4" secondAttribute="bottom" constant="8" symbolic="YES" id="lzp-oh-R1r"/>
+                            <constraint firstItem="hpU-AA-CLH" firstAttribute="width" secondItem="TET-9u-I3c" secondAttribute="width" id="rAk-ZR-bN6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Objective-C Implementation" id="8GH-YE-GQy">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="57R-g3-Oaq">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="EQA-BT-Xv6">
+                                <rect key="frame" x="308" y="6.5" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="outputToggleTapped:" destination="RuL-lc-W7i" eventType="valueChanged" id="k5W-Dt-xJ8"/>
+                                </connections>
+                            </switch>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callbacksDetailsTextView" destination="hpU-AA-CLH" id="i94-bQ-Ip5"/>
+                        <outlet property="callbacksTextView" destination="TET-9u-I3c" id="oAm-In-2BI"/>
+                        <outlet property="playerContainerView" destination="tiL-gt-ycz" id="PL7-hT-3HU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhQ-Ou-e9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="634"/>
         </scene>
     </scenes>
     <resources>

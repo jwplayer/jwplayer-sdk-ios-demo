@@ -10,8 +10,9 @@
 #import "JWPlayer_Developer_Guide-Swift.h"
 
 @interface ObjCViewController ()
-
+    
 @property (strong, nonatomic) SwiftObjcViewModel *viewModel;
+    
 @property (weak, nonatomic) IBOutlet UITextView *callbacksTextView;
 @property (weak, nonatomic) IBOutlet UITextView *callbacksDetailsTextView;
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
@@ -20,33 +21,37 @@
 
 @implementation ObjCViewController
 
+    
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    self.viewModel = SwiftObjcViewModel.shared;
     
+    self.viewModel.outputTextView = self.callbacksTextView;
+    self.viewModel.outputDetailsTextView = self.callbacksDetailsTextView;
+}
     
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self layoutPlayerView:self.viewModel.player.view];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    
-}
+    - (void)viewWillDisappear:(BOOL)animated
+    {
+        [self.viewModel.player pause];
+        [super viewWillDisappear:animated];
+    }
 
-- (void)layout:(UIView *)playerView
+- (void)layoutPlayerView:(UIView *)playerView
 {
     [self.playerContainerView addSubview:playerView];
     playerView.frame = self.playerContainerView.bounds;
     playerView.autoresizingMask = UIViewAutoresizingFlexibleWidth & UIViewAutoresizingFlexibleHeight;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+- (IBAction)outputToggleTapped:(UISwitch *)sender {
+    [self.view bringSubviewToFront:
+     (sender.isOn ? self.callbacksDetailsTextView : self.callbacksTextView)];
 }
-*/
+    
 
+    
 @end
