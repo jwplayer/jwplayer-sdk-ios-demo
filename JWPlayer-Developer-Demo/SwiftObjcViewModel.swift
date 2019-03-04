@@ -8,28 +8,28 @@
 
 import Foundation
 
-let sdkVer = "*****\n SDK Version: \(JWPlayerController.sdkVersion() ?? "unavailable")\n*****\n"
+let sdkVerMsg = "*****\n SDK Version: \(JWPlayerController.sdkVersion() ?? "unavailable")\n*****\n"
 
 class SwiftObjcViewModel: NSObject {
-    static var shared = SwiftObjcViewModel()
+    public static var shared = SwiftObjcViewModel()
     private override init() {
         super.init()
         // receive model updates
         setupNotifications()
     }
     
-    var observations = [NSKeyValueObservation]()
+    var kvoObservations = [NSKeyValueObservation]()
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
     lazy var player = newPlayer()
-    var outputTextView: UITextView? { willSet { newValue?.text = outputText; setupOutputKVO() }}
-    var outputDetailsTextView: UITextView? { willSet { newValue?.text = outputDetailsText; setupDetailsOutputKVO() }}
+    var outputTextView: UITextView? { didSet { setupOutputKVO() }}
+    var outputDetailsTextView: UITextView? { didSet { setupDetailsOutputKVO() }}
     
-    @objc dynamic var outputText = sdkVer
-    @objc dynamic var outputDetailsText = sdkVer
+    @objc dynamic var outputText        = sdkVerMsg
+    @objc dynamic var outputDetailsText = sdkVerMsg
     
     private func newPlayer() -> JWPlayerController {
         //MARK: JWConfig
@@ -39,19 +39,15 @@ class SwiftObjcViewModel: NSObject {
         
         
         let config: JWConfig = JWConfig()
-        config.sources = [JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-injeKYZS.mp4", label: "180p Streaming", isDefault: true),
-                          JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4", label: "270p Streaming"),
-                          JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-DZ7jSYgM.mp4", label: "720p Streaming")]
+        config.sources = Endpoints.sources
         
-        config.image = "http://content.bitsontherun.com/thumbs/bkaovAYt-480.jpg"
+        config.image = Endpoints.sourceImage
         config.title = "JWPlayer Demo"
         config.controls = true  //default
         config.`repeat` = false   //default
         
         //MARK: JWTrack (captions)
-        config.tracks = [JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-en.srt", label: "English", isDefault: true),
-                         JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-sp.srt", label: "Spanish"),
-                         JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-ru.srt", label: "Russian")]
+        config.tracks = Endpoints.tracks
         
         //MARK: JWCaptionStyling
         let captionStyling: JWCaptionStyling = JWCaptionStyling()
@@ -71,17 +67,11 @@ class SwiftObjcViewModel: NSObject {
         adConfig.client      = JWAdClientVast
         
         //MARK: Ads: Waterfall Tags
-        let waterfallTags: NSArray = ["bad tag", "another bad tag", "http://playertest.longtailvideo.com/adtags/preroll_newer.xml"]
+        let waterfallTags = Endpoints.waterfallTags
         
         //MARK: Ads: AdSchedule
-        adConfig.schedule = [JWAdBreak(tags:waterfallTags as! [String], offset:"1"),
-                             JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"5"),
-                             //                             JWAdBreak(tag: "http://demo.jwplayer.com/player-demos/assets/overlay.xml", offset: "7", nonLinear: true),
-            JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"0:00:05"),
-            JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"50%"),
-            JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"post")]
-        
-        
+        adConfig.schedule = Endpoints.schedule
+                
         config.advertising   = adConfig
         
         return JWPlayerController(config: config, delegate: self)
@@ -119,37 +109,73 @@ extension SwiftObjcViewModel /* Notifications & Output */ {
         outputDetailsText += "\n=+=+=\n" + userInfo.prettyPrint()
     }
     
-    
+    // MARK: KVO to update UI
     private func setupOutputKVO() {
-        observations += [observe(\.outputText, options: .new, changeHandler: { (viewModel, changes) in
+        outputTextView?.text = outputText;
+        
+        kvoObservations += [observe(\.outputText, options: .new, changeHandler: { (viewModel, changes) in
                 viewModel.outputTextView?.text = changes.newValue
             self.outputTextView?.scrollToBottom()
         })]
     }
     
     private func setupDetailsOutputKVO() {
-        // KVO to update UI
-        observations += [observe(\.outputDetailsText, options: .new, changeHandler: { (viewModel, changes) in
+        outputDetailsTextView?.text = outputDetailsText;
+        
+        kvoObservations += [observe(\.outputDetailsText, options: .new, changeHandler: { (viewModel, changes) in
                 viewModel.outputDetailsTextView?.text = changes.newValue
             self.outputDetailsTextView?.scrollToBottom()
         })]
     }
 }
 
+// Optional
 extension SwiftObjcViewModel: JWPlayerDelegate {
     // Convenience callbacks as an alternative to
     // notification subscriptions can go here.
-    
 }
 
 
-extension UIScrollView {
+// Helpers
+
+fileprivate extension UIScrollView {
     func scrollToBottom() {
         setContentOffset(bottomOffset, animated: true)
-//        contentOffset = bottomOffset
     }
     
     var bottomOffset: CGPoint {
         let newY = max(0, contentSize.height - bounds.size.height + contentInset.bottom)
         return CGPoint(x: 0, y: newY) }
+}
+
+protocol Textual {
+    var text: String! { get set }
+}
+
+extension UITextView: Textual {}
+
+
+
+fileprivate struct Endpoints {
+    static let sources = [JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-injeKYZS.mp4", label: "180p Streaming", isDefault: true),
+                      JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4", label: "270p Streaming"),
+                      JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-DZ7jSYgM.mp4", label: "720p Streaming")].compactMap({$0})
+    
+    static let sourceImage = "http://content.bitsontherun.com/thumbs/bkaovAYt-480.jpg"
+
+    //MARK: JWTrack (captions)
+    static let tracks = [JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-en.srt", label: "English", isDefault: true),
+                     JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-sp.srt", label: "Spanish"),
+                     JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-ru.srt", label: "Russian")].compactMap({$0})
+    
+    
+    static let waterfallTags = ["bad tag", "another bad tag", "http://playertest.longtailvideo.com/adtags/preroll_newer.xml"]
+    
+    //MARK: Ads: AdSchedule
+    static let schedule = [JWAdBreak(tags:waterfallTags as! [String], offset:"1"),
+                         JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"5"),
+                         //                             JWAdBreak(tag: "http://demo.jwplayer.com/player-demos/assets/overlay.xml", offset: "7", nonLinear: true),
+        JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"0:00:05"),
+        JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"50%"),
+        JWAdBreak(tag: "http://playertest.longtailvideo.com/adtags/preroll_newer.xml", offset:"post")].compactMap({$0})
 }
