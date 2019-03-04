@@ -19,6 +19,15 @@
     
     NSLog(@"SDK version: %@", JWPlayerController.SDKVersion);
     
+    NSError *error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback                                                             withOptions:AVAudioSessionCategoryOptionMixWithOthers error:&error];
+    
+    [[AVAudioSession sharedInstance]setActive:YES error:&error];
+    
+    if (error) {
+        NSLog(@"** ERROR: %@", error.localizedDescription);
+    }
+    
     return YES;
 }
 
