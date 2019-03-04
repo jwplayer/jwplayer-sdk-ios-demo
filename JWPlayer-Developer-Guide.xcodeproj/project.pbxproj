@@ -220,7 +220,7 @@
 					6A7D08ED1A5DAFD600C4E749 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = WX87M56X5N;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -427,8 +427,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-Developer-Demo/JWPlayer-Developer-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -457,8 +456,7 @@
 				PRODUCT_NAME = "JWPlayer-Developer-Guide";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-Developer-Demo/JWPlayer-Developer-Demo-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

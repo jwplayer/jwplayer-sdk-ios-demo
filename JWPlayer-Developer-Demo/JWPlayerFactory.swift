@@ -9,7 +9,7 @@
 import Foundation
 
 class JWPlayerFactory {
-    static func newPlayer() -> JWPlayerController {
+    static func newPlayer(delegate: JWPlayerDelegate? = nil) -> JWPlayerController {
         //MARK: JWConfig
         
         /* JWConfig can be created with a single file reference */
@@ -52,6 +52,6 @@ class JWPlayerFactory {
         
         config.advertising   = adConfig
         
-        return JWPlayerController(config: config, delegate: self)
+        return JWPlayerController(config: config, delegate: delegate)
     }
 }

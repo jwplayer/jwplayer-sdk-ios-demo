@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ObjCPlayerViewController.h"
 #import "JWPlayer_Developer_Guide-Swift.h"
 
 @interface ViewController ()
