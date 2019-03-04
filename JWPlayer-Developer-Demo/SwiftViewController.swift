@@ -28,6 +28,11 @@ class SwiftViewController: UIViewController {
         layout(playerView: viewModel.player.view)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        viewModel.player.pause()
+        super.viewWillDisappear(animated)
+    }
+    
     func layout(playerView: UIView) {
         playerContainerView.addSubview(playerView)
         playerView.frame = playerContainerView.bounds
