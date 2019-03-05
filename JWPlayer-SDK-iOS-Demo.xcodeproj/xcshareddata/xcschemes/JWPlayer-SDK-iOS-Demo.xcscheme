@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-               BuildableName = "JWPlayer-Developer-Guide.app"
-               BlueprintName = "JWPlayer-Developer-Guide"
-               ReferencedContainer = "container:JWPlayer-Developer-Guide.xcodeproj">
+               BuildableName = "JWPlayer-SDK-iOS-Demo.app"
+               BlueprintName = "JWPlayer-SDK-iOS-Demo"
+               ReferencedContainer = "container:JWPlayer-SDK-iOS-Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A7D09061A5DAFD600C4E749"
-               BuildableName = "JWPlayer-Developer-DemoTests.xctest"
-               BlueprintName = "JWPlayer-Developer-DemoTests"
-               ReferencedContainer = "container:JWPlayer-Developer-Guide.xcodeproj">
+               BuildableName = "JWPlayer-SDK-iOS-DemoTests.xctest"
+               BlueprintName = "JWPlayer-SDK-iOS-DemoTests"
+               ReferencedContainer = "container:JWPlayer-SDK-iOS-Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A7D09061A5DAFD600C4E749"
-               BuildableName = "JWPlayer-Developer-DemoTests.xctest"
-               BlueprintName = "JWPlayer-Developer-DemoTests"
-               ReferencedContainer = "container:JWPlayer-Developer-Guide.xcodeproj">
+               BuildableName = "JWPlayer-SDK-iOS-DemoTests.xctest"
+               BlueprintName = "JWPlayer-SDK-iOS-DemoTests"
+               ReferencedContainer = "container:JWPlayer-SDK-iOS-Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWPlayer-Developer-Guide.app"
-            BlueprintName = "JWPlayer-Developer-Guide"
-            ReferencedContainer = "container:JWPlayer-Developer-Guide.xcodeproj">
+            BuildableName = "JWPlayer-SDK-iOS-Demo.app"
+            BlueprintName = "JWPlayer-SDK-iOS-Demo"
+            ReferencedContainer = "container:JWPlayer-SDK-iOS-Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWPlayer-Developer-Guide.app"
-            BlueprintName = "JWPlayer-Developer-Guide"
-            ReferencedContainer = "container:JWPlayer-Developer-Guide.xcodeproj">
+            BuildableName = "JWPlayer-SDK-iOS-Demo.app"
+            BlueprintName = "JWPlayer-SDK-iOS-Demo"
+            ReferencedContainer = "container:JWPlayer-SDK-iOS-Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -106,9 +106,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWPlayer-Developer-Guide.app"
-            BlueprintName = "JWPlayer-Developer-Guide"
-            ReferencedContainer = "container:JWPlayer-Developer-Guide.xcodeproj">
+            BuildableName = "JWPlayer-SDK-iOS-Demo.app"
+            BlueprintName = "JWPlayer-SDK-iOS-Demo"
+            ReferencedContainer = "container:JWPlayer-SDK-iOS-Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:JWPlayer-Developer-Guide.xcodeproj">
+      location = "self:JWPlayer-SDK-iOS-Demo.xcodeproj">
    </FileRef>
 </Workspace>

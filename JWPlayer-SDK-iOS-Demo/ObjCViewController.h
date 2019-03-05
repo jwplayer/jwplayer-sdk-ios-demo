@@ -1,6 +1,6 @@
 //
 //  ObjCViewController.h
-//  JWPlayer-Developer-Guide
+//  JWPlayer-SDK-iOS-Demo
 //
 //  Created by Amitai Blickstein on 2/26/19.
 //  Copyright © 2019 JWPlayer. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  SwiftViewController.swift
-//  JWPlayer-Developer-Guide
+//  JWPlayer-SDK-iOS-Demo
 //
 //  Created by Amitai Blickstein on 2/26/19.
 //  Copyright © 2019 JWPlayer. All rights reserved.
@@ -40,8 +40,7 @@ class SwiftViewController: UIViewController {
     }
     
     @IBAction func outputToggleTapped(_ sender: UISwitch) {
-        view.bringSubview(toFront:
-        (sender.isOn ? callbacksDetailsTextView : callbacksTextView))
+        view.bringSubviewToFront((sender.isOn ? callbacksDetailsTextView : callbacksTextView))
     }
     
 }

@@ -1,6 +1,6 @@
 //
 //  JWPlayerFactory.swift
-//  JWPlayer-Developer-Guide
+//  JWPlayer-SDK-iOS-Demo
 //
 //  Created by Amitai Blickstein on 3/4/19.
 //  Copyright © 2019 JWPlayer. All rights reserved.

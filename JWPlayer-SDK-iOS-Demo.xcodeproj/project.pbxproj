@@ -10,7 +10,6 @@
 		118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* SwiftViewController.swift */; };
 		118E8ED12225A147006D0685 /* SwiftObjcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */; };
 		118E8ED32225A7F6006D0685 /* Dictionary+PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */; };
-		118E8ED52225AAFE006D0685 /* PrettyPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED42225AAFE006D0685 /* PrettyPrinter.swift */; };
 		118E8ED62225AC6C006D0685 /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */; };
 		118E8ED72225AC6C006D0685 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED92225BE4E006D0685 /* ObjCViewController.m */; };
@@ -45,12 +44,11 @@
 		118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
 		118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObjcViewModel.swift; sourceTree = "<group>"; };
 		118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PrettyPrint.swift"; sourceTree = "<group>"; };
-		118E8ED42225AAFE006D0685 /* PrettyPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrinter.swift; sourceTree = "<group>"; };
 		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		1190585A222DB75E0058D653 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		1190585C222DB9D70058D653 /* JWPlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPlayerFactory.swift; sourceTree = "<group>"; };
-		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-Developer-Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-Developer-Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-SDK-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,7 +59,7 @@
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A7D09011A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6A80951A1A5F028400F8B4C6 /* icon-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-15.png"; sourceTree = "<group>"; };
-		8AEA39F61AFAAE22008A8C8A /* JWPlayer-Developer-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWPlayer-Developer-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWPlayer-SDK-iOS-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		97B533E11DA80A9000856F28 /* jwlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jwlogo.png; path = ../jwlogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +80,6 @@
 			children = (
 				1190585C222DB9D70058D653 /* JWPlayerFactory.swift */,
 				1190585A222DB75E0058D653 /* Endpoints.swift */,
-				118E8ED42225AAFE006D0685 /* PrettyPrinter.swift */,
 				118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */,
 			);
 			name = "Supporting Code";
@@ -123,7 +120,7 @@
 		6A7D08E51A5DAFD600C4E749 = {
 			isa = PBXGroup;
 			children = (
-				6A7D08F01A5DAFD600C4E749 /* JWPlayer-Developer-Demo */,
+				6A7D08F01A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo */,
 				6A7D08EF1A5DAFD600C4E749 /* Products */,
 				9769E5CB1DA8034E00BEF7FF /* Frameworks */,
 			);
@@ -132,12 +129,12 @@
 		6A7D08EF1A5DAFD600C4E749 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A7D08EE1A5DAFD600C4E749 /* JWPlayer-Developer-Guide.app */,
+				6A7D08EE1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6A7D08F01A5DAFD600C4E749 /* JWPlayer-Developer-Demo */ = {
+		6A7D08F01A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				11905860222DBAFC0058D653 /* Controllers */,
@@ -148,7 +145,7 @@
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
 				6A7D08F11A5DAFD600C4E749 /* iBoilerPlate */,
 			);
-			path = "JWPlayer-Developer-Demo";
+			path = "JWPlayer-SDK-iOS-Demo";
 			sourceTree = "<group>";
 		};
 		6A7D08F11A5DAFD600C4E749 /* iBoilerPlate */ = {
@@ -162,7 +159,7 @@
 				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
-				8AEA39F61AFAAE22008A8C8A /* JWPlayer-Developer-Demo-Bridging-Header.h */,
+				8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */,
 				6A8095191A5F028400F8B4C6 /* Assets */,
 			);
 			name = iBoilerPlate;
@@ -188,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A7D08ED1A5DAFD600C4E749 /* JWPlayer-Developer-Guide */ = {
+		6A7D08ED1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A7D09111A5DAFD600C4E749 /* Build configuration list for PBXNativeTarget "JWPlayer-Developer-Guide" */;
+			buildConfigurationList = 6A7D09111A5DAFD600C4E749 /* Build configuration list for PBXNativeTarget "JWPlayer-SDK-iOS-Demo" */;
 			buildPhases = (
 				6A7D08EA1A5DAFD600C4E749 /* Sources */,
 				6A7D08EB1A5DAFD600C4E749 /* Frameworks */,
@@ -201,9 +198,9 @@
 			);
 			dependencies = (
 			);
-			name = "JWPlayer-Developer-Guide";
-			productName = "JWPlayer-Developer-Demo";
-			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWPlayer-Developer-Guide.app */;
+			name = "JWPlayer-SDK-iOS-Demo";
+			productName = "JWPlayer-SDK-iOS-Demo";
+			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6A7D08E91A5DAFD600C4E749 /* Build configuration list for PBXProject "JWPlayer-Developer-Guide" */;
+			buildConfigurationList = 6A7D08E91A5DAFD600C4E749 /* Build configuration list for PBXProject "JWPlayer-SDK-iOS-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -237,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A7D08ED1A5DAFD600C4E749 /* JWPlayer-Developer-Guide */,
+				6A7D08ED1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -263,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */,
-				118E8ED52225AAFE006D0685 /* PrettyPrinter.swift in Sources */,
 				1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */,
 				1190585B222DB75E0058D653 /* Endpoints.swift in Sources */,
 				118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */,
@@ -413,19 +409,19 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/JWPlayer-Developer-Demo",
+					"$(PROJECT_DIR)/JWPlayer-SDK-iOS-Demo",
 					"$(PROJECT_DIR)",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IBSC_WARNINGS = YES;
-				INFOPLIST_FILE = "JWPlayer-Developer-Demo/Info.plist";
+				INFOPLIST_FILE = "JWPlayer-SDK-iOS-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "JWPlayer-Developer-Guide";
+				PRODUCT_NAME = "JWPlayer-SDK-iOS-Demo";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-Developer-Demo/JWPlayer-Developer-Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-SDK-iOS-Demo/JWPlayer-SDK-iOS-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -443,19 +439,19 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/JWPlayer-Developer-Demo",
+					"$(PROJECT_DIR)/JWPlayer-SDK-iOS-Demo",
 					"$(PROJECT_DIR)",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IBSC_WARNINGS = YES;
-				INFOPLIST_FILE = "JWPlayer-Developer-Demo/Info.plist";
+				INFOPLIST_FILE = "JWPlayer-SDK-iOS-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "JWPlayer-Developer-Guide";
+				PRODUCT_NAME = "JWPlayer-SDK-iOS-Demo";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-Developer-Demo/JWPlayer-Developer-Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-SDK-iOS-Demo/JWPlayer-SDK-iOS-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -463,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A7D08E91A5DAFD600C4E749 /* Build configuration list for PBXProject "JWPlayer-Developer-Guide" */ = {
+		6A7D08E91A5DAFD600C4E749 /* Build configuration list for PBXProject "JWPlayer-SDK-iOS-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A7D090F1A5DAFD600C4E749 /* Debug */,
@@ -472,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A7D09111A5DAFD600C4E749 /* Build configuration list for PBXNativeTarget "JWPlayer-Developer-Guide" */ = {
+		6A7D09111A5DAFD600C4E749 /* Build configuration list for PBXNativeTarget "JWPlayer-SDK-iOS-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6A7D09121A5DAFD600C4E749 /* Debug */,
