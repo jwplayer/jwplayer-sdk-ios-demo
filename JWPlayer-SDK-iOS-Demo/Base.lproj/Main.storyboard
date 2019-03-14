@@ -12,7 +12,7 @@
         <!--Swift Implementation-->
         <scene sceneID="z1b-58-COU">
             <objects>
-                <viewController id="3R5-q4-A91" customClass="SwiftViewController" customModule="JWPlayer_Developer_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3R5-q4-A91" customClass="SwiftViewController" customModule="JWPlayer_SDK_iOS_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GN2-cC-hbF"/>
                         <viewControllerLayoutGuide type="bottom" id="PFu-SZ-bdI"/>

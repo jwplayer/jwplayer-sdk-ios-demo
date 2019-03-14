@@ -9,11 +9,15 @@
 import Foundation
 
 struct Endpoints {
+    static let audioOnly = "http://content.bitsontherun.com/videos/3XnJSIm4-I3ZmuSFT.m4a"
+    static let video4Kdemo = "http://ftp.nluug.nl/pub/graphics/blender/demo/movies/ToS/ToS-4k-1920.mov"
+    
     static let sources = [JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-injeKYZS.mp4", label: "180p Streaming", isDefault: true),
                           JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4", label: "270p Streaming"),
                           JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-DZ7jSYgM.mp4", label: "720p Streaming")].compactMap({$0})
     
-    static let sourceImage = "http://content.bitsontherun.com/thumbs/bkaovAYt-480.jpg"
+    static let videoImage = "http://content.bitsontherun.com/thumbs/bkaovAYt-480.jpg"
+    static let audioImage = "http://content.bitsontherun.com/thumbs/3XnJSIm4-480.jpg"
     
     //MARK: JWTrack (captions)
     static let tracks = [JWTrack (file: "http://playertest.longtailvideo.com/caption-files/sintel-en.srt", label: "English", isDefault: true),

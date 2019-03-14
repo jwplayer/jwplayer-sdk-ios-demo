@@ -13,13 +13,13 @@ class JWPlayerFactory {
         //MARK: JWConfig
         
         /* JWConfig can be created with a single file reference */
-        //var config: JWConfig = JWConfig(contentURL:"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
+//        var config: JWConfig = JWConfig(contentURL:"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
         
+        let config: JWConfig = JWConfig(contentURL: Endpoints.video4Kdemo)
+//        let config: JWConfig = JWConfig()
+//        config.sources = Endpoints.sources
         
-        let config: JWConfig = JWConfig()
-        config.sources = Endpoints.sources
-        
-        config.image = Endpoints.sourceImage
+        config.image = Endpoints.videoImage
         config.title = "JWPlayer Demo"
         config.controls = true  //default
         config.`repeat` = false   //default
@@ -27,6 +27,14 @@ class JWPlayerFactory {
         //MARK: JWTrack (captions)
         config.tracks = Endpoints.tracks
         
+        addCaptionsTo(config)
+        
+        addAdvertisingTo(config)
+        
+        return JWPlayerController(config: config, delegate: delegate)
+    }
+    
+    fileprivate static func addCaptionsTo(_ config: JWConfig) {
         //MARK: JWCaptionStyling
         let captionStyling: JWCaptionStyling = JWCaptionStyling()
         captionStyling.font            = UIFont (name: "Zapfino", size: 20)
@@ -35,7 +43,9 @@ class JWPlayerFactory {
         captionStyling.backgroundColor = UIColor(red: 0.3, green: 0.6, blue: 0.3, alpha: 0.7)
         captionStyling.color           = .blue
         config.captions                = captionStyling
-        
+    }
+    
+    fileprivate static func addAdvertisingTo(_ config: JWConfig) {
         //MARK: Ads: JWAdConfig
         let adConfig: JWAdConfig = JWAdConfig()
         adConfig.adMessage   = "Ad duration countdown xx"
@@ -51,7 +61,5 @@ class JWPlayerFactory {
         adConfig.schedule = Endpoints.schedule
         
         config.advertising   = adConfig
-        
-        return JWPlayerController(config: config, delegate: delegate)
     }
 }
