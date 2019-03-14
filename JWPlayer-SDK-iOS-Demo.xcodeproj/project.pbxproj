@@ -13,11 +13,11 @@
 		1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1190585C222DB9D70058D653 /* JWPlayerFactory.swift */; };
 		11C81208223AD71B00222E98 /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81205223AD5CC00222E98 /* JWPlayer_iOS_SDK.framework */; };
 		11C81209223AD71B00222E98 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81205223AD5CC00222E98 /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11C8120A223ADDF400222E98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
 		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
 		6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */; };
 		6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */; };
-		6A7D08FF1A5DAFD600C4E749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +88,13 @@
 			path = "JWPlayer configuration helpers";
 			sourceTree = "<group>";
 		};
+		11C8120B223ADE1E00222E98 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		6A7D08E51A5DAFD600C4E749 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +123,7 @@
 				11905860222DBAFC0058D653 /* Controllers */,
 				11C81202223AD2CA00222E98 /* JWPlayer configuration helpers */,
 				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
+				11C8120B223ADE1E00222E98 /* Asset */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
 			);
@@ -194,7 +202,7 @@
 			files = (
 				6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */,
 				6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */,
-				6A7D08FF1A5DAFD600C4E749 /* Images.xcassets in Resources */,
+				11C8120A223ADDF400222E98 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
