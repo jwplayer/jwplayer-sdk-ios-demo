@@ -11,7 +11,7 @@ import Foundation
 class JWPlayerFactory: NSObject {
     @objc public static func newPlayer(delegate: JWPlayerDelegate? = nil) -> JWPlayerController {
         // MARK: JWConfig with convenience init
-        let config: JWConfig = JWConfig(contentURL: Endpoints.video4Kdemo)
+        let config: JWConfig = JWConfig(contentURL: Endpoints.videoDemo)
         
         // MARK: JWConfig with [JWSources]
 //        let config: JWConfig = JWConfig()

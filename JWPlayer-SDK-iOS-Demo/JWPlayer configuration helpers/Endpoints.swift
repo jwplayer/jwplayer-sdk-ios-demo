@@ -10,8 +10,9 @@ import Foundation
 
 /// A struct that abstracts out the strings used in the project.
 struct Endpoints {
-    static let audioOnly = "http://content.bitsontherun.com/videos/3XnJSIm4-I3ZmuSFT.m4a"
+    static let audioOnly   = "http://content.bitsontherun.com/videos/3XnJSIm4-I3ZmuSFT.m4a"
     static let video4Kdemo = "http://ftp.nluug.nl/pub/graphics/blender/demo/movies/ToS/ToS-4k-1920.mov"
+    static let videoDemo   = "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"
     
     static let sources = [JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-injeKYZS.mp4", label: "180p Streaming", isDefault: true),
                           JWSource (file: "http://content.bitsontherun.com/videos/bkaovAYt-52qL9xLP.mp4", label: "270p Streaming"),
