@@ -17,19 +17,19 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 JWPlayer. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="439" width="440" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="nTe-7d-1ID"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jwlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mn4-r1-Aip">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jwlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mn4-r1-Aip">
                     <rect key="frame" x="127.5" y="128" width="225" height="224"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  SumTotalSystems - Audio Image Demo  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVe-kw-TFq">
-                    <rect key="frame" x="92" y="20" width="315" height="38"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Hello JWPlayer - Demo App  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVe-kw-TFq">
+                    <rect key="frame" x="83" y="20" width="315" height="38"/>
                     <color key="backgroundColor" red="0.79466459570000003" green="1" blue="0.93697059829999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="38" id="Ceq-bn-mWY"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -37,14 +37,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="mn4-r1-Aip" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1re-5T-9Vz"/>
-                <constraint firstItem="mn4-r1-Aip" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Dim-oX-jl5"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="hVe-kw-TFq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="92" id="ksj-Qj-K8a"/>
-                <constraint firstItem="mn4-r1-Aip" firstAttribute="top" secondItem="hVe-kw-TFq" secondAttribute="bottom" constant="70" id="l7I-A5-NE9"/>
-                <constraint firstItem="hVe-kw-TFq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="rHl-pv-CNs"/>
+                <constraint firstItem="mn4-r1-Aip" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="21e-f5-4CY"/>
+                <constraint firstItem="hVe-kw-TFq" firstAttribute="centerX" secondItem="mn4-r1-Aip" secondAttribute="centerX" id="6Fy-Cy-gOS"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="8Lc-xm-tcp"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="mn4-r1-Aip" secondAttribute="bottom" constant="87" id="IZn-yA-xOM"/>
+                <constraint firstItem="hVe-kw-TFq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="KHZ-FH-fh2"/>
+                <constraint firstItem="mn4-r1-Aip" firstAttribute="top" secondItem="hVe-kw-TFq" secondAttribute="bottom" constant="70" id="Njm-Sx-Pyx"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" symbolic="YES" id="esM-GW-tSx"/>
+                <constraint firstItem="mn4-r1-Aip" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ivh-DV-9tp"/>
+                <constraint firstItem="hVe-kw-TFq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="83" id="jeC-QU-zTD"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="vO3-DI-5ZB"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -52,6 +54,6 @@
         </view>
     </objects>
     <resources>
-        <image name="jwlogo.png" width="225" height="225"/>
+        <image name="jwlogo" width="225" height="225"/>
     </resources>
 </document>

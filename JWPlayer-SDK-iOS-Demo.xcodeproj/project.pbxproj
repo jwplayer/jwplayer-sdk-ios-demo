@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* SwiftViewController.swift */; };
-		118E8ED12225A147006D0685 /* SwiftObjcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */; };
-		118E8ED32225A7F6006D0685 /* Dictionary+PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */; };
 		118E8ED62225AC6C006D0685 /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */; };
 		118E8ED72225AC6C006D0685 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED92225BE4E006D0685 /* ObjCViewController.m */; };
@@ -17,12 +15,10 @@
 		1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1190585C222DB9D70058D653 /* JWPlayerFactory.swift */; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
 		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
-		6A7D08FA1A5DAFD600C4E749 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* ViewController.m */; };
+		6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */; };
 		6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */; };
 		6A7D08FF1A5DAFD600C4E749 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */; };
-		6A80951B1A5F028400F8B4C6 /* icon-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A80951A1A5F028400F8B4C6 /* icon-15.png */; };
-		97B533E21DA80A9000856F28 /* jwlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B533E11DA80A9000856F28 /* jwlogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,8 +38,6 @@
 /* Begin PBXFileReference section */
 		118E8ECC22259B43006D0685 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		118E8ECE22259F9B006D0685 /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
-		118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObjcViewModel.swift; sourceTree = "<group>"; };
-		118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PrettyPrint.swift"; sourceTree = "<group>"; };
 		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		1190585A222DB75E0058D653 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -53,14 +47,12 @@
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6A7D08F81A5DAFD600C4E749 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6A7D08F91A5DAFD600C4E749 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6A7D08F81A5DAFD600C4E749 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		6A7D08FC1A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A7D09011A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6A80951A1A5F028400F8B4C6 /* icon-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-15.png"; sourceTree = "<group>"; };
 		8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWPlayer-SDK-iOS-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
-		97B533E11DA80A9000856F28 /* jwlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jwlogo.png; path = ../jwlogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,46 +67,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1190585E222DBACC0058D653 /* Supporting Code */ = {
-			isa = PBXGroup;
-			children = (
-				1190585A222DB75E0058D653 /* Endpoints.swift */,
-				118E8ED22225A7F6006D0685 /* Dictionary+PrettyPrint.swift */,
-			);
-			name = "Supporting Code";
-			sourceTree = "<group>";
-		};
-		1190585F222DBAEF0058D653 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		11905860222DBAFC0058D653 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A7D08F81A5DAFD600C4E749 /* InitialViewController.h */,
+				6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */,
 				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
 				118E8ED82225BE4E006D0685 /* ObjCViewController.h */,
 				118E8ED92225BE4E006D0685 /* ObjCViewController.m */,
-				1190585C222DB9D70058D653 /* JWPlayerFactory.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		11905861222DBB150058D653 /* ViewModels */ = {
+		11C81202223AD2CA00222E98 /* JWPlayer configuration helpers */ = {
 			isa = PBXGroup;
 			children = (
-				118E8ED02225A147006D0685 /* SwiftObjcViewModel.swift */,
+				1190585C222DB9D70058D653 /* JWPlayerFactory.swift */,
+				1190585A222DB75E0058D653 /* Endpoints.swift */,
 			);
-			name = ViewModels;
-			sourceTree = "<group>";
-		};
-		11905862222DBB980058D653 /* Models-Are-JWP-SDK */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Models-Are-JWP-SDK";
+			path = "JWPlayer configuration helpers";
 			sourceTree = "<group>";
 		};
 		6A7D08E51A5DAFD600C4E749 = {
@@ -137,41 +108,18 @@
 		6A7D08F01A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				11905860222DBAFC0058D653 /* Controllers */,
-				11905861222DBB150058D653 /* ViewModels */,
-				1190585F222DBAEF0058D653 /* Views */,
-				11905862222DBB980058D653 /* Models-Are-JWP-SDK */,
-				1190585E222DBACC0058D653 /* Supporting Code */,
-				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
-				6A7D08F11A5DAFD600C4E749 /* iBoilerPlate */,
-			);
-			path = "JWPlayer-SDK-iOS-Demo";
-			sourceTree = "<group>";
-		};
-		6A7D08F11A5DAFD600C4E749 /* iBoilerPlate */ = {
-			isa = PBXGroup;
-			children = (
 				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
 				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
 				6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */,
-				6A7D08F81A5DAFD600C4E749 /* ViewController.h */,
-				6A7D08F91A5DAFD600C4E749 /* ViewController.m */,
+				8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */,
+				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
+				11905860222DBAFC0058D653 /* Controllers */,
+				11C81202223AD2CA00222E98 /* JWPlayer configuration helpers */,
 				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
-				8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */,
-				6A8095191A5F028400F8B4C6 /* Assets */,
 			);
-			name = iBoilerPlate;
-			sourceTree = "<group>";
-		};
-		6A8095191A5F028400F8B4C6 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				97B533E11DA80A9000856F28 /* jwlogo.png */,
-				6A80951A1A5F028400F8B4C6 /* icon-15.png */,
-			);
-			path = Assets;
+			path = "JWPlayer-SDK-iOS-Demo";
 			sourceTree = "<group>";
 		};
 		9769E5CB1DA8034E00BEF7FF /* Frameworks */ = {
@@ -246,8 +194,6 @@
 			files = (
 				6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */,
 				6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */,
-				97B533E21DA80A9000856F28 /* jwlogo.png in Resources */,
-				6A80951B1A5F028400F8B4C6 /* icon-15.png in Resources */,
 				6A7D08FF1A5DAFD600C4E749 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,11 +209,9 @@
 				1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */,
 				1190585B222DB75E0058D653 /* Endpoints.swift in Sources */,
 				118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */,
-				6A7D08FA1A5DAFD600C4E749 /* ViewController.m in Sources */,
+				6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */,
 				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
 				6A7D08F41A5DAFD600C4E749 /* main.m in Sources */,
-				118E8ED32225A7F6006D0685 /* Dictionary+PrettyPrint.swift in Sources */,
-				118E8ED12225A147006D0685 /* SwiftObjcViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

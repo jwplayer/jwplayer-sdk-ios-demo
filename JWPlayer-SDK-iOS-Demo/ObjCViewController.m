@@ -8,14 +8,12 @@
 
 #import "ObjCViewController.h"
 #import "JWPlayer_SDK_iOS_Demo-Swift.h"
+#import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface ObjCViewController ()
-    
-@property (strong, nonatomic) SwiftObjcViewModel *viewModel;
-    
-@property (weak, nonatomic) IBOutlet UITextView *callbacksTextView;
-@property (weak, nonatomic) IBOutlet UITextView *callbacksDetailsTextView;
+
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
+@property (nonatomic) JWPlayerController *player;
 
 @end
 
@@ -23,20 +21,18 @@
 
     
 - (void)viewDidLoad {
-    self.viewModel = SwiftObjcViewModel.shared;
-    
-    self.viewModel.outputTextView = self.callbacksTextView;
-    self.viewModel.outputDetailsTextView = self.callbacksDetailsTextView;
+    [super viewDidLoad];
+    self.player = [JWPlayerFactory newPlayerWithDelegate:nil];
 }
     
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self layoutPlayerView:self.viewModel.player.view];
+    [self layoutPlayerView:self.player.view];
 }
 
     - (void)viewWillDisappear:(BOOL)animated
     {
-        [self.viewModel.player pause];
+        [self.player pause];
         [super viewWillDisappear:animated];
     }
 
@@ -46,12 +42,5 @@
     playerView.frame = self.playerContainerView.bounds;
     playerView.autoresizingMask = UIViewAutoresizingFlexibleWidth & UIViewAutoresizingFlexibleHeight;
 }
-    
-- (IBAction)outputToggleTapped:(UISwitch *)sender {
-    [self.view bringSubviewToFront:
-     (sender.isOn ? self.callbacksDetailsTextView : self.callbacksTextView)];
-}
-    
-
-    
+        
 @end

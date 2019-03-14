@@ -9,27 +9,21 @@
 import UIKit
 
 class SwiftViewController: UIViewController {
-    fileprivate var viewModel = SwiftObjcViewModel.shared
-    
-    @IBOutlet weak var callbacksTextView: UITextView!
-    @IBOutlet weak var callbacksDetailsTextView: UITextView!
     @IBOutlet weak var playerContainerView: UIView!
+    var player: JWPlayerController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel.outputTextView = callbacksTextView
-        viewModel.outputDetailsTextView = callbacksDetailsTextView
+        player = JWPlayerFactory.newPlayer()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        layout(playerView: viewModel.player.view)
+        layout(playerView: player!.view)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        viewModel.player.pause()
+        player?.pause()
         super.viewWillDisappear(animated)
     }
     
@@ -38,9 +32,4 @@ class SwiftViewController: UIViewController {
         playerView.frame = playerContainerView.bounds
         playerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    
-    @IBAction func outputToggleTapped(_ sender: UISwitch) {
-        view.bringSubviewToFront((sender.isOn ? callbacksDetailsTextView : callbacksTextView))
-    }
-    
 }
