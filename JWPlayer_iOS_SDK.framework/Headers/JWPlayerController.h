@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JWConfig.h"
 #import "JWPlayerDelegate.h"
+#import "JWAVPlayerAnalyticsDelegate.h"
 #import "JWCastController.h"
 #import "JWDrmDataSource.h"
 
@@ -47,6 +48,13 @@ The object that acts as the delegate of the jwPlayerController.
  @see JWPlayerDelegate
  */
 @property (nonatomic, weak) id<JWPlayerDelegate> delegate;
+
+/*!
+ The object that acts as the analyticsDelegate of the JWPlayerController. Data provided by this object can be used by 3rd-party analytics libraries.
+ @discussion The analyticsDelegate must adopt the JWAVPlayerAnalyticsDelegate protocol. The analyticsDelegate is not retained.
+ @see JWAVPlayerAnalyticsDelegate
+ */
+@property (nonatomic, weak) id<JWAVPlayerAnalyticsDelegate> analyticsDelegate;
 
 /*!
  The JWDrmDataSource is adopted by an object that mediates the application's data model and key server. The data source provides the JWPlayerController object with the data needed to reproduce encrypted content.
@@ -219,7 +227,7 @@ The object that acts as the delegate of the jwPlayerController.
  @param position Time in the video to seek to
  @see duration
  */
-- (void)seek:(NSUInteger)position;
+- (void)seek:(NSInteger)position;
 
 /*!
  Playback position of the current video.
@@ -250,6 +258,7 @@ The object that acts as the delegate of the jwPlayerController.
 
 /*!
  The setter toggles the player's fullscreen mode; the getter returns a boolean value that determines whether the video is in full screen.
+ @warning *Note:* If your app uses fullscreen mode, and will run on iPads running iOS 11 or higher, select *Requires full screen* in the *General* tab of your target's settings to avoid unwanted triggering of [Split View](https://developer.apple.com/design/human-interface-guidelines/ios/views/split-views/) mode.
  */
 @property (nonatomic) BOOL fullscreen;
 
