@@ -22,14 +22,15 @@ class SwiftViewController: UIViewController {
         layout(playerView: player!.view)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        player?.pause()
-        super.viewWillDisappear(animated)
-    }
-    
     func layout(playerView: UIView) {
         playerContainerView.addSubview(playerView)
-        playerView.frame = playerContainerView.bounds
-        playerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        if JWPlayerController.supportsAutolayout
+        {
+            playerView.constrainToSuperview()
+        } else {
+            playerView.frame = playerContainerView.bounds
+            playerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        }
     }
 }

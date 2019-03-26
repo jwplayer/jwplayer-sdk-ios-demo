@@ -19,28 +19,27 @@
 
 @implementation ObjCViewController
 
-    
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.player = [JWPlayerFactory newPlayerWithDelegate:nil];
 }
-    
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self layoutPlayerView:self.player.view];
 }
 
-    - (void)viewWillDisappear:(BOOL)animated
-    {
-        [self.player pause];
-        [super viewWillDisappear:animated];
-    }
-
 - (void)layoutPlayerView:(UIView *)playerView
 {
     [self.playerContainerView addSubview:playerView];
-    playerView.frame = self.playerContainerView.bounds;
-    playerView.autoresizingMask = UIViewAutoresizingFlexibleWidth & UIViewAutoresizingFlexibleHeight;
+    
+    if (JWPlayerController.supportsAutolayout) {
+        [playerView constrainToSuperview];
+    } else {
+        playerView.frame = self.playerContainerView.bounds;
+        playerView.autoresizingMask = UIViewAutoresizingFlexibleWidth & UIViewAutoresizingFlexibleHeight;
+    }
 }
-        
+
 @end
