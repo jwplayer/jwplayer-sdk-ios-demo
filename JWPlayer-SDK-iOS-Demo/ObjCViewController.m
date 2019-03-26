@@ -33,13 +33,7 @@
 - (void)layoutPlayerView:(UIView *)playerView
 {
     [self.playerContainerView addSubview:playerView];
-    
-    if (JWPlayerController.supportsAutolayout) {
-        [playerView constrainToSuperview];
-    } else {
-        playerView.frame = self.playerContainerView.bounds;
-        playerView.autoresizingMask = UIViewAutoresizingFlexibleWidth & UIViewAutoresizingFlexibleHeight;
-    }
+    [playerView constrainToSuperview];
 }
 
 @end
