@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CGGeometry.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWAdCompanionType) {
     JWAdCompanionTypeStatic,
     JWAdCompanionTypeIFrame,
     JWAdCompanionTypeHtml
-}JWAdCompanionType;
+};
 
 @interface JWAdCompanion : NSObject
 

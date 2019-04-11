@@ -11,10 +11,10 @@
 @class IMAAd;
 @class IMAAdsRequest;
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWAdType) {
     JWAdTypeLinear = 1,
     JWAdTypeNonlinear = 2
-}JWAdType;
+};
 
 /*!
  JWAdBreak is an object providing info for an ad break in a video, played using JWPlayer.

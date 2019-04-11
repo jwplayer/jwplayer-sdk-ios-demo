@@ -19,17 +19,17 @@
 #import "JWSkinStyling.h"
 #import "JWLogo.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWStretching) {
     JWStretchingUniform = 0,
     JWStretchingExactFit,
     JWStretchingFill,
     JWStretchingNone
-}JWStretching;
+};
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWPreload) {
     JWPreloadAuto = 0,
     JWPreloadNone
-}JWPreload;
+};
 
 @class JWAdConfig;
 

@@ -8,27 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWRelatedOnComplete) {
     JWRelatedOnCompleteShow = 0,
     JWRelatedOnCompleteHide,
     JWRelatedOnCompleteAutoplay
-}JWRelatedOnComplete;
+};
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWRelatedMethod) {
     JWRelatedMethodApi = 0,
     JWRelatedMethodComplete,
     JWRelatedMethodInteraction
-}JWRelatedMethod;
+};
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWRelatedDisplayMode) {
     JWRelatedDisplayModeShelf = 0,
     JWRelatedDisplayModeOverlay
-}JWRelatedDisplayMode;
+};
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWRelatedOnClick) {
     JWRelatedOnClickPlay = 0,
     JWRelatedOnClickLink,
-}JWRelatedOnClick;
+};
 
 /*!
  An object providing information about the way related videos are handled by the player.

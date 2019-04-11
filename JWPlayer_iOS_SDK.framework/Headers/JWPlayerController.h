@@ -12,6 +12,7 @@
 #import "JWAVPlayerAnalyticsDelegate.h"
 #import "JWCastController.h"
 #import "JWDrmDataSource.h"
+#import "JWExperimentalAPI.h"
 
 #define JWPlayerAllNotification @"JWPlayerAllNotification"
 #define JWMetaDataAvailableNotification @"JWMetaDataAvailableNotification"
@@ -22,6 +23,7 @@
 #define JWAdPlaybackProgressNotification @"JWAdPlaybackProgressNotification"
 #define JWAdClickNotification @"JWAdClickNotification"
 #define JWErrorNotification @"JWErrorNotification"
+#define JWWarningNotification @"JWWarningNotification"
 #define JWCaptionsNotification @"JWCaptionsNotification"
 #define JWVideoQualityNotification @"JWVideoQualityNotification"
 #define JWPlaylistNotification @"JWPlaylistNotification"
@@ -62,6 +64,12 @@ The object that acts as the delegate of the jwPlayerController.
  @see JWDrmDataSource
  */
 @property (nonatomic, weak) id<JWDrmDataSource> drmDataSource;
+
+/*!
+ An interface for exposing experimental features.
+ @discussion These features are very likely to be deprecated in the future, and will either be entirely dropped or replaced.
+ */
+@property (nonatomic, readonly) JWExperimentalAPI *experimentalAPI;
 
 /*!
  Returns the version of google IMA framework used by the SDK.

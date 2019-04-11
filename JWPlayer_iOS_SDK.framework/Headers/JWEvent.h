@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWPlayerState) {
     JWPlayerStatePlaying = 0,
     JWPlayerStatePaused,
     JWPlayerStateBuffering,
     JWPlayerStateIdle,
     JWPlayerStateComplete,
     JWPlayerStateError
-}JWPlayerState;
+};
 
 @class JWTrack, JWSource, JWPlaylistItem, JWPlayerError, JWAdCompanion;
 

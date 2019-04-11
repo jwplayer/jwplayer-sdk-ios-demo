@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWLogoPosition) {
     JWLogoPositionTopRight = 0,
     JWLogoPositionTopLeft,
     JWLogoPositionBottomRight,
     JWLogoPositionBottomLeft,
     JWLogoPositionControlbar
-}JWLogoPosition;
+};
 
 /*!
  Configures a clickable watermark that is overlayed on the video.

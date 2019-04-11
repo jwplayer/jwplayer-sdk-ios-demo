@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWAdShown) {
     JWAdShownNone = 1,
     JWAdShownPre = 2
-}JWAdShown;
+};
 
 @interface JWAdRules : NSObject
 /*!

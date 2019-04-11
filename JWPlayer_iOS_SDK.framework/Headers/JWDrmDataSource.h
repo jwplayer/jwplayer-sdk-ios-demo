@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWEncryption) {
     JWEncryptionFairPlay = 0
-}JWEncryption;
+};
 
 /*!
  @protocol JWDrmDataSource

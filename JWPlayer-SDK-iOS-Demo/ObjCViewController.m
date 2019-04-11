@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.player = [JWPlayerFactory newPlayerWithDelegate:nil];
+    self.player.forceFullScreenOnLandscape = YES;
+//    self.player.forceLandscapeOnFullScreen = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* SwiftViewController.swift */; };
 		118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED92225BE4E006D0685 /* ObjCViewController.m */; };
-		1190585B222DB75E0058D653 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1190585A222DB75E0058D653 /* Endpoints.swift */; };
 		1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1190585C222DB9D70058D653 /* JWPlayerFactory.swift */; };
-		11C81208223AD71B00222E98 /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81205223AD5CC00222E98 /* JWPlayer_iOS_SDK.framework */; };
-		11C81209223AD71B00222E98 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11C81205223AD5CC00222E98 /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1190F392224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; };
+		1190F393224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C8120A223ADDF400222E98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
 		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
@@ -28,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				11C81209223AD71B00222E98 /* JWPlayer_iOS_SDK.framework in Embed Frameworks */,
+				1190F393224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,9 +38,8 @@
 		118E8ECC22259B43006D0685 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
-		1190585A222DB75E0058D653 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		1190585C222DB9D70058D653 /* JWPlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPlayerFactory.swift; sourceTree = "<group>"; };
-		11C81205223AD5CC00222E98 /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
+		1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-SDK-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11C81208223AD71B00222E98 /* JWPlayer_iOS_SDK.framework in Frameworks */,
+				1190F392224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,24 +73,16 @@
 				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
 				118E8ED82225BE4E006D0685 /* ObjCViewController.h */,
 				118E8ED92225BE4E006D0685 /* ObjCViewController.m */,
+				1190585C222DB9D70058D653 /* JWPlayerFactory.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		11C81202223AD2CA00222E98 /* JWPlayer configuration helpers */ = {
-			isa = PBXGroup;
-			children = (
-				1190585C222DB9D70058D653 /* JWPlayerFactory.swift */,
-				1190585A222DB75E0058D653 /* Endpoints.swift */,
-			);
-			path = "JWPlayer configuration helpers";
-			sourceTree = "<group>";
-		};
-		11C8120B223ADE1E00222E98 /* Asset */ = {
+		11C8120B223ADE1E00222E98 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Asset;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		6A7D08E51A5DAFD600C4E749 = {
@@ -121,9 +111,8 @@
 				8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */,
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
 				11905860222DBAFC0058D653 /* Controllers */,
-				11C81202223AD2CA00222E98 /* JWPlayer configuration helpers */,
 				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
-				11C8120B223ADE1E00222E98 /* Asset */,
+				11C8120B223ADE1E00222E98 /* Assets */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
 			);
@@ -133,7 +122,7 @@
 		9769E5CB1DA8034E00BEF7FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11C81205223AD5CC00222E98 /* JWPlayer_iOS_SDK.framework */,
+				1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,7 +205,6 @@
 			files = (
 				118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */,
 				1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */,
-				1190585B222DB75E0058D653 /* Endpoints.swift in Sources */,
 				118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */,
 				6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */,
 				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
