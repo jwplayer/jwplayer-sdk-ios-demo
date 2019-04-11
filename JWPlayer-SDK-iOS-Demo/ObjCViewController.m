@@ -22,18 +22,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.player = [JWPlayerFactory newPlayerWithDelegate:nil];
-    self.player.forceFullScreenOnLandscape = YES;
-//    self.player.forceLandscapeOnFullScreen = YES;
+    
+    JWConfig *config = [JWConfig configWithContentURL:@""];
+    self.player = [[JWPlayerController alloc]initWithConfig:config];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self layoutPlayerView:self.player.view];
-}
-
-- (void)layoutPlayerView:(UIView *)playerView
-{
+    
+    UIView *playerView = self.player.view;
     [self.playerContainerView addSubview:playerView];
     [playerView constrainToSuperview];
 }

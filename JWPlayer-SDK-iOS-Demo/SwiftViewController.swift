@@ -14,15 +14,13 @@ class SwiftViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        player = JWPlayerFactory.newPlayer()
+        let config: JWConfig  = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
+        player = JWPlayerController(config: config)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        layout(playerView: player!.view)
-    }
-
-    func layout(playerView: UIView) {
+        let playerView: UIView = player!.view
         playerContainerView.addSubview(playerView)
         playerView.constrainToSuperview()
     }
