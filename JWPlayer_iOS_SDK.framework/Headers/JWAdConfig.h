@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "JWAdRules.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWAdClient) {
     JWAdClientVast = 0,
     JWAdClientGoogima,
     JWAdClientFreewheel
-}JWAdClient;
+};
 
 @class JWAdBreak, IMASettings, JWFreewheelConfig;
 

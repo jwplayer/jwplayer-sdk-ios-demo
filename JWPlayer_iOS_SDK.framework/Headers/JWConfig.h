@@ -19,17 +19,17 @@
 #import "JWSkinStyling.h"
 #import "JWLogo.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWStretching) {
     JWStretchingUniform = 0,
     JWStretchingExactFit,
     JWStretchingFill,
     JWStretchingNone
-}JWStretching;
+};
 
-typedef enum {
+typedef NS_ENUM(NSInteger, JWPreload) {
     JWPreloadAuto = 0,
     JWPreloadNone
-}JWPreload;
+};
 
 @class JWAdConfig;
 
@@ -60,8 +60,13 @@ typedef enum {
 @property (nonatomic, retain) NSArray <JWPlaylistItem *> *playlist;
 
 /*!
- Title of the video
- @discussion Shown in the play button container in the center of the screen, before the video starts to play.
+ Title (or name) of the video
+ @discussion Shown in the play button container in the center of the screen, before the video starts to play, 
+ in addition to the device lock screen and in the multimedia controls in the multitasking UI. 
+ It will also be used in other relevant setups, such as when connecting to an Apple TV via AirPlay, or to an iPod accessory.
+ @note If nil, the app name will be set as the title by default.
+ @warning Trying to set the title directly via MPNowPlayingInfoCenter[MPMediaItemPropertyTitle] 
+ can lead to unpredictable behavior.
  */
 @property (nonatomic, retain) NSString *title;
 

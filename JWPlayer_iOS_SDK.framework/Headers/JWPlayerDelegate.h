@@ -248,25 +248,25 @@
 
 /*!
  onAdRequest(callback)
- @discussion VAST and IMA. Fired whenever an ad is requested by the player.
+ @discussion VAST, IMA and FreeWheel. Fired whenever an ad is requested by the player.
  */
 - (void)onAdRequest:(JWAdEvent<JWAdRequestEvent> *)event;
 
 /*!
  onAdSkipped(callback)
- @discussion VAST and IMA. Fired whenever an ad has been skipped.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever an ad has been skipped.
  */
 - (void)onAdSkipped:(JWAdEvent<JWAdDetailEvent> *)event;
 
 /*!
  onAdComplete(callback)
- @discussion VAST and IMA. Fired whenever an ad has completed playback.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever an ad has completed playback.
  */
 - (void)onAdComplete:(JWAdEvent<JWAdDetailEvent> *)event;
 
 /*!
  onAdClick(callback)
- @discussion VAST and IMA. Fired whenever a user clicks an ad to be redirected to its landing page.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever a user clicks an ad to be redirected to its landing page.
  */
 - (void)onAdClick:(JWAdEvent<JWAdDetailEvent> *)event;
 
@@ -284,43 +284,43 @@
 
 /*!
  onAdImpression(callback)
- @discussion VAST and IMA. Fired whenever an ad starts playing back. At this point, the VAST tag is loaded and the creative selected.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever an ad starts playing back. At this point, the VAST tag is loaded and the creative selected.
  */
 - (void)onAdImpression:(JWAdEvent<JWAdImpressionEvent> *)event;
 
 /*!
  onAdPlay(callback)
- @discussion VAST and IMA. Fired whenever an ad starts playing. Will fire after an ad is unpaused.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever an ad starts playing. Will fire after an ad is unpaused.
  */
 - (void)onAdPlay:(JWAdEvent<JWAdStateChangeEvent> *)event;
 
 /*!
  onAdPause(callback)
- @discussion VAST and IMA. Fired whenever an ad is paused.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever an ad is paused.
  */
 - (void)onAdPause:(JWAdEvent<JWAdStateChangeEvent> *)event;
 
 /*!
  onAdTime(callback)
- @discussion VAST and IMA. Fired while ad playback is in progress.
+ @discussion VAST, IMA, and FreeWheel. Fired while ad playback is in progress.
  */
 - (void)onAdTime:(JWAdEvent<JWAdTimeEvent> *)event;
 
 /*!
  onAdError(callback)
- @discussion VAST and IMA. Fired whenever an error prevents the ad from playing.
+ @discussion VAST, IMA, and FreeWheel. Fired whenever an error prevents the ad from playing.
  */
 - (void)onAdError:(JWAdEvent<JWErrorEvent> *)event;
 
 /*!
  onAdStarted(callback)
- @discussion VPAID-only. Will trigger when a VPAID ad creative signals to our player that it is starting. This differs from adImpression since the advertisement may not yet be visible.
+ @discussion VPAID-only (not FreeWheel or IMA). Will trigger when a VPAID ad creative signals to our player that it is starting. This differs from adImpression since the advertisement may not yet be visible.
  */
 - (void)onAdStarted:(JWAdEvent<JWAdDetailEvent> *)event;
 
 /*!
  onAdMeta(callback)
- @discussion Fired when new metadata has been broadcasted by the player during an Ad.
+ @discussion VAST, IMA, and FreeWheel. Fired when new metadata has been broadcasted by the player during an Ad.
  */
 - (void)onAdMeta:(JWAdEvent<JWMetaEvent> *)event;
 
@@ -350,16 +350,23 @@
 
 /*!
  onError(callback)
- @discussion Fired when a media error has occurred, causing the player to stop playback and go into 'idle' mode.
+ @discussion Fired when a media error has occurred, causing the player to stop playback and go into 'error' state.
  @discussion See "Common error messages" on http://support.jwplayer.com/customer/portal/articles/1403682-troubleshooting-your-setup for a list of possible media errors.
 */
 - (void)onError:(JWEvent<JWErrorEvent> *)event;
 
 /*!
  onSetupError(callback)
- @discussion Fired when neither the Flash nor HTML5 player could be setup.
+ @discussion Fired when the player failed to setup.
  */
 - (void)onSetupError:(JWEvent<JWErrorEvent> *)event;
+
+/*!
+ onWarning(callback)
+ @discussion Fired when a non-fatal error occurs. Such errors do not prevent playback, do not cause state changes, and do not prevent the player from being used.
+ @discussion Example scenarios: failure to load captions, or failure to load a recommendation feed.
+ */
+- (void)onWarning:(JWEvent<JWErrorEvent> *)event;
 
 @end
 

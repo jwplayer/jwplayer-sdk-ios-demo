@@ -17,5 +17,6 @@
 @property (nonatomic) NSString *mediaId;
 @property (nonatomic) NSUInteger networkId;
 @property (nonatomic) CGFloat duration;
+@property (nonatomic) NSDictionary *custom;
 
 @end
