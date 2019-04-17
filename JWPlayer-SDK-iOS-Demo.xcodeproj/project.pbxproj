@@ -9,25 +9,24 @@
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* SwiftViewController.swift */; };
 		118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED92225BE4E006D0685 /* ObjCViewController.m */; };
-		1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1190585C222DB9D70058D653 /* JWPlayerFactory.swift */; };
-		1190F392224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; };
-		1190F393224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		11C8120A223ADDF400222E98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
 		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
 		6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */; };
 		6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */; };
 		6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */; };
+		B51E0867225FF298004E034C /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; };
+		B51E0869225FF6FF004E034C /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1AE35ACA21120F1E00B352A7 /* Embed Frameworks */ = {
+		B51E086A225FF6FF004E034C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1190F393224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Embed Frameworks */,
+				B51E0869225FF6FF004E034C /* JWPlayer_iOS_SDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +37,6 @@
 		118E8ECC22259B43006D0685 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
-		1190585C222DB9D70058D653 /* JWPlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWPlayerFactory.swift; sourceTree = "<group>"; };
 		1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-SDK-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1190F392224BD6AB0043EACD /* JWPlayer_iOS_SDK.framework in Frameworks */,
+				B51E0867225FF298004E034C /* JWPlayer_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,16 +71,8 @@
 				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
 				118E8ED82225BE4E006D0685 /* ObjCViewController.h */,
 				118E8ED92225BE4E006D0685 /* ObjCViewController.m */,
-				1190585C222DB9D70058D653 /* JWPlayerFactory.swift */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		11C8120B223ADE1E00222E98 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		6A7D08E51A5DAFD600C4E749 = {
@@ -112,7 +102,6 @@
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
 				11905860222DBAFC0058D653 /* Controllers */,
 				6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */,
-				11C8120B223ADE1E00222E98 /* Assets */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
 			);
@@ -137,7 +126,7 @@
 				6A7D08EA1A5DAFD600C4E749 /* Sources */,
 				6A7D08EB1A5DAFD600C4E749 /* Frameworks */,
 				6A7D08EC1A5DAFD600C4E749 /* Resources */,
-				1AE35ACA21120F1E00B352A7 /* Embed Frameworks */,
+				B51E086A225FF6FF004E034C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,7 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */,
-				1190585D222DB9D70058D653 /* JWPlayerFactory.swift in Sources */,
 				118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */,
 				6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */,
 				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
@@ -352,7 +340,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)\"",
 					"$(PROJECT_DIR)",
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
