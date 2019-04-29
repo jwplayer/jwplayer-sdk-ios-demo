@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    JWConfig *config = [JWConfig configWithContentURL:@""];
+    JWConfig *config = [JWConfig configWithContentURL:@"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"];
     self.player = [[JWPlayerController alloc]initWithConfig:config];
 }
 
