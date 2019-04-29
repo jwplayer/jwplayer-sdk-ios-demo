@@ -20,7 +20,7 @@ The source code of a sample application (JWPlayer_Developer_Demo) is included to
 JW Player Quickstart Guide
 ==========================
 
-- https://developer.jwplayer.com/sdk/ios/docs/developer-guide/intro/getting-started/
+- https://developer.jwplayer.com/sdk/ios/docs/developer-guide/
 
 JW Player iOS SDK Documentation
 =====================
