@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @class JWCastingDevice;
 
 /*!
@@ -40,7 +41,7 @@
  @discussion Called when the castController is disconnected from the castDevice.
  @param error Object containing the error message under property localizedDescription. Value will be nil if disconnection was purposeful.
  */
-- (void)onDisconnectedFromCastingDevice:(NSError *)error;
+- (void)onDisconnectedFromCastingDevice:(nullable NSError *)error;
 
 /*!
  onConnectionTemporarilySuspended
@@ -79,6 +80,7 @@
  @discussion Called when casting session ends. Note: Application might still be connected to the casting device.
  @param error Object containing the error message under property localizedDescription. Can be nil if casting ended intentionally.
  */
-- (void)onCastingEnded:(NSError *)error;
+- (void)onCastingEnded:(nullable NSError *)error;
 
 @end
+NS_ASSUME_NONNULL_END

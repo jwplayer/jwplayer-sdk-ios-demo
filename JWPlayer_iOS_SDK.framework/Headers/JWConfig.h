@@ -33,6 +33,7 @@ typedef NS_ENUM(NSInteger, JWPreload) {
 
 @class JWAdConfig;
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  Configuration object used to create JW Player instance.
  */
@@ -45,19 +46,19 @@ typedef NS_ENUM(NSInteger, JWPreload) {
 /*!
  Video URL to play using JW Player.
  */
-@property (nonatomic, retain) NSString *file;
+@property (nonatomic, nullable, retain) NSString *file;
 
 /*!
  An array of JWSource objects representing multiple quality levels of a video.
  @see JWSource
  */
-@property (nonatomic, retain) NSArray <JWSource *> *sources;
+@property (nonatomic, nullable, retain) NSArray <JWSource *> *sources;
 
 /*!
  An array of JWPlaylistItem objects containing information about different video items to be reproduced in a sequence.
  @see JWPlaylistItem
  */
-@property (nonatomic, retain) NSArray <JWPlaylistItem *> *playlist;
+@property (nonatomic, nullable, retain) NSArray <JWPlaylistItem *> *playlist;
 
 /*!
  Title (or name) of the video
@@ -68,43 +69,43 @@ typedef NS_ENUM(NSInteger, JWPreload) {
  @warning Trying to set the title directly via MPNowPlayingInfoCenter[MPMediaItemPropertyTitle] 
  can lead to unpredictable behavior.
  */
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic, nullable, retain) NSString *title;
 
 /*!
  The URL of the thumbnail image.
  */
-@property (nonatomic, retain) NSString *image;
+@property (nonatomic, nullable, retain) NSString *image;
 
 /*!
  A description of your video or audio item.
  */
-@property (nonatomic, retain, readwrite) NSString *desc;
+@property (nonatomic, nullable, retain, readwrite) NSString *desc;
 
 /*!
  Unique identifier of this item. Used by advertising, analytics and discovery services
  */
-@property (nonatomic, retain) NSString *mediaId;
+@property (nonatomic, nullable, retain) NSString *mediaId;
 
 /*!
  An array of JWTrack objects providing captions for different languages.
  @see JWTrack
  */
-@property (nonatomic, retain) NSArray <JWTrack *> *tracks;
+@property (nonatomic, nullable, retain) NSArray <JWTrack *> *tracks;
 
 /*!
  A dictionary containing asset initialization options.
  */
-@property (nonatomic) NSDictionary *assetOptions;
+@property (nonatomic, nullable) NSDictionary *assetOptions;
 
 /*!
  The image you wish to display if the user gets disconnected from the internet. If this is nil, your thumbnail image will be displayed.
  */
-@property (nonatomic, retain) UIImage *offlinePoster;
+@property (nonatomic, nullable, retain) UIImage *offlinePoster;
 
 /*!
  The message you wish to display if the user gets disconnected from the internet. If this is nil, "Internet Lost" will be displayed.
  */
-@property (nonatomic, retain) NSString *offlineMessage;
+@property (nonatomic, nullable, retain) NSString *offlineMessage;
 
 /*!
  Player view size.
@@ -118,16 +119,24 @@ typedef NS_ENUM(NSInteger, JWPreload) {
 @property (nonatomic) NSInteger nextupOffset;
 
 /*!
+ Configures when the Next Up card displays during playback, based on the percentage of the duration.
+ @discussion A positive value is a percentage offset from the start of the video. A negative number is a percentage offset from the end of the video
+ @discussion i.e. setting the value to 50 will result in the Next Up card showing when half of the video is played. Setting the value to -25 will result in the Next Up card showing when playback reaches 75% of the video duration.
+ @discussion takes precedence over nextupOffset if both properties are set.
+ */
+@property (nonatomic) NSInteger nextupOffsetPercentage;
+
+/*!
  adConfig object providing info about ad handling.
  @see JWAdConfig
  */
-@property (nonatomic, retain) JWAdConfig *advertising;
+@property (nonatomic, nullable, retain) JWAdConfig *advertising;
 
 /*!
  Config object containing related settings.
  @see JWRelatedConfig
  */
-@property (nonatomic) JWRelatedConfig *related;
+@property (nonatomic, nullable) JWRelatedConfig *related;
 
 /*!
  A boolean value that determines whether player controls are shown.
@@ -172,7 +181,7 @@ typedef NS_ENUM(NSInteger, JWPreload) {
  Custom playback rate options to display in the settings menu.
  @discussion Only accepts value in the 0.0 to 4.0 range.
  */
-@property (nonatomic, retain) NSArray <NSNumber *> *playbackRates;
+@property (nonatomic, nullable, retain) NSArray <NSNumber *> *playbackRates;
 
 /*!
  Provides an option to stretch the video.
@@ -198,17 +207,17 @@ typedef NS_ENUM(NSInteger, JWPreload) {
 /*!
  The customization options for the player's skin.
  */
-@property (nonatomic, retain) JWSkinStyling *skin;
+@property (nonatomic, nullable, retain) JWSkinStyling *skin;
 
 /*!
  The configuration options for a clickable watermark that is overlayed on the video.
  */
-@property (nonatomic, retain) JWLogo *logo;
+@property (nonatomic, nullable, retain) JWLogo *logo;
 
 /*!
  Configuration object used to customize the captions.
  */
-@property (nonatomic, retain) JWCaptionStyling *captions;
+@property (nonatomic, nullable, retain) JWCaptionStyling *captions;
 
 /*!
  Prevents the JW Player SDK from overriding application level audio settings. Defaults to true.
@@ -235,3 +244,4 @@ typedef NS_ENUM(NSInteger, JWPreload) {
 - (instancetype)initWithContentUrl:(NSString *)contentUrl;
 
 @end
+NS_ASSUME_NONNULL_END

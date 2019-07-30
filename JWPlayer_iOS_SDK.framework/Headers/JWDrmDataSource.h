@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger, JWEncryption) {
     JWEncryptionFairPlay = 0
 };
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  @protocol JWDrmDataSource
  @discussion The JWDrmDataSource protocol defines methods that get called when assistance is required to reproduce DRM encrypted content.
@@ -19,6 +20,20 @@ typedef NS_ENUM(NSInteger, JWEncryption) {
 @protocol JWDrmDataSource <NSObject>
 
 @required
+
+/*!
+ @method fetchContentIdentifierForRequest:forEncryption:withCompletion:
+ @discussion Called when the JW Player SDK realizes that a stream is DRM encrypted and requires a content identifier from the application to begin decrypting.
+ 
+ @param loadingRequestURL The url of the resource being loaded.
+ 
+ @param encryption The DRM system used (i.e. Apple FairPlay).
+ 
+ @param completion The completion block used to provide the JW Player SDK with the content identifier. In the case of Apple FairPlay this is an opaque identifier for the content and is needed to obtain the SPC (Server Playback Context) message from the operating system.
+ */
+- (void)fetchContentIdentifierForRequest:(NSURL *)loadingRequestURL
+                           forEncryption:(JWEncryption)encryption
+                          withCompletion:(void (^)(NSData *contentIdentifier))completion;
 
 /*!
  @method fetchAppIdentifierForRequest:forEncryption:withCompletion:
@@ -50,21 +65,5 @@ typedef NS_ENUM(NSInteger, JWEncryption) {
                      forEncryption:(JWEncryption)encryption
                     withCompletion:(void (^)(NSData *response, NSDate *renewalDate, NSString *contentType))completion;
 
-@optional
-
-/*!
- @method fetchContentIdentifierForRequest:forEncryption:withCompletion:
- @discussion Called when the JW Player SDK realizes that a stream is DRM encrypted and requires a content identifier from the application to begin decrypting.
- 
- @param loadingRequestURL The url of the resource being loaded.
- 
- @param encryption The DRM system used (i.e. Apple FairPlay).
- 
- @param completion The completion block used to provide the JW Player SDK with the content identifier. In the case of Apple FairPlay this is an opaque identifier for the content and is needed to obtain the SPC (Server Playback Context) message from the operating system.
- @deprecated JWPlayer uses this method only for iOS version less then 11.
- */
-- (void)fetchContentIdentifierForRequest:(NSURL *)loadingRequestURL
-                           forEncryption:(JWEncryption)encryption
-                          withCompletion:(void (^)(NSData *contentIdentifier))completion __deprecated;
-
 @end
+NS_ASSUME_NONNULL_END

@@ -20,22 +20,26 @@ var SDKRouter = {
         window.webkit.messageHandlers.fastSeek.postMessage(position);
     },
 
-    preloadTitle(title) {
-        window.webkit.messageHandlers.preloadTitle.postMessage(title);
-    },
-
-    preloadImage(image) {
-        window.webkit.messageHandlers.preloadImage.postMessage(image);
-    },
-
-    load(providerId, file, time, payload, preload) {
+    load(item, providerId) {
+        /*
+         Per MDN (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage):
+         message is serialized using the structured clone algorithm,
+         meaning that error and function objects cannot be duplicated.
+         When parsing captions, the xhr object is added to the track. The xhr object contains function properties.
+         Stringifying and then parsing back to JSON allows us to strip out functions.
+         Since this conversion could result in undefined or throw an error in the case of syntax errors,
+         we fallback to a basic item containing just the file.
+         */
+        var itemWithoutFunctions;
+        var itemFallback = { file: item.file };
+        try {
+            itemWithoutFunctions = JSON.parse(JSON.stringify(item)) || itemFallback;
+        } catch(e) {
+            itemWithoutFunctions = itemFallback;
+        }
         window.webkit.messageHandlers.load.postMessage({
-                                                       providerId: providerId,
-                                                       file: file,
-                                                       time: time,
-                                                       payload: payload,
-                                                       preload: preload
-
+                                                       item: itemWithoutFunctions,
+                                                       providerId: providerId
                                                        });
     },
 
@@ -53,5 +57,12 @@ var SDKRouter = {
 
     setPlaybackRate(playbackRate) {
         window.webkit.messageHandlers.setPlaybackRate.postMessage(playbackRate);
+    },
+    
+    parseLocalFile(url, uniqueKey) {
+        window.webkit.messageHandlers.parseLocalFile.postMessage({
+                                                                 url: url,
+                                                                 uniqueKey: uniqueKey
+                                                                 });
     }
 };

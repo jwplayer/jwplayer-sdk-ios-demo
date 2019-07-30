@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, JWAdShown) {
     JWAdShownPre = 2
 };
 
+NS_ASSUME_NONNULL_BEGIN
 @interface JWAdRules : NSObject
 /*!
  The first playlist item that will allow ad playback, index starting at 1.
@@ -37,3 +38,4 @@ typedef NS_ENUM(NSInteger, JWAdShown) {
 @property (nonatomic) JWAdShown startOnSeek;
 
 @end
+NS_ASSUME_NONNULL_END

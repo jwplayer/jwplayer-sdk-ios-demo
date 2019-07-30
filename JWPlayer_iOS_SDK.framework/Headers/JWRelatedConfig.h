@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, JWRelatedOnClick) {
     JWRelatedOnClickLink,
 };
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  An object providing information about the way related videos are handled by the player.
  */
@@ -42,7 +43,7 @@ typedef NS_ENUM(NSInteger, JWRelatedOnClick) {
  (Required) Location of an RSS or JSON file containing a feed of related videos.
  @discussion Must be an url to a RSS or JSON file containing a feed of related videos. See: https://support.jwplayer.com/customer/portal/articles/1483102#implementing-related
 */
-@property (nonatomic) NSString *file;
+@property (nonatomic, copy) NSString *file;
 
 /*!
  Configure the recommendations user interface. Does not apply to manual playlists. Defaults to the shelf (JWRelatedDisplayModeShelf).
@@ -70,7 +71,7 @@ typedef NS_ENUM(NSInteger, JWRelatedOnClick) {
  Single line heading displayed above the grid with related videos. Generally contains a short call-to-action.
  Default: "Next up"
  */
-@property (nonatomic) NSString *heading;
+@property (nonatomic, nullable, copy) NSString *heading;
 
 /*!
  The number of seconds to wait before playing the next related video in your content list. Defaults to 10 seconds.
@@ -83,6 +84,7 @@ typedef NS_ENUM(NSInteger, JWRelatedOnClick) {
  Note: xx will be replaced by the countdown timer
  Note: __title__ will be replaced by the next title in the related feed.
  */
-@property (nonatomic) NSString *autoplayMessage;
+@property (nonatomic, nullable, copy) NSString *autoplayMessage;
 
 @end
+NS_ASSUME_NONNULL_END

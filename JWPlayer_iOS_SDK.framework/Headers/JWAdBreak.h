@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, JWAdType) {
     JWAdTypeNonlinear = 2
 };
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  JWAdBreak is an object providing info for an ad break in a video, played using JWPlayer.
  single AdBreak or a set of multiple AdBreak should be fed to the JWAdConfig's schedule array
@@ -36,19 +37,19 @@ typedef NS_ENUM(NSInteger, JWAdType) {
  @discussion * percentage of the entire video - '50%'
  @discussion * hours, minutes, seconds, milliseconds : 'hh:mm:ss.mmm'
  */
-@property (nonatomic, retain) NSString *offset;
+@property (nonatomic, copy) NSString *offset;
 
 /*!
  This option is the URL to the ad tag, which contains the VAST response.
  */
-@property (nonatomic, retain) NSString *tag;
+@property (nonatomic, nullable, copy) NSString *tag;
 
 /*!
  This option is the array of URLs to the ad tags, which contains the VAST response.
  @description tags array is used as a waterfall: if the first tag fails to play, the player falls back to the second in the list and so on, until it finds one that can be played.
  @discussion ONLY ONE AD FROM ARRAY IS PLAYED.
  */
-@property (nonatomic, retain) NSArray <NSString *> *tags;
+@property (nonatomic, nullable, retain) NSArray <NSString *> *tags;
 
 /*!
  This should be set to JWAdTypeNonlinear if you want to force the player to render a nonlinear ad in the ad response. Defaults to JWAdTypeLinear.
@@ -61,7 +62,7 @@ typedef NS_ENUM(NSInteger, JWAdType) {
  @discussion VAST only.
  @see JWPlayerDelegate
  */
-@property (nonatomic, readonly) NSDictionary *vmapInfo;
+@property (nonatomic, nullable, readonly) NSDictionary *vmapInfo;
 
 /* ========================================*/
 /** @name Creating Ad Break Object */
@@ -108,3 +109,4 @@ typedef NS_ENUM(NSInteger, JWAdType) {
 - (instancetype)initWithTags:(NSArray *)tags offset:(NSString *)offset;
 
 @end
+NS_ASSUME_NONNULL_END

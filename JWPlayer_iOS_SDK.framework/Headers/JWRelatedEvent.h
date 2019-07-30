@@ -11,6 +11,7 @@
 
 @class JWPlaylistItem;
 
+NS_ASSUME_NONNULL_BEGIN
 @interface JWRelatedEvent : NSObject
 
 @end
@@ -30,7 +31,7 @@
 /*!
  The URL of the feed that was loaded into the player.
  */
-@property (nonatomic) NSString *url;
+@property (nonatomic, copy) NSString *url;
 
 /*!
  An array of all items that have been loaded into the related plugin.
@@ -58,3 +59,4 @@
 @property (nonatomic) NSInteger position;
 
 @end
+NS_ASSUME_NONNULL_END

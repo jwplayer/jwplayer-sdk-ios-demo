@@ -9,16 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @interface JWTooltipsStyling : NSObject
 
 /*!
  The text color of tooltips.
  */
-@property (nonatomic, retain) UIColor *text;
+@property (nonatomic, nullable, retain) UIColor *text;
 
 /*!
  The background color of tooltips.
  */
-@property (nonatomic, retain) UIColor *background;
+@property (nonatomic, nullable, retain) UIColor *background;
 
 @end
+NS_ASSUME_NONNULL_END

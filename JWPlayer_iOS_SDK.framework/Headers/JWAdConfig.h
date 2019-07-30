@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, JWAdClient) {
     JWAdClientFreewheel
 };
 
+NS_ASSUME_NONNULL_BEGIN
 @class JWAdBreak, IMASettings, JWFreewheelConfig;
 
 /*!
@@ -31,25 +32,25 @@ The URL of the VAST tag to display, or the custom string of the Freewheel tag to
  @discussion can also specify Vast vmap file to use for ad breaks.
  @discussion ignore if schedule is set.
 */
-@property (nonatomic, retain) NSString *tag;
+@property (nonatomic, nullable, retain) NSString *tag;
 
 /*!
  A message to be shown to the user in place of a seekbar while the ad is playing.
  @discussion 'xx' in the message is replaced with countdown timer until the end of the ad.
  */
-@property (nonatomic, retain) NSString *adMessage;
+@property (nonatomic, nullable, retain) NSString *adMessage;
 
 /*!
  A message to be shown on the skip button during countdown to skip availablilty.
  @discussion 'xx' in the message is replaced with countdown timer until the moment skip becomes available.
  @see skipText
  */
-@property (nonatomic, retain) NSString *skipMessage;
+@property (nonatomic, nullable, retain) NSString *skipMessage;
 
 /*!
  A message to be shown on the skip button when the skip option becomes available.
  */
-@property (nonatomic, retain) NSString *skipText;
+@property (nonatomic, nullable, retain) NSString *skipText;
 
 /*!
  An integer representing the number of seconds before the ad can be skipped.
@@ -61,13 +62,13 @@ The URL of the VAST tag to display, or the custom string of the Freewheel tag to
  @discussion tag property is ignored if this property is not nil.
  @see JWAdBreak
  */
-@property (nonatomic, retain) NSArray <JWAdBreak *> *schedule;
+@property (nonatomic, nullable, retain) NSArray <JWAdBreak *> *schedule;
 
 /*!
  Vast vmap file to use for ad breaks.
  @discussion schedule is ignored if this property is not nil.
  */
-@property (nonatomic, retain) NSString *adVmap;
+@property (nonatomic, nullable, retain) NSString *adVmap;
 
 /*!
  Set to JWAdClientGoogima if you wish to use google IMA; set to JWAdClientVast if not. Setting to nil defaults to vast.
@@ -79,13 +80,13 @@ The URL of the VAST tag to display, or the custom string of the Freewheel tag to
  The IMASettings class stores the Google IMA SDK settings.
  @discussion When setting a custom imaSetting, the default value of enableBackgroundPlayback is NO.
  */
-@property (nonatomic) IMASettings *googimaSettings;
+@property (nonatomic, nullable) IMASettings *googimaSettings;
 
 /*!
  The JWFreewheelConfig class stores the Freewheel SDK settings.
  @discussion When setting Freewheel settings, the value of adClient should be set to JWAdClientFreewheel.
  */
-@property (nonatomic) JWFreewheelConfig *freewheel;
+@property (nonatomic, nullable) JWFreewheelConfig *freewheel;
 
 /*!
  For forcing controls to show for VPAID ads. Default is false.
@@ -97,6 +98,7 @@ The URL of the VAST tag to display, or the custom string of the Freewheel tag to
  Use to control the frequency of ad playback.
  @discussion Available only for the VAST adClient.
  */
-@property (nonatomic, retain) JWAdRules *rules;
+@property (nonatomic, nullable, retain) JWAdRules *rules;
 
 @end
+NS_ASSUME_NONNULL_END

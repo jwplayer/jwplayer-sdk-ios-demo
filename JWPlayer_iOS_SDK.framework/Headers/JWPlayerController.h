@@ -30,6 +30,7 @@
 #define JWAudioTrackNotification @"JWAudioTrackNotification"
 #define JWRelatedActivityNotification @"JWRelatedActivityNotification"
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  A class that encapsulates JW Player and provides control over the playback as well as holds the state of the player and notifies about status updates.
  */
@@ -42,28 +43,28 @@
  Player view.
  @discussion to be added to the application view hierarchy.
  */
-@property (nonatomic, retain, readonly) UIView *view;
+@property (nonatomic, nullable, retain, readonly) UIView *view;
 
 /*!
 The object that acts as the delegate of the jwPlayerController.
  @discussion The delegate must adopt the JWPlayerDelegate protocol. The delegate is not retained.
  @see JWPlayerDelegate
  */
-@property (nonatomic, weak) id<JWPlayerDelegate> delegate;
+@property (nonatomic, nullable, weak) id<JWPlayerDelegate> delegate;
 
 /*!
  The object that acts as the analyticsDelegate of the JWPlayerController. Data provided by this object can be used by 3rd-party analytics libraries.
  @discussion The analyticsDelegate must adopt the JWAVPlayerAnalyticsDelegate protocol. The analyticsDelegate is not retained.
  @see JWAVPlayerAnalyticsDelegate
  */
-@property (nonatomic, weak) id<JWAVPlayerAnalyticsDelegate> analyticsDelegate;
+@property (nonatomic, nullable, weak) id<JWAVPlayerAnalyticsDelegate> analyticsDelegate;
 
 /*!
  The JWDrmDataSource is adopted by an object that mediates the application's data model and key server. The data source provides the JWPlayerController object with the data needed to reproduce encrypted content.
  @discussion The drmDataSource must adopt the JWDrmDataSource protocol. The drmDataSource is not retained.
  @see JWDrmDataSource
  */
-@property (nonatomic, weak) id<JWDrmDataSource> drmDataSource;
+@property (nonatomic, nullable, weak) id<JWDrmDataSource> drmDataSource;
 
 /*!
  An interface for exposing experimental features.
@@ -74,12 +75,12 @@ The object that acts as the delegate of the jwPlayerController.
 /*!
  Returns the version of google IMA framework used by the SDK.
  */
-@property (nonatomic, retain, readonly) NSString *googleIMAVersion;
+@property (nonatomic, copy, readonly) NSString *googleIMAVersion;
 
 /*!
  Returns the version of google ChromeCast framework used by the SDK.
 */
-@property (nonatomic, retain, readonly) NSString *googleChromeCastVersion;
+@property (nonatomic, copy, readonly) NSString *googleChromeCastVersion;
 
 /*!
  Returns current state of the player.
@@ -91,7 +92,7 @@ The object that acts as the delegate of the jwPlayerController.
  Metadata associated with the current video. Usually includes dimensions and duration of the video.
  @discussion becomes available shortly after the video starts playing. There is a notification JWMetaDataAvailableNotification posted right after metadata is available.
  */
-@property (nonatomic, retain, readonly) NSDictionary *metadata;
+@property (nonatomic, nullable, retain, readonly) NSDictionary *metadata;
 
 /*!
  Dimensions of the current video. Becomes available shortly after the video starts to play as a part of metadata.
@@ -188,7 +189,7 @@ The object that acts as the delegate of the jwPlayerController.
  Inits the player with config object in JWConfig format.
  @param config  JWConfig object that is used to setup the player.
  */
-- (instancetype)initWithConfig:(JWConfig *)config;
+- (nullable instancetype)initWithConfig:(JWConfig *)config;
 
 /*!
  Inits the player with config object in JWConfig format and sets the object that acts as the delegate of the JWPlayerController.
@@ -196,7 +197,7 @@ The object that acts as the delegate of the jwPlayerController.
  @param delegate The object that acts as the delegate of the jwPlayerController.
  @see JWPlayerDelegate
  */
-- (instancetype)initWithConfig:(JWConfig *)config delegate:(id<JWPlayerDelegate>)delegate;
+- (nullable instancetype)initWithConfig:(JWConfig *)config delegate:(nullable id<JWPlayerDelegate>)delegate;
 
 /*!
  Inits the player with a JWConfig object and sets the object that acts as a DRM data source, as well as the delegate of the JWPlayerController.
@@ -205,7 +206,9 @@ The object that acts as the delegate of the jwPlayerController.
  @param drmDataSource The object that acts as a data source for reproducing drm encrypted content.
  @see JWPlayerDelegate, JWDrmDataSource
  */
-- (instancetype)initWithConfig:(JWConfig *)config delegate:(id<JWPlayerDelegate>)delegate drmDataSource:(id<JWDrmDataSource>)drmDataSource;
+- (nullable instancetype)initWithConfig:(JWConfig *)config delegate:(nullable id<JWPlayerDelegate>)delegate drmDataSource:(nullable id<JWDrmDataSource>)drmDataSource NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
 
 /* ========================================*/
 /** @name Managing Playback */
@@ -348,12 +351,12 @@ The object that acts as the delegate of the jwPlayerController.
 /*!
  Version of underlying web player
  */
-@property (nonatomic, retain, readonly) NSString *playerVersion;
+@property (nonatomic, copy, readonly) NSString *playerVersion;
 
 /*!
  Player edition based on the provided JW License key
  */
-@property (nonatomic, retain, readonly) NSString *playerEdition;
+@property (nonatomic, copy, readonly) NSString *playerEdition;
 
 /*!
  Version of the iOS SDK
@@ -373,3 +376,4 @@ The object that acts as the delegate of the jwPlayerController.
 + (void)setPlayerKey:(NSString *)key;
 
 @end
+NS_ASSUME_NONNULL_END

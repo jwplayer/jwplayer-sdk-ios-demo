@@ -15,12 +15,13 @@ typedef NS_ENUM(NSInteger, JWAdCompanionType) {
     JWAdCompanionTypeHtml
 };
 
+NS_ASSUME_NONNULL_BEGIN
 @interface JWAdCompanion : NSObject
 
 /*!
  URL to link to when clicking the companion. Only available if the type is static.
  */
-@property (nonatomic, readonly) NSString *clickUrl;
+@property (nonatomic, nullable, copy, readonly) NSString *clickUrl;
 
 /*!
  The dimensions of the companion in pixels.
@@ -30,7 +31,7 @@ typedef NS_ENUM(NSInteger, JWAdCompanionType) {
 /*!
  The URL to the static/iframe resource, or the raw HTML content.
  */
-@property (nonatomic, readonly) NSString *resource;
+@property (nonatomic, copy, readonly) NSString *resource;
 
 /*!
  The type of the creative: static, IFrame, or HTML.
@@ -40,6 +41,9 @@ typedef NS_ENUM(NSInteger, JWAdCompanionType) {
 /*!
 An array of included creativeview event tracking pixels
  */
-@property (nonatomic, readonly) NSArray <NSString *> *creativeView;
+@property (nonatomic, nullable, readonly) NSArray <NSString *> *creativeView;
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
+NS_ASSUME_NONNULL_END

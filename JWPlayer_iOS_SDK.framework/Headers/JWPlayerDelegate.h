@@ -11,6 +11,7 @@
 #import "JWAdEvent.h"
 #import "JWRelatedEvent.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @protocol JWFirstFrameEvent, JWReadyEvent;
 /*!
  @protocol JWPlayerDelegate
@@ -369,4 +370,4 @@
 - (void)onWarning:(JWEvent<JWErrorEvent> *)event;
 
 @end
-
+NS_ASSUME_NONNULL_END

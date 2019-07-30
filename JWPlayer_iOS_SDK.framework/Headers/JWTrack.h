@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  An object providing info about captions. Supports DFXP (TTML), SRT, WebVTT formats.
  */
@@ -20,19 +21,19 @@
 /*!
  Path to the captions file.
  */
-@property (nonatomic, retain) NSString *file;
+@property (nonatomic, copy) NSString *file;
 
 /*!
  Label to be shown in the player in captions popup.
  @discussion not shown if only 1 captions track provided.
  */
-@property (nonatomic, retain) NSString *label;
+@property (nonatomic, copy) NSString *label;
 
 /*!
  String representing kind of track.
  @discussion only 'captions' currently supported.
  */
-@property (nonatomic, retain) NSString *kind;
+@property (nonatomic, nullable, copy) NSString *kind;
 
 /*!
  If set to yes the player shows this captions track upon launch.
@@ -75,6 +76,8 @@
  @param label Label to be shown in the player in captions popup.
  @param def If set to yes the player shows this captions track upon launch.
  */
-- (instancetype)initWithFile:(NSString *)file label:(NSString *)label isDefault:(BOOL)def;
+- (instancetype)initWithFile:(NSString *)file label:(NSString *)label isDefault:(BOOL)def NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
 @end
+NS_ASSUME_NONNULL_END

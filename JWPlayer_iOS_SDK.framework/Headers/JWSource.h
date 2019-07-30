@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  An object providing info about quality levels of a video.
  */
@@ -20,12 +21,12 @@
 /*!
  URL of a file representing video quality
  */
-@property (nonatomic, retain) NSString *file;
+@property (nonatomic, copy) NSString *file;
 
 /*!
  A label to be shown in the quality dropdown for this quality
  */
-@property (nonatomic, retain) NSString *label;
+@property (nonatomic, copy) NSString *label;
 
 /*!
  Determines whether current quality is the default.
@@ -35,7 +36,7 @@
 /*!
  A dictionary containing asset initialization options.
  */
-@property (nonatomic) NSDictionary *assetOptions;
+@property (nonatomic, nullable, retain) NSDictionary *assetOptions;
 
 
 /* ========================================*/
@@ -66,6 +67,8 @@
  @param label A label to be shown in the quality dropdown for this quality.
  @param defaultQuality Determines whether this quality is the default option.
  */
-- (instancetype)initWithFile:(NSString *)file label:(NSString *)label isDefault:(BOOL)defaultQuality;
+- (instancetype)initWithFile:(NSString *)file label:(NSString *)label isDefault:(BOOL)defaultQuality NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
 @end
+NS_ASSUME_NONNULL_END

@@ -11,12 +11,13 @@
 #import "JWAdConfig.h"
 #import "JWAdBreak.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface JWAdEvent : NSObject
 
 /*!
  The ad tag that for which the event was fired.
  */
-@property (nonatomic) NSString *tag;
+@property (nonatomic, copy) NSString *tag;
 
 @end
 
@@ -25,7 +26,7 @@
 /*!
  The type of ad that is being played.
  */
-@property (nonatomic) NSString *creativeType;
+@property (nonatomic, copy) NSString *creativeType;
 
 /*!
  The client that is currently being used, vast, googima or freewheel.
@@ -40,12 +41,12 @@
 /*!
  Whether an ad is in a pre, mid, or post position.
  */
-@property (nonatomic) NSString *adPosition;
+@property (nonatomic, copy) NSString *adPosition;
 
 /*!
  An ad's position. Will return a number (in seconds) of a midroll's position
  */
-@property (nonatomic) NSString *offset;
+@property (nonatomic, copy) NSString *offset;
 
 @end
 
@@ -80,32 +81,32 @@
 /*!
  An ad's position (pre, mid, post).
  */
-@property (nonatomic) NSString *adPosition;
+@property (nonatomic, copy) NSString *adPosition;
 
 /*!
  AdSystem referenced inside of the VAST XML.
  */
-@property (nonatomic) NSString *adSystem;
+@property (nonatomic, nullable, copy) NSString *adSystem;
 
 /*!
  AdTitle referenced inside of the VAST XML.
  */
-@property (nonatomic) NSString *adTitle;
+@property (nonatomic, nullable, copy) NSString *adTitle;
 
 /*!
  VAST-only: An array of the AdSystems specified in any utilized ad wrappers; index denotes level of wrapper.
  */
-@property (nonatomic) NSArray *wrapper;
+@property (nonatomic, nullable) NSArray *wrapper;
 
 /*!
  The URL which will be opened if the ad is clicked.
  */
-@property (nonatomic) NSString *clickThroughUrl;
+@property (nonatomic, copy) NSString *clickThroughUrl;
 
 /*!
  The currently playing media item.
  */
-@property (nonatomic) NSString *mediaFile;
+@property (nonatomic, copy) NSString *mediaFile;
 
 /*!
  VAST-only: The version of VAST referenced in the VAST XML.
@@ -120,7 +121,7 @@
 /*!
  Details of the VMAP schedule's adBreak that is currently playing. Available only for VMAP schedules on Vast.
  */
-@property (nonatomic) NSDictionary *vmapInfo;
+@property (nonatomic, nullable) NSDictionary *vmapInfo;
 
 @end
 
@@ -142,3 +143,4 @@
 @property (nonatomic) NSUInteger sequence;
 
 @end
+NS_ASSUME_NONNULL_END

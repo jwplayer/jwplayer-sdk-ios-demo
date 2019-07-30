@@ -10,6 +10,7 @@
 #import "JWCastingDelegate.h"
 #import "JWCastingDevice.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @class JWPlayerController;
 
 /*!
@@ -28,19 +29,19 @@
  The ChromeCast Application ID of the receiver application to which you wish to cast.
  @discussion Set this property to a receiver's Application ID before scanning for devices in order to restrict the scan to chromeCast devices that support the receiver. Leaving this value nil results in scanning for all ChromeCast devices.
  */
-@property (nonatomic) NSString *chromeCastReceiverAppID;
+@property (nonatomic, copy) NSString *chromeCastReceiverAppID;
 
 /*!
  The object that acts as the delegate of the JWCastController.
  @discussion The delegate must adopt the JWCastingDelegate protocol. The delegate is not retained.
  */
-@property (nonatomic, weak) id<JWCastingDelegate> delegate;
+@property (nonatomic, nullable, weak) id<JWCastingDelegate> delegate;
 
 /*!
  The casting device to which you are currently connected. 
  @discussion Will be nil if not connected to any casting devices.
  */
-@property (nonatomic, readonly) JWCastingDevice *connectedDevice;
+@property (nonatomic, nullable, readonly) JWCastingDevice *connectedDevice;
 
 /*!
  The list of casting devices that are currently online.
@@ -48,13 +49,13 @@
  */
 @property (nonatomic, readonly) NSArray <JWCastingDevice *> *availableDevices;
 
-- (instancetype)init __attribute__((unavailable("init not available")));
+- (instancetype)init NS_UNAVAILABLE;
 
 /*!
  Inits the castController with a player.
  @param player JWPlayerController object currently in use.
  */
-- (instancetype)initWithPlayer:(JWPlayerController *)player;
+- (instancetype)initWithPlayer:(JWPlayerController *)player NS_DESIGNATED_INITIALIZER;
 
 /*!
  Scans for casting devices.
@@ -88,3 +89,4 @@
 - (void)stopCasting;
 
 @end
+NS_ASSUME_NONNULL_END

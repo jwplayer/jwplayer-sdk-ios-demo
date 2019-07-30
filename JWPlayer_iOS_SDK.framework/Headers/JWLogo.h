@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, JWLogoPosition) {
     JWLogoPositionControlbar
 };
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  Configures a clickable watermark that is overlayed on the video.
  */
@@ -25,7 +26,7 @@ typedef NS_ENUM(NSInteger, JWLogoPosition) {
  The file path of a JPG, PNG, SVG or GIF image to be used as watermark (e.g. /assets/logo.png). We recommend using 24 bit PNG images with transparency.
  @discussion Can be either an external URL or the resource path in the bundle.
  */
-@property (nonatomic, retain) NSString *file;
+@property (nonatomic, copy) NSString *file;
 
 /*!
  When this option is set to true, the logo will automatically show and hide along with the other player controls. Defaults to NO.
@@ -35,7 +36,7 @@ typedef NS_ENUM(NSInteger, JWLogoPosition) {
 /*!
  The URL to visit when the watermark image is clicked. Clicking a logo will have no effect unless this is configured.
  */
-@property (nonatomic, retain) NSString *link;
+@property (nonatomic, nullable, copy) NSString *link;
 
 /*!
  The distance, in pixels, of the logo from the edges of the display. Defaults to 20;
@@ -55,3 +56,4 @@ typedef NS_ENUM(NSInteger, JWLogoPosition) {
 + (instancetype)logoNamed:(NSString *)name withExtension:(NSString *)fileType;
 
 @end
+NS_ASSUME_NONNULL_END

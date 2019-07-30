@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, JWPlayerState) {
 
 @class JWTrack, JWSource, JWPlaylistItem, JWPlayerError, JWAdCompanion;
 
+NS_ASSUME_NONNULL_BEGIN
 @interface JWEvent : NSObject
 
 @end
@@ -55,7 +56,7 @@ typedef NS_ENUM(NSInteger, JWPlayerState) {
 /*!
  The reason why a buffer event occurred.
  */
-@property (nonatomic) NSString *reason;
+@property (nonatomic, copy) NSString *reason;
 
 @end
 
@@ -235,3 +236,4 @@ typedef NS_ENUM(NSInteger, JWPlayerState) {
 @property (nonatomic) JWPlayerError *error;
 
 @end
+NS_ASSUME_NONNULL_END

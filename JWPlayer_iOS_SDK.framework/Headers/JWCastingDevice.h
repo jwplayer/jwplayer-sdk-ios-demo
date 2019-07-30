@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, JWCastingService) {
     JWCastingServiceGoogleChromeCast = 1
 };
@@ -26,13 +27,14 @@ typedef NS_ENUM(NSInteger, JWCastingService) {
 /*!
  The casting device's friendly name; i.e. "Dining Room".
  */
-@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *name;
 
 /*!
  A unique identifier for the casting device.
  */
-@property (nonatomic, readonly) NSString *identifier;
+@property (nonatomic, copy, readonly) NSString *identifier;
 
-- (instancetype)init __attribute__((unavailable("init not available")));
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
+NS_ASSUME_NONNULL_END

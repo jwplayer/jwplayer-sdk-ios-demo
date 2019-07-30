@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  @protocol JWAVPlayerAnalyticsDelegate
  @discussion The JWAVPlayerAnalyticsDelegate protocol defines properties that a analyticsDelegate of a JWPlayerController object can implement to observe AVPlayer values.
@@ -48,3 +49,4 @@
 - (void)playerLayerVideoRectDidChange:(CGRect)videoRect;
 
 @end
+NS_ASSUME_NONNULL_END
