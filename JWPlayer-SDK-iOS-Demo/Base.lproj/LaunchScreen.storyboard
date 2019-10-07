@@ -1,0 +1,71 @@
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"></adaptation>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"></deployment>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"></plugIn>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"></capability>
+    </dependencies>
+    <scenes>
+        <scene sceneID="twJ-eg-ty3">
+            <objects>
+                <viewController id="hlI-xK-gTG" sceneMemberID="viewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <connections></connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CoG-oY-W0a" userLabel="First Responder" sceneMemberID="firstResponder"></placeholder>
+                <viewController id="4MN-Ds-AJY">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ous-V3-xiu"></viewControllerLayoutGuide>
+                        <viewControllerLayoutGuide type="bottom" id="vfd-lo-W06"></viewControllerLayoutGuide>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qn5-Q1-bd7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"></rect>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"></autoresizingMask>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Hello JWPlayer - Demo App  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxo-WQ-XeM">
+                                <rect key="frame" x="30" y="42" width="315" height="58"></rect>
+                                <color key="backgroundColor" red="0.79466459570000003" green="1" blue="0.93697059829999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"></color>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="maL-xk-QEX"></constraint>
+                                    <constraint firstAttribute="height" constant="58" id="ZrR-4w-Zwc"></constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"></fontDescription>
+                                <nil key="textColor"></nil>
+                                <nil key="highlightedColor"></nil>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="jwlogo" translatesAutoresizingMaskIntoConstraints="NO" id="eu2-FZ-Ep7">
+                                <rect key="frame" x="131.5" y="277.5" width="112.5" height="112.5"></rect>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 JWPlayer   All rights reserved." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="pjh-97-idy">
+                                <rect key="frame" x="67.5" y="570" width="240" height="57"></rect>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="RmK-zS-6Mr"></constraint>
+                                    <constraint firstAttribute="width" constant="240" id="YWd-kB-lzn"></constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"></fontDescription>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"></color>
+                                <nil key="highlightedColor"></nil>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"></color>
+                        <constraints>
+                            <constraint firstItem="pjh-97-idy" firstAttribute="centerX" secondItem="eu2-FZ-Ep7" secondAttribute="centerX" id="EQS-mL-oGs"></constraint>
+                            <constraint firstItem="eu2-FZ-Ep7" firstAttribute="centerY" secondItem="Qn5-Q1-bd7" secondAttribute="centerY" id="hTU-va-NUr"></constraint>
+                            <constraint firstItem="lxo-WQ-XeM" firstAttribute="top" secondItem="ous-V3-xiu" secondAttribute="bottom" constant="22" id="dhM-c4-Nsn"></constraint>
+                            <constraint firstItem="vfd-lo-W06" firstAttribute="top" secondItem="pjh-97-idy" secondAttribute="bottom" constant="40" id="qqE-Ba-CeG"></constraint>
+                            <constraint firstItem="lxo-WQ-XeM" firstAttribute="centerX" secondItem="Qn5-Q1-bd7" secondAttribute="centerX" id="cWX-Gf-mtc"></constraint>
+                            <constraint firstItem="eu2-FZ-Ep7" firstAttribute="centerX" secondItem="lxo-WQ-XeM" secondAttribute="centerX" id="Tno-Ie-MAF"></constraint>
+                        </constraints>
+                    </view>
+                    <point key="canvasLocation" x="390" y="360"></point>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="0" y="0"></point>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jwlogo" width="112.5" height="112.5"></image>
+    </resources>
+</document>
