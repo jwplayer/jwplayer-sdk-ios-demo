@@ -70,6 +70,7 @@ The object that acts as the delegate of the jwPlayerController.
  An interface for exposing experimental features.
  @discussion These features are very likely to be deprecated in the future, and will either be entirely dropped or replaced.
  */
+DEPRECATED_MSG_ATTRIBUTE("Use JWFriendlyAdObstructions class instead.");
 @property (nonatomic, readonly) JWExperimentalAPI *experimentalAPI;
 
 /*!

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+__attribute__ ((deprecated("Use JWFriendlyAdObstructions class instead")))
+
 NS_ASSUME_NONNULL_BEGIN
 
 /*!

@@ -94,6 +94,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, copy) NSString *adTitle;
 
 /*!
+ GoogleIMA and Freewheel-only: AdId referenced inside of the VAST XML.
+ @discussion Google IMA and Freewheel only. Not yet supported in VAST.
+ */
+@property (nonatomic, nullable, copy) NSString *adId;
+
+/*!
  VAST-only: An array of the AdSystems specified in any utilized ad wrappers; index denotes level of wrapper.
  */
 @property (nonatomic, nullable) NSArray *wrapper;

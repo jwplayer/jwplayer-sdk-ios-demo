@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)fetchContentKeyWithRequest:(NSData *)requestBytes
                      forEncryption:(JWEncryption)encryption
-                    withCompletion:(void (^)(NSData *response, NSDate *renewalDate, NSString *contentType))completion;
+                    withCompletion:(void (^)(NSData *response, NSDate *_Nullable renewalDate, NSString *_Nullable contentType))completion;
 
 @end
 NS_ASSUME_NONNULL_END
