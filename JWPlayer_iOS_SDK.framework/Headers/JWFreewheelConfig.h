@@ -10,6 +10,10 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+/**
+    Configuration settings for freewheel ads.
+ */
 @interface JWFreewheelConfig : NSObject
 
 @property (nonatomic, nullable, copy) NSString *serverId;

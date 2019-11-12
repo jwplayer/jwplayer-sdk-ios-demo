@@ -8,22 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+    Type of encryption for DRM content.
+ */
 typedef NS_ENUM(NSInteger, JWEncryption) {
+    /// Apple's FairPlay encryption
     JWEncryptionFairPlay = 0
 };
 
 NS_ASSUME_NONNULL_BEGIN
-/*!
- @protocol JWDrmDataSource
- @discussion The JWDrmDataSource protocol defines methods that get called when assistance is required to reproduce DRM encrypted content.
+/**
+ The JWDrmDataSource protocol defines methods that get called when assistance is required to reproduce DRM encrypted content.
  */
 @protocol JWDrmDataSource <NSObject>
 
 @required
 
-/*!
- @method fetchContentIdentifierForRequest:forEncryption:withCompletion:
- @discussion Called when the JW Player SDK realizes that a stream is DRM encrypted and requires a content identifier from the application to begin decrypting.
+/**
+ Called when the JW Player SDK realizes that a stream is DRM encrypted and requires a content identifier from the application to begin decrypting.
  
  @param loadingRequestURL The url of the resource being loaded.
  
@@ -35,9 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
                            forEncryption:(JWEncryption)encryption
                           withCompletion:(void (^)(NSData *contentIdentifier))completion;
 
-/*!
- @method fetchAppIdentifierForRequest:forEncryption:withCompletion:
- @discussion Called when the JW Player SDK realizes that a stream is DRM encrypted and requires an application identifier from the application to begin decrypting.
+/**
+ Called when the JW Player SDK realizes that a stream is DRM encrypted and requires an application identifier from the application to begin decrypting.
  
  @param loadingRequestURL The url of the resource being loaded.
  
@@ -49,9 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
              forEncryption:(JWEncryption)encryption
             withCompletion:(void (^)(NSData *appIdentifier))completion;
 
-/*!
- @method fetchContentKeyWithRequest:forEncryption:withCompletion:
- @discussion Called when the JW Player SDK needs the content key to being decrypting.
+/**
+ Called when the JW Player SDK needs the content key to being decrypting.
  
  @param requestBytes The key request data that must be transmitted to the key vendor to obtain the content key. In the case of Apple FairPlay this is the SPC (Server Playback Context) message from the operating system which must be sent to the Key Server in order to obtain the CKC (Content Key Context) message.
  

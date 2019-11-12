@@ -15,8 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  This interface allows to register views considered as friendly obstructions.
  
- @discussion
- Applicable to the Google IMA ad client only.
+ @note Applicable to the Google IMA ad client only.
  
  Friendly obstructions are views such as video controls that are essential to the user’s experience but do not impact viewability. Once registered as such, these controls are excluded from ad viewability measurements. These controls must only be fully transparent overlays or small buttons. Any other non-control views must not be registered.
  
@@ -24,35 +23,35 @@ NS_ASSUME_NONNULL_BEGIN
 
  You may register:
  
- ● A transparent overlay used to capture user taps.
+    * A transparent overlay used to capture user taps.
  
- ● Transient buttons such as:
+    * Transient buttons such as:
  
- ○ Pause
+        1. Pause
  
- ○ Play
+        2. Play
  
- ○ Fullscreen
- 
- ○ Cast/AirPlay
- 
- ○ Collapse
- 
- ○ Progress/Seek
- 
- ○ Other playback relevant actions
+        3. Fullscreen
+     
+        4. Cast/AirPlay
+     
+        5. Collapse
+     
+        6. Progress/Seek
+     
+        7. Other playback relevant actions
  
  You must NOT register:
  
- ● Watermarks
+    * Watermarks
  
- ● Pop ups
+    * Pop ups
  
- ● Dialogs
+    * Dialogs
  
- ● Non-transient buttons
+    * Non-transient buttons
  
- ● Other obscuring views
+    * Other obscuring views
  
  
  For more information, see [Open Measurement in the IMA SDK](https://developers.google.com/interactive-media-ads/docs/sdks/ios/omsdk)
