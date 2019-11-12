@@ -9,7 +9,6 @@
 #import "JWPlayerController.h"
 #import "JWSDKRouter.h"
 #import "JWWebPlayerFactory.h"
-#import "JWPingBridge.h"
 #import "JWOfflineHandler.h"
 #import "JWRotationHandler.h"
 #import "JWFullScreenHandler.h"
@@ -34,7 +33,7 @@ static NSString * webPlayerVersion;
 
 @interface JWPlayerController (Private)<JWEditionProvider>
 
-@property (nonatomic) JWPWebView *playerView;
+@property (nonatomic) JWPWebView *webPlayer;
 @property (nonatomic) JWAVContainer *avContainer;
 @property (nonatomic) IMAAdsManager *googimaAdsManager;
 @property (nonatomic, readwrite) JWConfig *config;
@@ -45,7 +44,6 @@ static NSString * webPlayerVersion;
 @property (nonatomic) JWOfflineHandler *offlineHandler;
 @property (nonatomic) JWRotationHandler *rotationHandler;
 @property (nonatomic) JWPictureInPictureHandler *pictureInpictureHandler;
-@property (nonatomic) JWPingBridge *pingBridge;
 @property (nonatomic) JWWebPlayerFactory *webPlayerFactory;
 @property (nonatomic) JWWebViewDelegate *webLoadFilter;
 @property (nonatomic) JWLockScreenController *lockScreenController;
@@ -55,7 +53,6 @@ static NSString * webPlayerVersion;
 @property (nonatomic, weak) id<JWFriendlyAdObstructionsDataSource> friendlyAdObstructionsDataSource;
 
 @property (nonatomic) BOOL queuedForFullscreen;
-@property (nonatomic) BOOL wasForcedToRotate;
 @property (nonatomic) BOOL isPreparingToPlay;
 @property (nonatomic) BOOL isReady;
 @property (nonatomic) BOOL webPlayerLoadFailed;

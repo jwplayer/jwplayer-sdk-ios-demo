@@ -9,47 +9,49 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-/*!
+/**
  An object providing info about quality levels of a video.
  */
 @interface JWSource : NSObject
 
 /* ========================================*/
-/** @name Accessing Source Attributes */
+/** @name Accessing Source Attributes
+ */
 
 
-/*!
+/**
  URL of a file representing video quality
  */
 @property (nonatomic, copy) NSString *file;
 
-/*!
+/**
  A label to be shown in the quality dropdown for this quality
  */
 @property (nonatomic, copy) NSString *label;
 
-/*!
+/**
  Determines whether current quality is the default.
  */
 @property (nonatomic) BOOL defaultQuality;
 
-/*!
+/**
  A dictionary containing asset initialization options.
  */
 @property (nonatomic, nullable, retain) NSDictionary *assetOptions;
 
 
 /* ========================================*/
-/** @name Creating Source Object */
+/** @name Creating Source Object
+ */
 
-/*!
+/**
  Initializes source with file and label.
  @param file URL of a file representing video quality.
  @param label A label to be shown in the quality dropdown for this quality.
  */
 + (instancetype)sourceWithFile:(NSString *)file label:(NSString *)label;
 
-/*!
+/**
  Convenience method that initilizes source with provided file, label and sets it to default.
  @param file URL of a file representing video quality.
  @param label A label to be shown in the quality dropdown for this quality.
@@ -58,10 +60,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sourceWithFile:(NSString *)file label:(NSString *)label isDefault:(BOOL)defaultQuality;
 
 /* ========================================*/
-/** @name Initializing Source Object */
+/** @name Initializing Source Object
+ */
 
 
-/*!
+/**
  Initializes source with file and label. Sets source as default.
  @param file URL of a file representing video quality.
  @param label A label to be shown in the quality dropdown for this quality.
