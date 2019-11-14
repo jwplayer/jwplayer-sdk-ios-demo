@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import MediaPlayer
 
 class SwiftViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
@@ -16,6 +18,8 @@ class SwiftViewController: UIViewController {
         super.viewDidLoad()
         let config = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
         player = JWPlayerController(config: config)
+        
+        navigationItem.setupAirPlayButton()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -25,6 +29,22 @@ class SwiftViewController: UIViewController {
             playerView.constrainToSuperview()
         }
     }
+    
+//    func setupAirPlayButton() {
+//        var barButtonItem: UIBarButtonItem?
+//
+//        if #available(iOS 11.0, *) {
+//            barButtonItem = UIBarButtonItem(customView: AVRoutePickerView())
+//        } else {
+//            let volumeView = MPVolumeView()
+//            volumeView.showsVolumeSlider = false
+//            barButtonItem = UIBarButtonItem(customView: volumeView)
+//        }
+//
+//        if let barButtonItem = barButtonItem {
+//            navigationItem.rightBarButtonItems?.append(barButtonItem)
+//        }
+//    }
 }
 
 
@@ -46,5 +66,24 @@ extension UIView {
                                                                    views: ["thisView": self])
         
         NSLayoutConstraint.activate(horizontalConstraints + verticalConstraints)
+    }
+}
+
+extension UINavigationItem {
+    
+    func setupAirPlayButton() {
+        var barButtonItem: UIBarButtonItem?
+        
+        if #available(iOS 11.0, *) {
+            barButtonItem = UIBarButtonItem(customView: AVRoutePickerView())
+        } else {
+            let volumeView = MPVolumeView()
+            volumeView.showsVolumeSlider = false
+            barButtonItem = UIBarButtonItem(customView: volumeView)
+        }
+        
+        if let barButtonItem = barButtonItem {
+            setRightBarButton(barButtonItem, animated: true)
+        }
     }
 }
