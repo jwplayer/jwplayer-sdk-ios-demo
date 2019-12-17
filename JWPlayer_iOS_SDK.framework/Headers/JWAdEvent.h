@@ -42,6 +42,23 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /**
+   JWAdBreakEvent provides information for an ad break.
+*/
+@protocol JWAdBreakEvent <NSObject>
+
+/**
+ The client that is currently being used, vast, googima or freewheel.
+ */
+@property (nonatomic) JWAdClient client;
+
+/**
+ Whether an ad break is in a pre, mid, or post position.
+ */
+@property (nonatomic, copy) NSString *adPosition;
+
+@end
+
+/**
     JWAdRequestEvent provides information for a requested ad.
  */
 @protocol JWAdRequestEvent <JWAdDetailEvent>
