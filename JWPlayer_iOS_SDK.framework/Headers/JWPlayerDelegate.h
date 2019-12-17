@@ -293,6 +293,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)onAdMeta:(JWAdEvent<JWMetaEvent> *)event;
 
+/**
+Fires after the ad request and immediately before the ad is loaded into the player. Only fires before the first ad inside of an ad break.
+*/
+- (void)onAdBreakStart:(JWAdEvent<JWAdBreakEvent> *)event;
+
+/**
+ Fires when control is passed back to the player from the ad.
+ */
+- (void)onAdBreakEnd:(JWAdEvent<JWAdBreakEvent> *)event;
+
 /* ========================================*/
 /** @name Related
  */
