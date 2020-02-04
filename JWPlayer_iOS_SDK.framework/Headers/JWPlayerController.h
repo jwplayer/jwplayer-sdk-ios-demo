@@ -14,6 +14,7 @@
 #import "JWDrmDataSource.h"
 #import "JWExperimentalAPI.h"
 #import "JWFriendlyAdObstructions.h"
+#import "JWButton.h"
 
 #define JWPlayerAllNotification @"JWPlayerAllNotification"
 #define JWMetaDataAvailableNotification @"JWMetaDataAvailableNotification"
@@ -183,6 +184,16 @@ The object that acts as the delegate of the jwPlayerController.
  */
 @property (nonatomic) NSInteger playlistIndex;
 
+/**
+ Returns the playlist item at a specific index.
+ */
+- (JWPlaylistItem *)getPlaylistItem:(NSInteger)index;
+
+/**
+ Returns the playlist.
+ */
+- (NSArray <JWPlaylistItem *> *)getPlaylist;
+
 /* ========================================*/
 /** @name Initializing Player Controller Object */
 
@@ -217,11 +228,13 @@ The object that acts as the delegate of the jwPlayerController.
 
 /**
  Starts to play video from current position.
+ @note If there is a paused ad, this method will resume the ad playback.
  */
 - (void)play;
 
 /**
  Pauses video.
+ @note If there is an ad playing, this method will pause the ad playback.
  */
 - (void)pause;
 
@@ -266,7 +279,7 @@ The object that acts as the delegate of the jwPlayerController.
 
 
 /* ========================================*/
-/** @name Managing Full Screen / Picture in Picture */
+/** @name Managing Full Screen */
 
 /**
  The setter toggles the player's fullscreen mode; the getter returns a boolean value that determines whether the video is in full screen.
@@ -285,6 +298,22 @@ The object that acts as the delegate of the jwPlayerController.
  @note Make sure your app supports landscape to make this property work.
  */
 @property (nonatomic) BOOL forceLandscapeOnFullScreen;
+
+/* ========================================*/
+/** @name Custom Buttons */
+
+/**
+ Adds a custom button to the player's control bar.
+ @note Buttons are added to the righthand-side grouping of icons in the control bar. Buttons are added all the way to the left of the grouping, except if there is a logo in the control bar. In this case, buttons will be added to the right of the logo. Multiple buttons are added from right to left in the order they are entered.
+ @see JWButton
+ */
+- (void)addButton:(JWButton *)button;
+
+/**
+ Removes a custom button from the control bar.
+ @see JWButton
+ */
+- (void)removeButton:(JWButton *)button;
 
 /* ========================================*/
 /** @name Loading New Media */
