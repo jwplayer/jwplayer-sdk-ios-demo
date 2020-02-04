@@ -12,6 +12,7 @@
 @class JWSource;
 @class JWAdBreak;
 @class JWTrack;
+@class JWFreewheelConfig;
 
 NS_ASSUME_NONNULL_BEGIN
 /**
@@ -56,6 +57,14 @@ NS_ASSUME_NONNULL_BEGIN
  @see JWAdBreak
  */
 @property (nonatomic, nullable, retain) NSArray <JWAdBreak *> *adSchedule;
+
+/**
+ The JWFreewheelConfig class stores the Freewheel SDK settings. The settings defined here will apply only to ads associated with this playlist item.
+ @note When setting a Freewheel config, config.advertising.adClient should be set to JWAdClientFreewheel, where config is an instance of JWConfig.
+ @note if nil, fallsback to config.advertising.freewheel.
+ @note Properties that are nil will fallback to the equivalent in config.advertising.freewheel. You may therefore use config.advertising.freewheel to define common settings.
+ */
+@property (nonatomic, nullable) JWFreewheelConfig *freewheel;
 
 /**
  An array of JWTrack objects providing captions for different languages.

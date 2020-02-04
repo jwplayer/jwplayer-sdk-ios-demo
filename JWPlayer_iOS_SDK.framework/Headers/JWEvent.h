@@ -143,7 +143,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol JWMetaEvent <NSObject>
 
 /**
- Object containing the new metadata. This can be metadata hidden in the media (ID3, XMP, keyframes) or metadata broadcasted by the playback provider (bandwidth, quality switches).
+ Object containing the new metadata. This can be metadata hidden in the media (DATERANGE, ID3, XMP, keyframes) or metadata broadcasted by the playback provider (bandwidth, quality switches).
  */
 @property (nonatomic) NSDictionary *metadata;
 

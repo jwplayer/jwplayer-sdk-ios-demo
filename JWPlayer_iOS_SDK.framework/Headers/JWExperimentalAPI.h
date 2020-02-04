@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface JWExperimentalAPI : NSObject
 
-#pragma Mark - Friendly Advertising Obstructions
+#pragma mark - Friendly Advertising Obstructions
 
 /**
  The following methods allows you to register friendly advertising obstructions.
