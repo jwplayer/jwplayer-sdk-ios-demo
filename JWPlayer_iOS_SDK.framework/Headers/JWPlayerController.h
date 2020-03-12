@@ -267,7 +267,7 @@ The object that acts as the delegate of the jwPlayerController.
 
 /**
  The volume of the JWPlayerController's audio. At 0.0 the player is muted, at 1.0 the player's volume is as loud as the device's volume.
- @note This property should be used to control the volume of the player relative to other audio output, not for volume              control by viewers. This property will have no effect when ads are played using Google IMA, or when casting. Viewers can control volume when casting by changing the device's volume.
+ @note This property should be used to control the volume of the player (including Google IMA ads) relative to other audio output, not for volume control by viewers. This property will have no effect when casting. Viewers can control volume when casting by changing the device's volume.
  */
 @property (nonatomic) CGFloat volume;
 

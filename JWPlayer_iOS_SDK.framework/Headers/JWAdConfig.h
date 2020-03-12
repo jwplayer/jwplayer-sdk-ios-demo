@@ -17,12 +17,14 @@ typedef NS_ENUM(NSInteger, JWAdClient) {
     JWAdClientVast = 0,
     /// Google IMA provider
     JWAdClientGoogima,
+    /// Google IMA DAI provider
+    JWAdClientGoogimaDAI,
     /// Freewheel ad provider
     JWAdClientFreewheel
 };
 
 NS_ASSUME_NONNULL_BEGIN
-@class JWAdBreak, IMASettings, JWFreewheelConfig;
+@class JWAdBreak, IMASettings, JWGoogimaDaiConfig, JWFreewheelConfig;
 
 /**
  An object providing information about the way ads are handled by the player. Describes adMessage, skipMessage, skipText and skipOffset.
@@ -88,6 +90,12 @@ The URL of the VAST tag to display, or the custom string of the Freewheel tag to
  @note When setting a custom imaSetting, the default value of enableBackgroundPlayback is NO.
  */
 @property (nonatomic, nullable) IMASettings *googimaSettings;
+
+/**
+ The JWGoogimaDaiConfig class stores the Google IMA DAI settings.
+ */
+
+@property (nonatomic, nullable) JWGoogimaDaiConfig *googimaDaiSettings;
 
 /**
  The JWFreewheelConfig class stores the Freewheel SDK settings.
