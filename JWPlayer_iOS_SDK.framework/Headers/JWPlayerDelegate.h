@@ -139,11 +139,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Fired when the list of available quality levels is updated. Happens e.g. shortly after a playlist item starts playing.
+ Not applicable for HLS.
  */
 - (void)onLevels:(JWEvent<JWLevelsEvent> *)event;
 
 /**
- Fired when the active quality level is changed. Happens in response to e.g. a user clicking the controlbar quality menu or calling setCurrentLevel.
+ Fired when the active quality level is changed. Happens in response to e.g. a user clicking the controlbar quality menu or calling setCurrentLevel. Not applicable for HLS.
  */
 - (void)onLevelsChanged:(JWEvent<JWLevelsChangedEvent> *)event;
 

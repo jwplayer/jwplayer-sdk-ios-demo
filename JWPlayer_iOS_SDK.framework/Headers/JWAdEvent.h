@@ -131,6 +131,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, copy) NSString *adId;
 
 /**
+GoogleIMA only: creativeId referenced inside of the VAST XML.
+@note Google IMA only
+*/
+@property (nonatomic, nullable, copy) NSString *creativeAdId;
+
+/**
+GoogleIMA only: creativeId referenced inside of the VAST XML.
+@note Google IMA only
+*/
+@property (nonatomic, nullable, copy) NSString *creativeId;
+
+/**
  VAST-only: An array of the AdSystems specified in any utilized ad wrappers; index denotes level of wrapper.
  */
 @property (nonatomic, nullable) NSArray *wrapper;

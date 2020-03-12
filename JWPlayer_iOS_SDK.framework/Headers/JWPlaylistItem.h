@@ -12,6 +12,7 @@
 @class JWSource;
 @class JWAdBreak;
 @class JWTrack;
+@class JWGoogimaDaiConfig;
 @class JWFreewheelConfig;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -57,6 +58,11 @@ NS_ASSUME_NONNULL_BEGIN
  @see JWAdBreak
  */
 @property (nonatomic, nullable, retain) NSArray <JWAdBreak *> *adSchedule;
+
+/**
+ The JWGoogimaDaiConfig class stores the Google IMA DAI settings.
+ */
+@property (nonatomic, nullable) JWGoogimaDaiConfig *googimaDaiSettings;
 
 /**
  The JWFreewheelConfig class stores the Freewheel SDK settings. The settings defined here will apply only to ads associated with this playlist item.

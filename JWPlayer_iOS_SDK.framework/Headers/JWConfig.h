@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "JWAdConfig.h"
 #import "JWFreewheelConfig.h"
+#import "JWGoogimaDaiConfig.h"
 #import "JWAdBreak.h"
 #import "JWTrack.h"
 #import "JWSource.h"

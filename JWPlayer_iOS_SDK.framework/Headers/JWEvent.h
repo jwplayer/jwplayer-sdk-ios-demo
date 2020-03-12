@@ -174,12 +174,13 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /**
-    JWLevelsEvent is emited when the qualify levels or audio tracks information are available.
+ JWLevelsEvent is emitted when the qualify levels or audio tracks information are available.
  */
 @protocol JWLevelsEvent <NSObject>
 
 /**
- The full array of quality levels in the case of onLevels; The full array with audio tracks in the case of onAudioTracks.
+ The full array of quality levels in the case of onLevels. The full array of audio tracks in the case of onAudioTracks.
+ Returns nil in the case of an HLS stream.
  */
 @property (nonatomic) NSArray *levels;
 
