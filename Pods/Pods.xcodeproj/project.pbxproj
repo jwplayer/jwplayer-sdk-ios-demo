@@ -6,60 +6,106 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		24A80F80D862D66FDB7A271BB46C6FB5 /* JWPlayer-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 037331DAE1EDE0E984EAAC1382F2056D /* Build configuration list for PBXAggregateTarget "JWPlayer-SDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "JWPlayer-SDK";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		26D8B30D621720659C5F55599A06A0DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		494A9974E1BAB96C269FAAACCDC4EF7E /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 048B439E6AF300FBDD056783A54276D9 /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		584D95F15CA0519CFB454C2FA5C5F330 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0810905D183216E2E2BDF922A6315193 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m */; };
+		1BAED29B7A18CE1A804D9C15A72D2F85 /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC1D2D2A5980B436A9CAF7DC3DBA4EA /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BE3787121157C57651D7B70CC5C5F53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		BF8A97FB08D2E87AF5C81BDD0B26B412 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 365B090983E8AC5CEADA0009E043258C /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8A4404764B5EFCD853DC8F7DAC0C743D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A80F80D862D66FDB7A271BB46C6FB5;
+			remoteInfo = "JWPlayer-SDK";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		048B439E6AF300FBDD056783A54276D9 /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JWPlayer-SDK-iOS-Demo-umbrella.h"; sourceTree = "<group>"; };
-		0810905D183216E2E2BDF922A6315193 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWPlayer-SDK-iOS-Demo-dummy.m"; sourceTree = "<group>"; };
 		1439F1944D5C5B08E0F95A13B33EA34A /* Pods_JWPlayer_SDK_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JWPlayer_SDK_iOS_Demo.framework; path = "Pods-JWPlayer-SDK-iOS-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECDFF975FCF183AC65420BD7A6C9171 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		20C8D8BF732C1CE62DFC171F665A0D60 /* Pods-JWPlayer-SDK-iOS-Demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWPlayer-SDK-iOS-Demo-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		36DB8BE60506BAADEAE4B8E6057F4FF0 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		813C4333E399E0C1B513C19BB3D8312F /* Pods-JWPlayer-SDK-iOS-Demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWPlayer-SDK-iOS-Demo-Info.plist"; sourceTree = "<group>"; };
+		365B090983E8AC5CEADA0009E043258C /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWPlayer-SDK-iOS-Demo-dummy.m"; sourceTree = "<group>"; };
+		40973D7277D1BA8628D41A639365EEEB /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6263E75390BB9C3D42A31C800FE660B4 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		845FABD36897F01F63D2D2F7CEA66BA1 /* Pods-JWPlayer-SDK-iOS-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JWPlayer-SDK-iOS-Demo.modulemap"; sourceTree = "<group>"; };
+		979675A32392394491BC19829293628D /* JWPlayer-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "JWPlayer-SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ADA564CCFF0B8E93B9595C2B9587EF59 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		BB89ADC3C9E4797A8DE207C75702CAED /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EE9D0DF67CA526CF6A4976D825EA805B /* Pods-JWPlayer-SDK-iOS-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JWPlayer-SDK-iOS-Demo.modulemap"; sourceTree = "<group>"; };
-		FF48710DDA0FFF061EC822178B8810F6 /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		AF9AE0720759C7111AB4655F59845ECA /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
+		E4B7DB99483CF96D13DC377E2E96C5F8 /* Pods-JWPlayer-SDK-iOS-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JWPlayer-SDK-iOS-Demo-frameworks.sh"; sourceTree = "<group>"; };
+		E75737FFF2CEB56925758EEFD763BC98 /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		E9983151CB228C3979A5670A43CA0604 /* JWPlayer-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "JWPlayer-SDK.release.xcconfig"; sourceTree = "<group>"; };
+		EEC1D2D2A5980B436A9CAF7DC3DBA4EA /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JWPlayer-SDK-iOS-Demo-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A37FF5AA7AC87CC6E53A4781887EF3CC /* Frameworks */ = {
+		EB3C29A450C6EB2E82DD59AEDD879B00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D8B30D621720659C5F55599A06A0DB /* Foundation.framework in Frameworks */,
+				5BE3787121157C57651D7B70CC5C5F53 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F1D01824301571EF6A3495A7492BB3C /* Pods-JWPlayer-SDK-iOS-Demo */ = {
+		29FF1F7E9FEDCA462AC36D42374D6A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE9D0DF67CA526CF6A4976D825EA805B /* Pods-JWPlayer-SDK-iOS-Demo.modulemap */,
-				BB89ADC3C9E4797A8DE207C75702CAED /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.markdown */,
-				FF48710DDA0FFF061EC822178B8810F6 /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.plist */,
-				0810905D183216E2E2BDF922A6315193 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m */,
-				813C4333E399E0C1B513C19BB3D8312F /* Pods-JWPlayer-SDK-iOS-Demo-Info.plist */,
-				048B439E6AF300FBDD056783A54276D9 /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h */,
-				ADA564CCFF0B8E93B9595C2B9587EF59 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */,
-				36DB8BE60506BAADEAE4B8E6057F4FF0 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */,
+				AF9AE0720759C7111AB4655F59845ECA /* JWPlayer_iOS_SDK.framework */,
 			);
-			name = "Pods-JWPlayer-SDK-iOS-Demo";
-			path = "Target Support Files/Pods-JWPlayer-SDK-iOS-Demo";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		115788FCDA9863E7D8A24B320AD3220A /* Targets Support Files */ = {
+		4E7FFDD9C1FFB4A6F9F3A2D49D93EA1A /* JWPlayer-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				0F1D01824301571EF6A3495A7492BB3C /* Pods-JWPlayer-SDK-iOS-Demo */,
+				29FF1F7E9FEDCA462AC36D42374D6A17 /* Frameworks */,
+				B0FB750628BC275CC40A121F648A3C74 /* Support Files */,
+			);
+			name = "JWPlayer-SDK";
+			path = "JWPlayer-SDK";
+			sourceTree = "<group>";
+		};
+		A3A7D44084D4208941F026FBA309A788 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E7FFDD9C1FFB4A6F9F3A2D49D93EA1A /* JWPlayer-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFCD0F03D66310D54F5083F7DF33C070 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE4293472CCAE052A7CB3689882241 /* Pods-JWPlayer-SDK-iOS-Demo */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B0FB750628BC275CC40A121F648A3C74 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				979675A32392394491BC19829293628D /* JWPlayer-SDK.debug.xcconfig */,
+				E9983151CB228C3979A5670A43CA0604 /* JWPlayer-SDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JWPlayer-SDK";
 			sourceTree = "<group>";
 		};
 		BDC2A05FBC152170E92AA6D8C92885C5 /* Products */ = {
@@ -78,13 +124,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		CDCE4293472CCAE052A7CB3689882241 /* Pods-JWPlayer-SDK-iOS-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				845FABD36897F01F63D2D2F7CEA66BA1 /* Pods-JWPlayer-SDK-iOS-Demo.modulemap */,
+				40973D7277D1BA8628D41A639365EEEB /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.markdown */,
+				E75737FFF2CEB56925758EEFD763BC98 /* Pods-JWPlayer-SDK-iOS-Demo-acknowledgements.plist */,
+				365B090983E8AC5CEADA0009E043258C /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m */,
+				E4B7DB99483CF96D13DC377E2E96C5F8 /* Pods-JWPlayer-SDK-iOS-Demo-frameworks.sh */,
+				20C8D8BF732C1CE62DFC171F665A0D60 /* Pods-JWPlayer-SDK-iOS-Demo-Info.plist */,
+				EEC1D2D2A5980B436A9CAF7DC3DBA4EA /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h */,
+				6263E75390BB9C3D42A31C800FE660B4 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */,
+				1ECDFF975FCF183AC65420BD7A6C9171 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */,
+			);
+			name = "Pods-JWPlayer-SDK-iOS-Demo";
+			path = "Target Support Files/Pods-JWPlayer-SDK-iOS-Demo";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A3A7D44084D4208941F026FBA309A788 /* Pods */,
 				BDC2A05FBC152170E92AA6D8C92885C5 /* Products */,
-				115788FCDA9863E7D8A24B320AD3220A /* Targets Support Files */,
+				AFCD0F03D66310D54F5083F7DF33C070 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +163,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		00969A95C7E9614A91EB62F0EC48349B /* Headers */ = {
+		58FE3BFB66F9EA0B9ED19C212F55834F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494A9974E1BAB96C269FAAACCDC4EF7E /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h in Headers */,
+				1BAED29B7A18CE1A804D9C15A72D2F85 /* Pods-JWPlayer-SDK-iOS-Demo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,16 +176,17 @@
 /* Begin PBXNativeTarget section */
 		1A6B743B5193FEC536CC47F7B3AFBB66 /* Pods-JWPlayer-SDK-iOS-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70E03AB1879616C3B777A2EFE949AE3C /* Build configuration list for PBXNativeTarget "Pods-JWPlayer-SDK-iOS-Demo" */;
+			buildConfigurationList = 30099EE747CA62B08BB80BE4AABA457A /* Build configuration list for PBXNativeTarget "Pods-JWPlayer-SDK-iOS-Demo" */;
 			buildPhases = (
-				00969A95C7E9614A91EB62F0EC48349B /* Headers */,
-				A729EAEBC444CEEE5CDF12DD9A4FBE2E /* Sources */,
-				A37FF5AA7AC87CC6E53A4781887EF3CC /* Frameworks */,
-				849C40BA6D9243753B4291470EACBA9B /* Resources */,
+				58FE3BFB66F9EA0B9ED19C212F55834F /* Headers */,
+				8724C59FCCDCECF13214BDD15BC563C9 /* Sources */,
+				EB3C29A450C6EB2E82DD59AEDD879B00 /* Frameworks */,
+				A4530C24ABC1F911740541E95BA50AF1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4E7EDB7F5A7393C347D2EE81EEFFC6B8 /* PBXTargetDependency */,
 			);
 			name = "Pods-JWPlayer-SDK-iOS-Demo";
 			productName = "Pods-JWPlayer-SDK-iOS-Demo";
@@ -150,13 +215,14 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				24A80F80D862D66FDB7A271BB46C6FB5 /* JWPlayer-SDK */,
 				1A6B743B5193FEC536CC47F7B3AFBB66 /* Pods-JWPlayer-SDK-iOS-Demo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		849C40BA6D9243753B4291470EACBA9B /* Resources */ = {
+		A4530C24ABC1F911740541E95BA50AF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,20 +232,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A729EAEBC444CEEE5CDF12DD9A4FBE2E /* Sources */ = {
+		8724C59FCCDCECF13214BDD15BC563C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				584D95F15CA0519CFB454C2FA5C5F330 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m in Sources */,
+				BF8A97FB08D2E87AF5C81BDD0B26B412 /* Pods-JWPlayer-SDK-iOS-Demo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4E7EDB7F5A7393C347D2EE81EEFFC6B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JWPlayer-SDK";
+			target = 24A80F80D862D66FDB7A271BB46C6FB5 /* JWPlayer-SDK */;
+			targetProxy = 8A4404764B5EFCD853DC8F7DAC0C743D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		2B47045234C0AA295EC3D48671257391 /* Debug */ = {
+		13B9E2CE1904038E7640FC074641E2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADA564CCFF0B8E93B9595C2B9587EF59 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */;
+			baseConfigurationReference = 6263E75390BB9C3D42A31C800FE660B4 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -209,6 +284,20 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		1B7D5B85F68BA3DB38B2D58288586964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9983151CB228C3979A5670A43CA0604 /* JWPlayer-SDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -334,9 +423,9 @@
 			};
 			name = Debug;
 		};
-		D7125AF58E9B70BC418B8209B1CAA02B /* Release */ = {
+		9C693161C9E481DDD62730358DF74B6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36DB8BE60506BAADEAE4B8E6057F4FF0 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */;
+			baseConfigurationReference = 1ECDFF975FCF183AC65420BD7A6C9171 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -368,23 +457,45 @@
 			};
 			name = Release;
 		};
+		E9DBE7C7EB9BC11FFA9762C86F5F4AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979675A32392394491BC19829293628D /* JWPlayer-SDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		037331DAE1EDE0E984EAAC1382F2056D /* Build configuration list for PBXAggregateTarget "JWPlayer-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9DBE7C7EB9BC11FFA9762C86F5F4AED /* Debug */,
+				1B7D5B85F68BA3DB38B2D58288586964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30099EE747CA62B08BB80BE4AABA457A /* Build configuration list for PBXNativeTarget "Pods-JWPlayer-SDK-iOS-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B9E2CE1904038E7640FC074641E2DD /* Debug */,
+				9C693161C9E481DDD62730358DF74B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				916E0404255105F480DC4950B7625F7A /* Debug */,
 				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		70E03AB1879616C3B777A2EFE949AE3C /* Build configuration list for PBXNativeTarget "Pods-JWPlayer-SDK-iOS-Demo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2B47045234C0AA295EC3D48671257391 /* Debug */,
-				D7125AF58E9B70BC418B8209B1CAA02B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

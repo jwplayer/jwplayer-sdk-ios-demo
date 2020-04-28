@@ -20,9 +20,10 @@ class SwiftViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let playerView: UIView = player!.view
-        playerContainerView.addSubview(playerView)
-        playerView.constrainToSuperview()
+        if let playerView = player?.view {
+            playerContainerView.addSubview(playerView)
+            playerView.constrainToSuperview()            
+        }
     }
 }
 
