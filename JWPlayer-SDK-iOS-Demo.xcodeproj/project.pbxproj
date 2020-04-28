@@ -15,6 +15,7 @@
 		6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */; };
 		6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */; };
 		6A7D09021A5DAFD600C4E749 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D09001A5DAFD600C4E749 /* LaunchScreen.xib */; };
+		A25B418FFC7CE241937DBDAC /* Pods_JWPlayer_SDK_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E59D2982120A9B78F61F15 /* Pods_JWPlayer_SDK_iOS_Demo.framework */; };
 		B51E0867225FF298004E034C /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; };
 		B51E0869225FF6FF004E034C /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
+		5104D54F02CEE5A51345C10B /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig"; path = "Target Support Files/Pods-JWPlayer-SDK-iOS-Demo/Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-SDK-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A7D09011A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8AEA39F61AFAAE22008A8C8A /* JWPlayer-SDK-iOS-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWPlayer-SDK-iOS-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		99E59D2982120A9B78F61F15 /* Pods_JWPlayer_SDK_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWPlayer_SDK_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3F39B2499D0E23BF81C99B /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig"; path = "Target Support Files/Pods-JWPlayer-SDK-iOS-Demo/Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B51E0867225FF298004E034C /* JWPlayer_iOS_SDK.framework in Frameworks */,
+				A25B418FFC7CE241937DBDAC /* Pods_JWPlayer_SDK_iOS_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +80,23 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		2334A32727603958AC85463F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF3F39B2499D0E23BF81C99B /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */,
+				5104D54F02CEE5A51345C10B /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6A7D08E51A5DAFD600C4E749 = {
 			isa = PBXGroup;
 			children = (
 				6A7D08F01A5DAFD600C4E749 /* JWPlayer-SDK-iOS-Demo */,
 				6A7D08EF1A5DAFD600C4E749 /* Products */,
 				9769E5CB1DA8034E00BEF7FF /* Frameworks */,
+				2334A32727603958AC85463F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1190F390224BD65F0043EACD /* JWPlayer_iOS_SDK.framework */,
+				99E59D2982120A9B78F61F15 /* Pods_JWPlayer_SDK_iOS_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A7D09111A5DAFD600C4E749 /* Build configuration list for PBXNativeTarget "JWPlayer-SDK-iOS-Demo" */;
 			buildPhases = (
+				3A5E7497CE05548C3243BB93 /* [CP] Check Pods Manifest.lock */,
 				6A7D08EA1A5DAFD600C4E749 /* Sources */,
 				6A7D08EB1A5DAFD600C4E749 /* Frameworks */,
 				6A7D08EC1A5DAFD600C4E749 /* Resources */,
@@ -186,6 +204,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A5E7497CE05548C3243BB93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWPlayer-SDK-iOS-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A7D08EA1A5DAFD600C4E749 /* Sources */ = {
@@ -330,6 +373,7 @@
 		};
 		6A7D09121A5DAFD600C4E749 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF3F39B2499D0E23BF81C99B /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -361,6 +405,7 @@
 		};
 		6A7D09131A5DAFD600C4E749 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5104D54F02CEE5A51345C10B /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
