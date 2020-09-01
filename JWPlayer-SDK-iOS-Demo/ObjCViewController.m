@@ -2,8 +2,8 @@
 //  ObjCViewController.m
 //  JWPlayer-SDK-iOS-Demo
 //
-//  Created by Amitai Blickstein on 2/26/19.
-//  Copyright © 2019 JWPlayer. All rights reserved.
+//  Created by Amitai Blickstein on 9/1/20.
+//  Copyright © 2020 JWPlayer. All rights reserved.
 //
 
 #import "ObjCViewController.h"
@@ -11,7 +11,6 @@
 #import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface ObjCViewController ()
-
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
 @property (nonatomic) JWPlayerController *player;
 
@@ -19,20 +18,22 @@
 
 @implementation ObjCViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     JWConfig *config = [JWConfig configWithContentURL:@"http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"];
     self.player = [[JWPlayerController alloc]initWithConfig:config];
+    
+    self.title = [NSString stringWithFormat:@"JWP SDK ver: %@", JWPlayerController.SDKVersionToMinor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    UIView *playerView = self.player.view;
-    [self.playerContainerView addSubview:playerView];
-    [playerView constrainToSuperview];
+    if (self.player.view == nil) { return; }
+    
+    [self.playerContainerView addSubview:self.player.view];
+    [self.player.view constrainToSuperview];
 }
 
 @end

@@ -7,13 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "JWAdConfig.h"
-#import "JWFreewheelConfig.h"
-#import "JWGoogimaDaiConfig.h"
-#import "JWAdBreak.h"
-#import "JWTrack.h"
-#import "JWSource.h"
 #import "JWPlaylistItem.h"
 #import "JWCaptionStyling.h"
 #import "JWRelatedConfig.h"
@@ -75,6 +69,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, retain) NSArray <JWPlaylistItem *> *playlist;
 
 /**
+ Item within a playlist to start playback.
+ @discussion
+ Within the playlist, the first index is 0. If the playlistIndex value is negative, the index starts counting from the end of the playlist.
+ @warning
+ A negative value cannot exceed the absolute number of playlist items. For example, in a playlist of 5 items, "playlistIndex": -5 is the lowest acceptable negative number.
+ */
+@property (nonatomic, assign) NSInteger playlistIndex;
+
+/**
  Title (or name) of the video
  @note Shown in the play button container in the center of the screen, before the video starts to play, 
  in addition to the device lock screen and in the multimedia controls in the multitasking UI. 
@@ -101,7 +104,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable, retain) NSString *mediaId;
 
 /**
- An array of JWTrack objects providing captions for different languages.
+ An array of JWTrack objects providing captions for different languages or thumbnails images.
  @see JWTrack
  */
 @property (nonatomic, nullable, retain) NSArray <JWTrack *> *tracks;
@@ -139,6 +142,19 @@ NS_ASSUME_NONNULL_BEGIN
  @note takes precedence over nextupOffset if both properties are set.
  */
 @property (nonatomic) NSInteger nextupOffsetPercentage;
+
+/**
+ Set to false to disable the “Next Up” tooltip. Defaults to true.
+ */
+@property (nonatomic) BOOL nextUpDisplay;
+
+/**
+ Array of metadata that can be passed externally to supplement the encoded metadata of the underlying media asset.
+ @discussion Applies to all playlist items that do not specify their own externalMetadata.
+ @note Capped at 5 metadata instances; the instances in excess will be excluded.
+ @see JWExternalMetadata
+*/
+@property (nonatomic, nullable, copy) NSArray <JWExternalMetadata *> *externalMetadata;
 
 /**
  adConfig object providing info about ad handling.
@@ -212,11 +228,6 @@ NS_ASSUME_NONNULL_BEGIN
  @note Useful in limiting bandwith consumption for viewers.
  */
 @property (nonatomic) CGFloat bitRateUpperBound;
-
-/**
- Set to false to disable the “Next Up” tooltip. Defaults to true.
- */
-@property (nonatomic) BOOL nextUpDisplay;
 
 /**
  The customization options for the player's skin.

@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "JWSource.h"
+#import "JWAdBreak.h"
+#import "JWTrack.h"
+#import "JWFreewheelConfig.h"
+#import "JWGoogimaDaiConfig.h"
+#import "JWExternalMetadata.h"
 
 @class JWConfig;
-@class JWSource;
-@class JWAdBreak;
-@class JWTrack;
-@class JWGoogimaDaiConfig;
-@class JWFreewheelConfig;
 
 NS_ASSUME_NONNULL_BEGIN
 /**
@@ -73,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable) JWFreewheelConfig *freewheel;
 
 /**
- An array of JWTrack objects providing captions for different languages.
+ An array of JWTrack objects providing captions for different languages or thumbnails images.
  @see JWTrack
  */
 @property (nonatomic, nullable, retain) NSArray <JWTrack *> *tracks;
@@ -97,6 +99,14 @@ NS_ASSUME_NONNULL_BEGIN
  Number of seconds from the start of a media asset when playback should begin.
  */
 @property (nonatomic, assign) CGFloat startTime;
+
+/**
+ Array of metadata that can be passed externally to supplement the encoded metadata of the underlying media asset.
+ @discussion Supersedes the externalMetada specified in the JWConfig, for this playlist item.
+ @note Capped at 5 metadata instances; the instances in excess will be excluded.
+ @see JWExternalMetadata
+ */
+@property (nonatomic, nullable, copy) NSArray <JWExternalMetadata *> *externalMetadata;
 
 /* ========================================*/
 /** @name Creating Playlist Item Object

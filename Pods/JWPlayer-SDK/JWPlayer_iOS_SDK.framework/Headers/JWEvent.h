@@ -170,6 +170,12 @@ NS_ASSUME_NONNULL_BEGIN
 An object containing the new metadata. This can be metadata hidden in the media or metadata broadcasted by the playback provider. The different
 types of metadata include:
 
+External metadata: Fired when playback enters the time range specified in an instance of JWExternalMetadata.
+Its payload includes:
+
+    metadata: Instance of JWExternalMetadata.
+    metadataType: (String) external
+
 Date range metadata: Fired when playback enters the section of an HLS stream tagged with #EXT-X-DATERANGE.
 Its payload includes:
 
@@ -252,7 +258,7 @@ Its payload includes:
 @end
 
 /**
- JWLevelsEvent is emitted when the qualify levels or audio tracks information are available.
+ The JWLevelsEvent is emitted when the quality levels or audio tracks information become available.
  */
 @protocol JWLevelsEvent <NSObject>
 
@@ -378,6 +384,8 @@ Its payload includes:
  -error playing creative (e.g. a 404 on the MP4 video)
  -error loading ad tag (for all else)
  When applicable, the userInfo (NSDictionary) property of error will contain the ad tag that is currently playing (key: tag), and/or the vmap (key: vmap). If Google IMA is being used as the ad Client, the imaErrorType will be included (key: imaErrorType) and not the vmap.
+ 
+ For onAdWarning events, see https://developer.jwplayer.com/jwplayer/docs/jw8-ad-errors-reference#section-jw-player-ad-warnings for more info.
  */
 @property (nonatomic) JWPlayerError *error;
 
