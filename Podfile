@@ -7,4 +7,5 @@ target 'JWPlayer-SDK-iOS-Demo' do
 
   # Pods for JWPlayer-SDK-iOS-Demo
   pod 'JWPlayer-SDK', '3.16.2'
+  pod 'GoogleAds-IMA-iOS-SDK', '3.11.3'
 end

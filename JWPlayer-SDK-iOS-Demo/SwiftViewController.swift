@@ -16,9 +16,13 @@ class SwiftViewController: UIViewController {
         super.viewDidLoad()
 
         let config = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
-        player = JWPlayerController(config: config)
+        config.advertising = getAdConfig()
+        player = JWPlayerController(config: config, delegate: self)
         
         title = "JWP SDK ver: \(JWPlayerController.sdkVersionToMinor())"
+        
+        #warning("LICENSE KEY SET??")
+        JWPlayerController.setPlayerKey("")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,6 +30,28 @@ class SwiftViewController: UIViewController {
         if let playerView = player?.view {
             playerContainerView.addSubview(playerView)
             playerView.constrainToSuperview()
+        }
+    }
+    
+    private func getAdConfig() -> JWAdConfig {
+        let adConfig = JWAdConfig()
+     
+        adConfig.client = .googima
+        adConfig.schedule = [
+            JWAdBreak(tag: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=", offset: "pre"),
+        ]
+    
+        return adConfig
+    }
+}
+
+
+extension SwiftViewController: JWPlayerDelegate {
+    func onAdTime(_ event: JWAdEvent & JWAdTimeEvent) {
+        if (player != nil && event.position > 0.1)
+        {
+            print("nilling player...")
+            player = nil
         }
     }
 }

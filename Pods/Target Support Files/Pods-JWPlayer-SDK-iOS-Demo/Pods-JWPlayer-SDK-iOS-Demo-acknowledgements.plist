@@ -14,6 +14,17 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2015 Google, Inc. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Copyright</string>
+			<key>Title</key>
+			<string>GoogleAds-IMA-iOS-SDK</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string># JW Player
 ## Terms of Service
 Please read these Terms of Service carefully before any Use of the Products.  Your Use constitutes an unconditional agreement to be bound by these Terms of Service.  IF YOU DO NOT ACCEPT THE TERMS OF SERVICE YOU ARE PROHIBITED FROM USING THE PRODUCTS.  The Products are available in different Editions, including unpaid and paid options.  Certain rights, obligations and restrictions vary by Edition.  Unless otherwise stated, terms apply to all Editions.
