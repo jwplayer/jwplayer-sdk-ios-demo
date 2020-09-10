@@ -17,12 +17,15 @@ class SwiftViewController: UIViewController {
 
         let config = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
         config.advertising = getAdConfig()
+        config.autostart = true
         player = JWPlayerController(config: config, delegate: self)
         
         title = "JWP SDK ver: \(JWPlayerController.sdkVersionToMinor())"
         
         #warning("LICENSE KEY SET??")
-        JWPlayerController.setPlayerKey("")
+        JWPlayerController.setPlayerKey()
+        
+        checkThatAppHasntCrashed(after: 3, byFlashing: .systemPurple)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,26 +36,37 @@ class SwiftViewController: UIViewController {
         }
     }
     
+    
     private func getAdConfig() -> JWAdConfig {
         let adConfig = JWAdConfig()
      
+        /// From the IMA Sample Ad Tags page
+        let kIMASampleSingleSkippableLinear = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator="
+        
         adConfig.client = .googima
         adConfig.schedule = [
-            JWAdBreak(tag: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=", offset: "pre"),
+            JWAdBreak(tag: kIMASampleSingleSkippableLinear, offset: "pre"),
         ]
     
         return adConfig
+    }
+    
+    fileprivate func checkThatAppHasntCrashed(after seconds: Double, byFlashing color: UIColor) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.view.backgroundColor = color
+            print("The app is still running, so we can make it PURPLE")
+        }
     }
 }
 
 
 extension SwiftViewController: JWPlayerDelegate {
     func onAdTime(_ event: JWAdEvent & JWAdTimeEvent) {
-        if (player != nil && event.position > 0.1)
-        {
-            print("nilling player...")
-            player = nil
-        }
+//        if (player != nil && event.position > 0.1)
+//        {
+//            print("nilling player...")
+//            player = nil
+//        }
     }
 }
 
