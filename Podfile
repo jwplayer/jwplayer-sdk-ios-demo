@@ -6,5 +6,5 @@ target 'JWPlayer-SDK-iOS-Demo' do
   use_frameworks!
 
   # Pods for JWPlayer-SDK-iOS-Demo
-  pod 'JWPlayer-SDK', '3.16.2'
+  pod 'JWPlayer-SDK', '3.17.0'
 end
