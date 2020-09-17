@@ -15,11 +15,23 @@
 		11B9D16A24FE08ED0072BE90 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B9D16924FE08ED0072BE90 /* SwiftViewController.swift */; };
 		11B9D16E24FE0A630072BE90 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B9D16D24FE0A630072BE90 /* ObjCViewController.m */; };
 		11B9D17024FE94A70072BE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B9D16F24FE94A60072BE90 /* LaunchScreen.storyboard */; };
+		11B9D17925003FA00072BE90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D17825003F9F0072BE90 /* QuartzCore.framework */; };
+		11B9D17B25003FAF0072BE90 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D17A25003FAF0072BE90 /* MessageUI.framework */; };
+		11B9D17D25003FBB0072BE90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D17C25003FBB0072BE90 /* CoreMedia.framework */; };
+		11B9D17F25003FC30072BE90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D17E25003FC30072BE90 /* UIKit.framework */; };
+		11B9D18125003FCA0072BE90 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18025003FCA0072BE90 /* CoreGraphics.framework */; };
+		11B9D18325003FD30072BE90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18225003FD30072BE90 /* CoreLocation.framework */; };
+		11B9D18525003FDF0072BE90 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18425003FDF0072BE90 /* MediaPlayer.framework */; };
+		11B9D18725003FE90072BE90 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18625003FE90072BE90 /* EventKit.framework */; };
+		11B9D18925003FF20072BE90 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18825003FF10072BE90 /* AVFoundation.framework */; };
+		11B9D18B25003FF80072BE90 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18A25003FF80072BE90 /* AdSupport.framework */; };
+		11B9D18D250044380072BE90 /* AdManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D17625003F710072BE90 /* AdManager.framework */; };
+		11D774AF2512486A00242040 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B9D18C250040030072BE90 /* libxml2.tbd */; };
 		8C4A0C922B9CC3E3BBA02913 /* Pods_JWPlayer_SDK_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3331D1570B2E7C247D94B523 /* Pods_JWPlayer_SDK_iOS_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11B9D15224FDA2FF0072BE90 /* JWPlayer-SDK-iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWPlayer-SDK-iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11B9D15224FDA2FF0072BE90 /* JWP FreeWheel Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWP FreeWheel Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B9D15524FDA2FF0072BE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B9D15724FDA2FF0072BE90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		11B9D15924FDA2FF0072BE90 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +43,18 @@
 		11B9D16C24FE0A630072BE90 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		11B9D16D24FE0A630072BE90 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		11B9D16F24FE94A60072BE90 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11B9D17625003F710072BE90 /* AdManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdManager.framework; sourceTree = "<group>"; };
+		11B9D17825003F9F0072BE90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		11B9D17A25003FAF0072BE90 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		11B9D17C25003FBB0072BE90 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		11B9D17E25003FC30072BE90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		11B9D18025003FCA0072BE90 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		11B9D18225003FD30072BE90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		11B9D18425003FDF0072BE90 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		11B9D18625003FE90072BE90 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		11B9D18825003FF10072BE90 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		11B9D18A25003FF80072BE90 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		11B9D18C250040030072BE90 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		3331D1570B2E7C247D94B523 /* Pods_JWPlayer_SDK_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWPlayer_SDK_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3BF6B3B9C51D8A712D5981 /* Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig"; path = "Target Support Files/Pods-JWPlayer-SDK-iOS-Demo/Pods-JWPlayer-SDK-iOS-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		FDD47EBFBFE5D812A168C287 /* Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig"; path = "Target Support Files/Pods-JWPlayer-SDK-iOS-Demo/Pods-JWPlayer-SDK-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +66,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4A0C922B9CC3E3BBA02913 /* Pods_JWPlayer_SDK_iOS_Demo.framework in Frameworks */,
+				11D774AF2512486A00242040 /* libxml2.tbd in Frameworks */,
+				11B9D18D250044380072BE90 /* AdManager.framework in Frameworks */,
+				11B9D18B25003FF80072BE90 /* AdSupport.framework in Frameworks */,
+				11B9D18925003FF20072BE90 /* AVFoundation.framework in Frameworks */,
+				11B9D17D25003FBB0072BE90 /* CoreMedia.framework in Frameworks */,
+				11B9D18125003FCA0072BE90 /* CoreGraphics.framework in Frameworks */,
+				11B9D18325003FD30072BE90 /* CoreLocation.framework in Frameworks */,
+				11B9D18725003FE90072BE90 /* EventKit.framework in Frameworks */,
+				11B9D18525003FDF0072BE90 /* MediaPlayer.framework in Frameworks */,
+				11B9D17B25003FAF0072BE90 /* MessageUI.framework in Frameworks */,
+				11B9D17925003FA00072BE90 /* QuartzCore.framework in Frameworks */,
+				11B9D17F25003FC30072BE90 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +97,7 @@
 		11B9D15324FDA2FF0072BE90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11B9D15224FDA2FF0072BE90 /* JWPlayer-SDK-iOS-Demo.app */,
+				11B9D15224FDA2FF0072BE90 /* JWP FreeWheel Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +123,18 @@
 		5EB0780D308757C7120F9FB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11B9D18C250040030072BE90 /* libxml2.tbd */,
+				11B9D18A25003FF80072BE90 /* AdSupport.framework */,
+				11B9D18825003FF10072BE90 /* AVFoundation.framework */,
+				11B9D18625003FE90072BE90 /* EventKit.framework */,
+				11B9D18425003FDF0072BE90 /* MediaPlayer.framework */,
+				11B9D18225003FD30072BE90 /* CoreLocation.framework */,
+				11B9D18025003FCA0072BE90 /* CoreGraphics.framework */,
+				11B9D17E25003FC30072BE90 /* UIKit.framework */,
+				11B9D17C25003FBB0072BE90 /* CoreMedia.framework */,
+				11B9D17A25003FAF0072BE90 /* MessageUI.framework */,
+				11B9D17825003F9F0072BE90 /* QuartzCore.framework */,
+				11B9D17625003F710072BE90 /* AdManager.framework */,
 				3331D1570B2E7C247D94B523 /* Pods_JWPlayer_SDK_iOS_Demo.framework */,
 			);
 			name = Frameworks;
@@ -120,7 +168,7 @@
 			);
 			name = "JWPlayer-SDK-iOS-Demo";
 			productName = "JWPlayer-SDK-iOS-Demo";
-			productReference = 11B9D15224FDA2FF0072BE90 /* JWPlayer-SDK-iOS-Demo.app */;
+			productReference = 11B9D15224FDA2FF0072BE90 /* JWP FreeWheel Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -360,15 +408,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8VC65F749H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "JWPlayer-SDK-iOS-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"JWPlayer_iOS_SDK\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.JWPlayer-SDK-iOS-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "JWP FreeWheel Demo";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-SDK-iOS-Demo/JWPlayer-SDK-iOS-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -383,15 +441,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8VC65F749H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "JWPlayer-SDK-iOS-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"JWPlayer_iOS_SDK\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.JWPlayer-SDK-iOS-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "JWP FreeWheel Demo";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWPlayer-SDK-iOS-Demo/JWPlayer-SDK-iOS-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

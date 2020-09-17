@@ -15,9 +15,13 @@ class SwiftViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let config = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
+        let VIDEO_TAG = "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4"
+        let config = JWConfig(contentURL: VIDEO_TAG)
+        config.advertising = getAdConfig()
         player = JWPlayerController(config: config)
         
+        #warning("The JWP Key must be set here, or in info.plist.")
+//        JWPlayerController.setPlayerKey("")
         title = "JWP SDK ver: \(JWPlayerController.sdkVersionToMinor())"
     }
     
@@ -28,7 +32,45 @@ class SwiftViewController: UIViewController {
             playerView.constrainToSuperview()
         }
     }
+    
+    private func getAdConfig() -> JWAdConfig {
+        // Putting it all together:
+        let adConfig = JWAdConfig()
+        adConfig.schedule  = [JWAdBreak(tag: "fw_Ad", offset: "pre")]
+        adConfig.client    = .freewheel
+        adConfig.freewheel = .fwConfigWithTestAppsValues // .fwConfigSanomaValues
+                
+        return adConfig
+    }
 }
+
+extension JWFreewheelConfig {
+    
+    static var fwConfigSanomaValues: JWFreewheelConfig {
+        let config = JWFreewheelConfig()
+        config.mediaId   = "YYhcQ8rH"
+        config.networkId = 506166
+        config.profileId = "506166:sanoma_sbs_external_live"
+        config.sectionId = "sanomanl_nu_jw_ios_phone_app_tech"
+        config.serverId  = "https://7b935.v.fwmrm.net/" // + "ad/g/1"
+        config.duration  = 600
+        
+        return config
+    }
+
+    /// Values extracted from the JW Test App, by reverse-engineering `ConfigParser`.
+    static var fwConfigWithTestAppsValues: JWFreewheelConfig {
+        let fwConfig = JWFreewheelConfig()
+        fwConfig.mediaId   = "jw_test_asset_h"
+        fwConfig.networkId = 90750
+        fwConfig.profileId = "90750:jw_ios_test"
+        fwConfig.sectionId = "jw_test_site_section"
+        fwConfig.serverId  = "https://demo.v.fwmrm.net/" // MUST remove "ad/g/1"
+        fwConfig.duration  = 600
+        return fwConfig
+    }
+}
+
 
 // MARK: - Helper method
 

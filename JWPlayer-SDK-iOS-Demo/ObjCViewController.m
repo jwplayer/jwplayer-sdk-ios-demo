@@ -7,7 +7,8 @@
 //
 
 #import "ObjCViewController.h"
-#import "JWPlayer_SDK_iOS_Demo-Swift.h"
+//#import "JWPlayer_SDK_iOS_Demo-Swift.h"
+#import "JWP_FreeWheel_Demo-Swift.h"
 #import <JWPlayer_iOS_SDK/JWPlayerController.h>
 
 @interface ObjCViewController ()
