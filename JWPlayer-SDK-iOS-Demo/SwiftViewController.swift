@@ -2,8 +2,8 @@
 //  SwiftViewController.swift
 //  JWPlayer-SDK-iOS-Demo
 //
-//  Created by Amitai Blickstein on 2/26/19.
-//  Copyright © 2019 JWPlayer. All rights reserved.
+//  Created by Amitai Blickstein on 9/1/20.
+//  Copyright © 2020 JWPlayer. All rights reserved.
 //
 
 import UIKit
@@ -14,19 +14,21 @@ class SwiftViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let config: JWConfig  = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
-        player = JWPlayerController(config: config)
-    }
 
+        let config = JWConfig(contentURL: "http://content.bitsontherun.com/videos/3XnJSIm4-injeKYZS.mp4")
+        player = JWPlayerController(config: config)
+        
+        title = "JWP SDK ver: \(JWPlayerController.sdkVersionToMinor())"
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let playerView = player?.view {
             playerContainerView.addSubview(playerView)
-            playerView.constrainToSuperview()            
+            playerView.constrainToSuperview()
         }
     }
 }
-
 
 // MARK: - Helper method
 
